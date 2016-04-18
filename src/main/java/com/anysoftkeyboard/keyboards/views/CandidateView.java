@@ -36,6 +36,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.anysoftkeyboard.AnySoftKeyboard;
+import com.anysoftkeyboard.dictionaries.Suggest;
 import com.anysoftkeyboard.dictionaries.TextEntryState;
 import com.anysoftkeyboard.theme.KeyboardTheme;
 import com.anysoftkeyboard.theme.KeyboardThemeFactory;
@@ -57,7 +58,7 @@ public class CandidateView extends View {
     private final int[] mWordWidth = new int[MAX_SUGGESTIONS];
     private final int[] mWordX = new int[MAX_SUGGESTIONS];
     private static final int SCROLL_PIXELS = 20;
-    private final ArrayList<CharSequence> mSuggestions = new ArrayList<>();
+    private final ArrayList<SuggestionObject> mSuggestions = new ArrayList<>();
     private final Drawable mSelectionHighlight;
     private final float mXGap;
     private final int mColorNormal;
@@ -197,9 +198,12 @@ public class CandidateView extends View {
 
         int x = 0;
         for (int i = 0; i < count; i++) {
-            CharSequence suggestion = mSuggestions.get(i);
-            if (suggestion == null)
+			SuggestionObject suggestionObject = mSuggestions.get(i);
+            CharSequence suggestion = suggestionObject.getSuggestedWord();
+
+			if (suggestion == null)
                 continue;
+
             final int wordLength = suggestion.length();
 
             paint.setColor(mColorNormal);
@@ -215,6 +219,13 @@ public class CandidateView extends View {
                 // punctuation list.
                 paint.setColor(mColorOther);
             }
+
+			if(!suggestionObject.isUseDefaultColors()){
+				paint.setColor(suggestionObject.getForegroundColor());
+				setBackgroundColor(suggestionObject.getBackgroundColor());
+			}else {
+				setBackgroundColor(Color.BLACK);
+			}
 
             // now that we set the typeFace, we can measure
             int wordWidth;
@@ -317,13 +328,13 @@ public class CandidateView extends View {
      *                              highlight the first word (typedWordValid == true), or
      *                              highlight the second word (typedWordValid != true)
      */
-    public void setSuggestions(List<CharSequence> suggestions,
+    public void setSuggestions(List<SuggestionObject> suggestions,
                                boolean completions, boolean typedWordValid,
                                boolean haveMinimalSuggestion) {
         clear();
         if (suggestions != null) {
             int insertCount = Math.min(suggestions.size(), MAX_SUGGESTIONS);
-            for (CharSequence suggestion : suggestions) {
+            for (SuggestionObject suggestion : suggestions) {
                 mSuggestions.add(suggestion);
                 if (--insertCount == 0)
                     break;
@@ -342,7 +353,8 @@ public class CandidateView extends View {
         ArrayList<CharSequence> suggestions = new ArrayList<>();
         suggestions.add(word);
         suggestions.add(mAddToDictionaryHint);
-        setSuggestions(suggestions, false, false, false);
+		List<SuggestionObject> objects = SuggestionObject.createFromStringListUsingDefaultColor(suggestions);
+        setSuggestions(objects, false, false, false);
         mShowingAddToDictionary = true;
     }
 
@@ -353,7 +365,7 @@ public class CandidateView extends View {
         return true;
     }
 
-    /* package */List<CharSequence> getSuggestions() {
+    /* package */List<SuggestionObject> getSuggestions() {
         return mSuggestions;
     }
 
@@ -401,7 +413,7 @@ public class CandidateView extends View {
                 if (!mScrolled) {
                     if (mSelectedString != null) {
                         if (mShowingAddToDictionary) {
-                            final CharSequence word = mSuggestions.get(0);
+                            final CharSequence word = mSuggestions.get(0).getSuggestedWord();
                             if (word.length() >= 2 && !mNoticing) {
                                 Log.d(TAG, "User wants to add the word '%s' to the user-dictionary.", word);
                                 boolean added = mService.addWordToDictionary(word.toString());
@@ -411,7 +423,7 @@ public class CandidateView extends View {
                             }
                         } else if (!mNoticing) {
                             if (!mShowingCompletions) {
-                                TextEntryState.acceptedSuggestion(mSuggestions.get(0), mSelectedString);
+                                TextEntryState.acceptedSuggestion(mSuggestions.get(0).getSuggestedWord(), mSelectedString);
                             }
                             mService.pickSuggestionManually(mSelectedIndex, mSelectedString);
                         } else if (mSelectedIndex == 1 && !TextUtils.isEmpty(mJustAddedWord)) {
@@ -434,7 +446,8 @@ public class CandidateView extends View {
         ArrayList<CharSequence> notice = new ArrayList<>(2);
         notice.add(getContext().getResources().getString(R.string.added_word, mJustAddedWord));
         notice.add(getContext().getResources().getString(R.string.revert_added_word_question));
-        setSuggestions(notice, false, true, false);
+		List<SuggestionObject> suggestions = SuggestionObject.createFromStringListUsingDefaultColor(notice);
+        setSuggestions(suggestions, false, true, false);
         mNoticing = true;
     }
 
@@ -442,13 +455,14 @@ public class CandidateView extends View {
         mJustAddedWord = null;
         ArrayList<CharSequence> notice = new ArrayList<>(1);
         notice.add(getContext().getResources().getString(R.string.removed_word, word));
-        setSuggestions(notice, false, true, false);
+		List<SuggestionObject> suggestions = SuggestionObject.createFromStringListUsingDefaultColor(notice);
+        setSuggestions(suggestions, false, true, false);
         mNoticing = true;
     }
 
     public void replaceTypedWord(CharSequence typedWord) {
         if (mSuggestions.size() > 0) {
-            mSuggestions.set(0, typedWord);
+			mSuggestions.get(0).setSuggestedWord(typedWord);
             invalidate();
         }
     }

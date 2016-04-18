@@ -600,7 +600,8 @@
 
     <string name="setup_wizard_step_permissions_title">Enable Permissions</string>
     <string name="wizard_step_this_step_complete_text_permissions"><i>AnySoftKeyboard</i> has access to the extra permissions. This will give you additional level of personalization.</string>
-    <string name="setup_wizard_step_permissions_details">In this step, you\'ll can approve <i>AnySoftKeyboard</i> access to the contacts stored on your device. If you wish to block this access, you may disable Contacts Dictionary.</string>
+    <string name="setup_wizard_step_permissions_details">In this step, you can approve <i>AnySoftKeyboard</i> access to the contacts stored on your device. If you wish to block this access, you may disable Contacts Dictionary.</string>
+    <string name="setup_wizard_step_location_permissions_details">In this step, you can approve <i>AnySoftKeyboard</i> access to the location of your device. If you wish to block this access, you may disable it.</string>
 
     <string name="setup_wizard_top_title">Setup\nAnySoftKeyboard\nfor use</string>
     <string name="setup_wizard_step_two_title">Switch to AnySoftKeyboard</string>
@@ -637,11 +638,14 @@
     <string name="setup_wizard_step_three_action_show_keyboard">Show me\nAnySoftKeyboard!</string>
     <string name="setup_wizard_step_three_action_go_to_home_fragment">Go to main page</string>
     <string name="notification_read_contacts_title">Can I read your contacts?</string>
-    <string name="notification_read_contacts_text">We need to read your contacts to give you a better auto-complete experience.</string>
-    <string name="notification_read_contacts_ticker">Contacts permission needed</string>
+    <string name="notification_location_title">Can I use your location?</string>
+    <string name="notification_location_text">We need to read your location to give you a better auto-complete experience.</string>
+    <string name="notification_location_ticker">Location permission needed</string>
     <string name="contacts_permissions_dialog_message">AnySoftKeyboard is using your contacts names to provide you with a personalized word suggestion: as you type a word, we look for similar words to auto-complete and auto-correct your typing.</string>
+    <string name="location_permissions_dialog_message">AnySoftKeyboard is using your loaction to provide you with a personalized word suggestion: as you type a word, we look for trendy words to auto-complete and auto-correct your typing.</string>
     <string name="allow_permission">Allow</string>
     <string name="navigate_to_app_permissions">Go to App permissions</string>
     <string name="turn_off_contacts_dictionary">Turn off Contacts Dictionary</string>
+    <string name="turn_off_location">Turn off Location access</string>
     <string name="read_more_about_permissions">Read more about permissions…</string>
 </resources>

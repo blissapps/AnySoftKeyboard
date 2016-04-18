@@ -39,6 +39,21 @@ public class WizardPermissionsFragment extends WizardPageBaseFragment implements
         public void onUserDeclinedPermissionsCompletely() {/*no-op - Main-Activity handles this case*/}
     };
 
+	private final PermissionsRequest mLocationPermissionRequest =
+		new PermissionsRequest.PermissionsRequestBase(PermissionsRequestCodes.LOCATION.getRequestCode(),
+			Manifest.permission.ACCESS_FINE_LOCATION) {
+			@Override
+			public void onPermissionsGranted() {
+				refreshWizardPager();
+			}
+
+			@Override
+			public void onPermissionsDenied() {/*no-op*/}
+
+			@Override
+			public void onUserDeclinedPermissionsCompletely() {/*no-op - Main-Activity handles this case*/}
+		};
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.keyboard_setup_wizard_page_permissions_layout, container, false);
@@ -48,6 +63,7 @@ public class WizardPermissionsFragment extends WizardPageBaseFragment implements
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         view.findViewById(R.id.ask_for_permissions_action).setOnClickListener(this);
+		view.findViewById(R.id.ask_for_location_permissions_action).setOnClickListener(this);
         view.findViewById(R.id.disable_contacts_dictionary).setOnClickListener(this);
         view.findViewById(R.id.open_permissions_wiki_action).setOnClickListener(this);
     }
@@ -55,7 +71,9 @@ public class WizardPermissionsFragment extends WizardPageBaseFragment implements
     @Override
     protected boolean isStepCompleted() {
         return !AnyApplication.getConfig().useContactsDictionary() ||//either the user disabled Contacts
-                ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.READ_CONTACTS) == PackageManager.PERMISSION_GRANTED;//or the user granted permission
+                ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.READ_CONTACTS) == PackageManager.PERMISSION_GRANTED ||//or the user granted permission
+		!AnyApplication.getConfig().useLocation() ||//either the user disabled Contacts
+			ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED;//or the user granted permission
     }
 
     @Override
@@ -72,6 +90,9 @@ public class WizardPermissionsFragment extends WizardPageBaseFragment implements
             case R.id.ask_for_permissions_action:
                 activity.startPermissionsRequest(mContactsPermissionRequest);
                 break;
+			case R.id.ask_for_location_permissions_action:
+				activity.startPermissionsRequest(mLocationPermissionRequest);
+				break;
             case R.id.disable_contacts_dictionary:
                 SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(activity);
                 SharedPreferencesCompat.EditorCompat.getInstance().apply(

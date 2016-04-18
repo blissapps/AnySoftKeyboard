@@ -83,6 +83,7 @@ public class AskPrefsImpl implements AskPrefs, OnSharedPreferenceChangeListener 
     private boolean mUseVolumeKeyForLeftRight = false;
     private boolean mUseCameraKeyForBackspaceBackword = false;
     private boolean mUseContactsDictionary = true;
+	private boolean mUseLocation = true;
     private int mAutoDictionaryInsertionThreshold = 9;
     private boolean mIsStickyExtensionKeyboard = false;
     private boolean mDrawExtensionKeyboardAboveMainKeyboard = true;
@@ -468,6 +469,10 @@ public class AskPrefsImpl implements AskPrefs, OnSharedPreferenceChangeListener 
                 mContext.getResources().getBoolean(R.bool.settings_default_contacts_dictionary));
         Log.d(TAG, "** mUseContactsDictionary: " + mUseContactsDictionary);
 
+		mUseLocation = sp.getBoolean(mContext.getString(R.string.settings_key_use_location),
+			mContext.getResources().getBoolean(R.bool.settings_default_location));
+		Log.d(TAG, "** mUseLocation: " + mUseLocation);
+
         mAutoDictionaryInsertionThreshold = getIntFromString(sp,
                 mContext.getString(R.string.settings_key_auto_dictionary_threshold),
                 mContext.getString(R.string.settings_default_auto_dictionary_add_threshold));
@@ -735,6 +740,10 @@ public class AskPrefsImpl implements AskPrefs, OnSharedPreferenceChangeListener 
     public boolean useContactsDictionary() {
         return mUseContactsDictionary;
     }
+
+	public boolean useLocation() {
+		return mUseLocation;
+	}
 
     public int getAutoDictionaryInsertionThreshold() {
         return mAutoDictionaryInsertionThreshold;

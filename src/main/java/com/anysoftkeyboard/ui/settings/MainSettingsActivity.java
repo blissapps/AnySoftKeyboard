@@ -279,6 +279,29 @@ public class MainSettingsActivity extends PermissionsFragmentChauffeurActivity {
         }
     };
 
+	private final DialogInterface.OnClickListener mLocationDialogListener = new DialogInterface.OnClickListener() {
+		@Override
+		public void onClick(DialogInterface dialog, final int which) {
+			switch (which) {
+				case DialogInterface.BUTTON_POSITIVE:
+					if (ActivityCompat.shouldShowRequestPermissionRationale(MainSettingsActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)) {
+						startLocationPermissionRequest();
+					} else {
+						startAppPermissionsActivity();
+					}
+					break;
+				case DialogInterface.BUTTON_NEGATIVE:
+					SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+					SharedPreferencesCompat.EditorCompat.getInstance().apply(
+						sharedPreferences
+							.edit()
+							.putBoolean(getString(R.string.settings_key_use_location), false)
+					);
+					break;
+			}
+		}
+	};
+
     private AlertDialog mAlertDialog;
 
     @Override
@@ -301,6 +324,23 @@ public class MainSettingsActivity extends PermissionsFragmentChauffeurActivity {
             mAlertDialog = builder.create();
             mAlertDialog.show();
         }
+		if (requestCode == PermissionsRequestCodes.LOCATION.getRequestCode() && grantResults[0] == PackageManager.PERMISSION_DENIED) {
+			//if the result is DENIED and the OS says "do not show rationale", it means the user has ticked "Don't ask me again".
+			final boolean userSaysDontAskAgain = !ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_CONTACTS);
+			//the user has denied us from reading the Contacts information.
+			//I'll ask them to whether they want to grant anyway, or disable ContactDictionary
+			AlertDialog.Builder builder = new AlertDialog.Builder(this);
+			builder.setCancelable(true);
+			builder.setIcon(R.drawable.ic_notification_contacts_permission_required);
+			builder.setTitle(R.string.notification_location_title);
+			builder.setMessage(getString(R.string.location_permissions_dialog_message));
+			builder.setPositiveButton(getString(userSaysDontAskAgain ? R.string.navigate_to_app_permissions : R.string.allow_permission), mLocationDialogListener);
+			builder.setNegativeButton(getString(R.string.turn_off_location), mLocationDialogListener);
+
+			if (mAlertDialog != null && mAlertDialog.isShowing()) mAlertDialog.dismiss();
+			mAlertDialog = builder.create();
+			mAlertDialog.show();
+		}
     }
 
     public void startContactsPermissionRequest() {
@@ -321,4 +361,23 @@ public class MainSettingsActivity extends PermissionsFragmentChauffeurActivity {
             }
         });
     }
+
+	public void startLocationPermissionRequest() {
+		startPermissionsRequest(new PermissionsRequest.PermissionsRequestBase(PermissionsRequestCodes.LOCATION.getRequestCode(), Manifest.permission.ACCESS_FINE_LOCATION) {
+			@Override
+			public void onPermissionsGranted() {
+
+			}
+
+			@Override
+			public void onPermissionsDenied() {
+
+			}
+
+			@Override
+			public void onUserDeclinedPermissionsCompletely() {
+
+			}
+		});
+	}
 }
