@@ -19,8 +19,8 @@ import org.joda.time.DateTime;
 public class LocationResponder implements ILocationResponder
 {
 
-	private static final float SPEED_THRESHOLD = 4.16667f;
-	private float mSpeedThreshold = SPEED_THRESHOLD;
+	private static final float SPEED_THRESHOLD_M_S = (10.0f * 1000) / 3600;
+	private float mSpeedThreshold = SPEED_THRESHOLD_M_S;
 	private static final long LOCATION_PROVIDER_MIN_TIME = 5000;
 	private static final float LOCATION_PROVIDER_MIN_DISTANCE = 10;
 

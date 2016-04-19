@@ -47,6 +47,7 @@ public class SuggestionObject
 		this.backgroundColor = backgroundColor;
 	}
 
+
 	public static List<SuggestionObject> createFromStringList(List<CharSequence> list, int foregroundColor, int backgroundColor){
 		ArrayList<SuggestionObject> suggestionObjects = new ArrayList<>(list.size());
 

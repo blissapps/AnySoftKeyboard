@@ -39,6 +39,8 @@ import com.anysoftkeyboard.devicespecific.StrictModeAble;
 import com.anysoftkeyboard.ui.tutorials.TutorialsProvider;
 import com.anysoftkeyboard.utils.Log;
 
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 import net.evendanan.frankenrobot.FrankenRobot;
 import net.evendanan.frankenrobot.Lab;
 
@@ -54,6 +56,7 @@ public class AnyApplication extends Application implements OnSharedPreferenceCha
     @Override
     public void onCreate() {
         super.onCreate();
+        Fabric.with(this, new Crashlytics());
         setupCrashHandler();
         Log.d(TAG, "** Starting application in DEBUG mode.");
         msFrank = Lab.build(getApplicationContext(), R.array.frankenrobot_interfaces_mapping);

@@ -39,6 +39,7 @@
         android:theme="@style/Theme.AskApp"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
 
+        <meta-data android:name="io.fabric.ApiKey" android:value="9283a3fca9071fd1c8120b1dcfa378b4903bb595"/>
         <!-- used to backup the settings and SQL to the cloud -->
         <meta-data
             android:name="com.google.android.backup.api_key"
@@ -116,4 +117,5 @@
             android:label="@string/ime_name"/>
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
