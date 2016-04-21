@@ -118,15 +118,28 @@ public class LocationResponder implements ILocationResponder
 
 		try
 		{
-			mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, LOCATION_PROVIDER_MIN_TIME, LOCATION_PROVIDER_MIN_DISTANCE, mLocationListener);
+			//mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, LOCATION_PROVIDER_MIN_TIME, LOCATION_PROVIDER_MIN_DISTANCE, mLocationListener);
 		}
 		catch (SecurityException e)
 		{
 			return StartLocationResponderStatus.Failed;
 		}
 
+		mHandler.post(mockRunnable);
+
 		return StartLocationResponderStatus.Success;
 	}
+
+	private Runnable mockRunnable = new Runnable()
+	{
+		@Override
+		public void run()
+		{
+			ensureLocationPresenter();
+			getLocationPresenter().aboveSpeedThreshold();
+			mHandler.postDelayed(mockRunnable, 1000);
+		}
+	};
 
 
 	@Override
@@ -136,7 +149,10 @@ public class LocationResponder implements ILocationResponder
 		mSpeed = -1;
 		try
 		{
-			mLocationManager.removeUpdates(mLocationListener);
+			if(mLocationManager != null)
+			{
+				mLocationManager.removeUpdates(mLocationListener);
+			}
 			mLocationManager = null;
 		}
 		catch (SecurityException e)

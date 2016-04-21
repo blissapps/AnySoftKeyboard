@@ -16,7 +16,9 @@
 
 package com.anysoftkeyboard.keyboards.views;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -31,6 +33,7 @@ import android.text.StaticLayout;
 import android.text.TextPaint;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -43,6 +46,7 @@ import com.anysoftkeyboard.theme.KeyboardThemeFactory;
 import com.anysoftkeyboard.utils.Log;
 import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.menny.android.anysoftkeyboard.R;
+import com.menny.android.anysoftkeyboard.SoftKeyboard;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -82,7 +86,8 @@ public class CandidateView extends View {
     private CharSequence mAddToDictionaryHint;
     private int mTargetScrollX;
     private int mTotalWidth;
-
+	KeyboardTheme mTheme;
+	AttributeSet mAttrs;
     public CandidateView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
@@ -96,10 +101,12 @@ public class CandidateView extends View {
 
         mAddToDictionaryHint = context.getString(R.string.hint_add_to_dictionary);
         // themed
-        final KeyboardTheme theme = KeyboardThemeFactory
+		mAttrs = attrs;
+		mTheme = KeyboardThemeFactory
                 .getCurrentKeyboardTheme(context.getApplicationContext());
-        TypedArray a = theme.getPackageContext().obtainStyledAttributes(attrs,
-                R.styleable.AnyKeyboardViewTheme, 0, theme.getThemeResId());
+		TypedArray a = mTheme.getPackageContext().obtainStyledAttributes(mAttrs,
+			R.styleable.AnyKeyboardViewTheme, 0, mTheme.getThemeResId());
+
         int colorNormal = context.getResources().getColor(R.color.candidate_normal);
         int colorRecommended = context.getResources().getColor(R.color.candidate_recommended);
         int colorOther = context.getResources().getColor(R.color.candidate_other);
@@ -187,6 +194,8 @@ public class CandidateView extends View {
                     mDivider.getIntrinsicHeight());
         }
 
+		DisplayMetrics displayMetrics = Resources.getSystem().getDisplayMetrics();
+
         final int dividerYOffset = (height - mDivider.getMinimumHeight()) / 2;
         final int count = mSuggestions.size();
         final Rect bgPadding = mBgPadding;
@@ -195,7 +204,8 @@ public class CandidateView extends View {
         final int scrollX = getScrollX();
         final boolean scrolled = mScrolled;
         final boolean typedWordValid = mTypedWordValid;
-
+		TypedArray a = mTheme.getPackageContext().obtainStyledAttributes(mAttrs,
+			R.styleable.AnyKeyboardViewTheme, 0, mTheme.getThemeResId());
         int x = 0;
         for (int i = 0; i < count; i++) {
 			SuggestionObject suggestionObject = mSuggestions.get(i);
@@ -224,7 +234,12 @@ public class CandidateView extends View {
 				paint.setColor(suggestionObject.getForegroundColor());
 				setBackgroundColor(suggestionObject.getBackgroundColor());
 			}else {
-				setBackgroundColor(Color.BLACK);
+				final Drawable stripImage = a
+					.getDrawable(R.styleable.AnyKeyboardViewTheme_suggestionBackgroundImage);
+				if (stripImage == null)
+					setBackgroundColor(Color.BLACK);
+				else
+					setBackgroundDrawable(stripImage);
 			}
 
             // now that we set the typeFace, we can measure
@@ -252,15 +267,17 @@ public class CandidateView extends View {
                 mSelectedIndex = i;
             }
 
+			int containerWidth = displayMetrics.widthPixels/3;
+
             if (canvas != null) {
                 // (+)This is the trick to get RTL/LTR text correct
                 if (AnyApplication.getConfig().workaround_alwaysUseDrawText()) {
                     final int y = (int) (height + paint.getTextSize() - paint.descent()) / 2;
-                    canvas.drawText(suggestion, 0, wordLength, x + wordWidth / 2, y, paint);
+                    canvas.drawText(suggestion, 0, wordLength, x +  containerWidth / 2, y, paint);
                 } else {
                     final int y = (int) (height - paint.getTextSize() + paint.descent()) / 2;
                     // no matter what: StaticLayout
-                    float textX = x + (wordWidth / 2) - mXGap;
+                    float textX = x + ((containerWidth) / 2) - mXGap;
                     float textY = y - bgPadding.bottom - bgPadding.top;
 
                     canvas.translate(textX, textY);
@@ -268,7 +285,8 @@ public class CandidateView extends View {
                     mTextPaint.setColor(paint.getColor());
 
                     StaticLayout suggestionText = new StaticLayout(suggestion,
-                            mTextPaint, wordWidth, Alignment.ALIGN_CENTER,
+                            mTextPaint, containerWidth
+						, Alignment.ALIGN_CENTER,
                             1.0f, 0.0f, false);
                     suggestionText.draw(canvas);
 
@@ -276,7 +294,7 @@ public class CandidateView extends View {
                 }
                 // (-)
                 paint.setColor(mColorOther);
-                canvas.translate(x + wordWidth, 0);
+                canvas.translate(x + containerWidth, 0);
                 // Draw a divider unless it's after the hint
                 //or the last suggested word
                 if (count > 1 && (!mShowingAddToDictionary) && i != (count - 1)) {
@@ -284,10 +302,10 @@ public class CandidateView extends View {
                     mDivider.draw(canvas);
                     canvas.translate(0, -dividerYOffset);
                 }
-                canvas.translate(-x - wordWidth, 0);
+                canvas.translate(-x - containerWidth, 0);
             }
             paint.setTypeface(Typeface.DEFAULT);
-            x += wordWidth;
+            x += containerWidth;
         }
         mTotalWidth = x;
         if (mTargetScrollX != scrollX) {

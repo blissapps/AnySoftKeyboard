@@ -11,6 +11,11 @@
   <component name="ChangeListManager">
     <list default="true" id="96ffe44a-7c98-4bdf-bf50-8e1129f84136" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnySoftKeyboard.iws" afterPath="$PROJECT_DIR$/AnySoftKeyboard.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AboveThresholdSuggestionProvider.java" afterPath="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AboveThresholdSuggestionProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AnySoftKeyboard.java" afterPath="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AnySoftKeyboard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/LocationResponder.java" afterPath="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/LocationResponder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/views/CandidateView.java" afterPath="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/views/CandidateView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/drawable/lean_light_candidates_background.xml" afterPath="$PROJECT_DIR$/src/main/res/drawable/lean_light_candidates_background.xml" />
     </list>
     <ignored path="AnySoftKeyboard.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -114,95 +119,224 @@
     <favorites_list name="AnySoftKeyboard" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="LocationResponder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/LocationResponder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="73" column="45" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
+              <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VersionBuilder.groovy" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/buildSrc/src/main/groovy/versionbuilder/VersionBuilder.groovy">
+      <file leaf-file-name="AnySoftKeyboard.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AnySoftKeyboard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32868525">
-              <caret line="11" column="31" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="31" />
+            <state vertical-scroll-proportion="-8.037037">
+              <caret line="2570" column="0" selection-start-line="2570" selection-start-column="0" selection-end-line="2570" selection-end-column="0" />
+              <folding>
+                <element signature="docComment;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#getCursorPosition#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#getDictionaryOverrideKey#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#10250#10259#0" expanded="false" />
+                <element signature="method#onCreate#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#setInputView#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#14751#14812#0" expanded="false" />
+                <element signature="method#onCreateInputView#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#16259#16300#0" expanded="false" />
+                <element signature="method#onShowInputRequested#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#16715#16783#0" expanded="false" />
+                <element signature="method#hideWindow#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#onUpdateSelection#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#25035#25095#0" expanded="false" />
+                <element signature="method#postRestartWordSuggestion#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#canRestartWordSuggestion#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#performRestartWordSuggestion#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#onPhysicalKeyboardKeyPressed#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#30403#30461#0" expanded="false" />
+                <element signature="method#onComputeInsets#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#31252#31322#0" expanded="false" />
+                <element signature="method#setCandidatesViewShown#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#32609#32681#0" expanded="false" />
+                <element signature="method#onEvaluateFullscreenMode#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#onKeyDown#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#36962#37014#0" expanded="false" />
+                <element signature="e#38243#38304#0" expanded="false" />
+                <element signature="e#38577#38640#0" expanded="false" />
+                <element signature="e#40152#40160#0" expanded="false" />
+                <element signature="e#40451#40509#0" expanded="false" />
+                <element signature="e#41518#41579#0" expanded="false" />
+                <element signature="e#41968#42021#0" expanded="false" />
+                <element signature="method#handleSelectionExpending#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#switchToNextPhysicalKeyboard#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#42993#43008#0" expanded="false" />
+                <element signature="method#notifyKeyboardChangeIfNeeded#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#43238#43297#0" expanded="false" />
+                <element signature="method#onKeyUp#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#getMetaKeysStates#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#setInputConnectionMetaStateAsCurrentMetaKeyKeyListenerState#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#checkAddToDictionaryWithAutoDictionary#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#46867#46939#0" expanded="false" />
+                <element signature="method#commitTyped#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#swapPunctuationAndSpace#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#swapPeriodAndSpace#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#removeTrailingSpace#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#addWordToDictionary#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#removeFromUserDictionary#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#isAlphabet#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#onMultiTapStarted#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#onMultiTapEnded#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#onFunctionKey#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#51255#51311#0" expanded="false" />
+                <element signature="e#52116#52162#0" expanded="false" />
+                <element signature="method#onNonFunctionKey#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#onKey#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#setSpaceTimeStamp#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#showAllClipboardEntries#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#handleClipboardOperation#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#openQuickTextPopup#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#outputCurrentQuickTextKey#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#isTerminalEmulation#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#sendTab#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#sendEscape#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#setKeyboardStuffBeforeSetToView#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#showOptionsDialogWithData#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#showLanguageSelectionDialog#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#performOnTextDeletion#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#68892#68951#0" expanded="false" />
+                <element signature="method#handleBackWord#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#69667#69732#0" expanded="false" />
+                <element signature="e#69981#69995#0" expanded="false" />
+                <element signature="e#70457#70480#0" expanded="false" />
+                <element signature="e#71127#71189#0" expanded="false" />
+                <element signature="method#handleDeleteLastCharacter#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#72943#73001#0" expanded="false" />
+                <element signature="e#73535#73592#0" expanded="false" />
+                <element signature="method#handleControl#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#handleShift#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#abortCorrection#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#78375#78442#0" expanded="false" />
+                <element signature="e#79266#79331#0" expanded="false" />
+                <element signature="e#79587#79653#0" expanded="false" />
+                <element signature="e#79876#79939#0" expanded="false" />
+                <element signature="e#80376#80435#0" expanded="false" />
+                <element signature="e#80712#80776#0" expanded="false" />
+                <element signature="e#81221#81261#0" expanded="false" />
+                <element signature="method#handleClose#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#postUpdateSuggestions#1;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#pickDefaultSuggestion#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#86364#86426#0" expanded="false" />
+                <element signature="docComment;method#pickSuggestion#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#pickSuggestion#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#isCursorTouchingWord#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#90831#90902#0" expanded="false" />
+                <element signature="method#revertLastWord#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#nextAlterKeyboard#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#nextKeyboard#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#92877#92943#0" expanded="false" />
+                <element signature="method#fillSeparatorsSparseArray#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#setKeyboardFinalStuff#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#onSwipeRight#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#onSwipeLeft#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#onSwipeDown#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#onSwipeUp#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#onPinch#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#onSeparate#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#sendKeyDown#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#sendKeyUp#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#onPress#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#97743#97794#0" expanded="false" />
+                <element signature="method#onRelease#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#loadSettings#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#setDictionariesForCurrentKeyboard#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#103193#103250#0" expanded="false" />
+                <element signature="method#launchSettings#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#launchDictionaryOverriding#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#showOptionsMenu#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#onConfigurationChanged#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#setInitialCondensedState#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#onSharedPreferenceChanged#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#deleteLastCharactersFromInput#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#showToastMessage#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#showToastMessage#1;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#onLowMemory#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="docComment;method#onEvaluateInputViewShown#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="e#112830#112863#0" expanded="false" />
+                <element signature="method#onEvaluateInputViewShown#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#resetKeyboardView#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#updateShiftStateNow#0;class#AnySoftKeyboard#0" expanded="false" />
+                <element signature="method#closeDictionaries#0;class#AnySoftKeyboard#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CandidateView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/views/CandidateView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="275" column="61" selection-start-line="275" selection-start-column="61" selection-end-line="275" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shippable.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shippable.yml">
+      <file leaf-file-name="TypedArray.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$ANDROID_HOME$/platforms/android-23/android.jar!/android/content/res/TypedArray.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="7.962963">
+            <state vertical-scroll-proportion="-15.259259">
+              <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles_lean_light_keyboard_theme.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/values/styles_lean_light_keyboard_theme.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.625">
+              <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lean_light_keyboard_background.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/res/drawable/lean_light_keyboard_background.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <file leaf-file-name="lean_light_candidates_background.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/drawable/lean_light_candidates_background.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.5">
+              <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ISuggestionProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/ISuggestionProvider.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="local.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local.properties">
+      <file leaf-file-name="AboveThresholdSuggestionProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AboveThresholdSuggestionProvider.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="issue_template.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/issue_template.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-26.25">
-              <caret line="42" column="65" selection-start-line="42" selection-start-column="65" selection-end-line="42" selection-end-column="65" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gradle.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gradle.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fabric.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fabric.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="47" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="47" />
+              <caret line="53" column="88" selection-start-line="53" selection-start-column="88" selection-end-line="53" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -4891,17 +5025,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/EndLocationResponderStatus.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/ILocationResponder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/ISuggestionProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/views/CandidateView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AboveTresholdSuggestionProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/ILocationPresenter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AnySoftKeyboard.java" />
         <option value="$PROJECT_DIR$/fabric.properties" />
         <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/views/SuggestionObject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AboveThresholdSuggestionProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/LocationResponder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AnySoftKeyboard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AboveThresholdSuggestionProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/views/CandidateView.java" />
+        <option value="$PROJECT_DIR$/src/main/res/drawable/lean_light_candidates_background.xml" />
       </list>
     </option>
   </component>
@@ -4942,7 +5077,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -5011,12 +5145,117 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnySoftKeyboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnySoftKeyboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnySoftKeyboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnySoftKeyboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnySoftKeyboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnySoftKeyboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnySoftKeyboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnySoftKeyboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anysoftkeyboard" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
@@ -5473,23 +5712,23 @@
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49763033" sideWeight="0.5063898" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985783" sideWeight="0.4978701" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49763033" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49763033" sideWeight="0.49361023" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22470714" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985783" sideWeight="0.4978701" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32985783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -5533,29 +5772,36 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AnySoftKeyboard.java</url>
-          <line>283</line>
+          <line>637</line>
           <properties />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/LocationResponder.java</url>
-          <line>138</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AnySoftKeyboard.java</url>
-          <line>369</line>
-          <properties />
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AnySoftKeyboard.java</url>
           <line>405</line>
           <properties />
-          <option name="timeStamp" value="5" />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/views/CandidateView.java</url>
+          <line>128</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/views/CandidateView.java</url>
+          <line>286</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/views/CandidateView.java</url>
+          <line>274</line>
+          <properties />
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="6" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -5564,41 +5810,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AskPrefs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="16" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/settings_defaults_dont_translate.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.041667">
-          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AskPrefsImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.148149">
-          <caret line="762" column="0" selection-start-line="762" selection-start-column="0" selection-end-line="762" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AnyKeyboardContextProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15463917">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/ui/settings/setup/WizardPermissionsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="72" column="48" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/popup_keyboard_layout.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.6603775">
@@ -5630,13 +5841,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/styles_lean_light_keyboard_theme.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -5744,24 +5948,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/ISuggestionProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$ANDROID_HOME$/platforms/android-23/android.jar!/android/graphics/Color.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.7777777">
           <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/views/CandidateView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="464" column="60" selection-start-line="464" selection-start-column="60" selection-end-line="464" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -5807,159 +5997,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AnySoftKeyboard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2571" column="9" selection-start-line="2571" selection-start-column="9" selection-end-line="2571" selection-end-column="9" />
-          <folding>
-            <element signature="docComment;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#9594#9595#0" expanded="false" />
-            <element signature="e#9639#9640#0" expanded="false" />
-            <element signature="method#getCursorPosition#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#10055#10056#0" expanded="false" />
-            <element signature="e#10091#10092#0" expanded="false" />
-            <element signature="method#getDictionaryOverrideKey#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#10250#10259#0" expanded="false" />
-            <element signature="e#13223#13224#0" expanded="false" />
-            <element signature="e#13263#13264#0" expanded="false" />
-            <element signature="e#13312#13313#0" expanded="false" />
-            <element signature="e#13343#13344#0" expanded="false" />
-            <element signature="e#14560#14561#0" expanded="false" />
-            <element signature="e#14584#14585#0" expanded="false" />
-            <element signature="method#setInputView#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#14752#14813#0" expanded="false" />
-            <element signature="e#15686#15687#0" expanded="false" />
-            <element signature="e#15754#15755#0" expanded="false" />
-            <element signature="e#16261#16302#0" expanded="false" />
-            <element signature="e#16717#16785#0" expanded="false" />
-            <element signature="e#24466#24533#0" expanded="false" />
-            <element signature="e#24995#25055#0" expanded="false" />
-            <element signature="method#canRestartWordSuggestion#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#26576#26583#0" expanded="false" />
-            <element signature="method#onPhysicalKeyboardKeyPressed#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#30363#30421#0" expanded="false" />
-            <element signature="method#onComputeInsets#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#31212#31282#0" expanded="false" />
-            <element signature="method#setCandidatesViewShown#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#32257#32306#0" expanded="false" />
-            <element signature="e#32690#32762#0" expanded="false" />
-            <element signature="e#35401#35402#0" expanded="false" />
-            <element signature="e#35449#35450#0" expanded="false" />
-            <element signature="method#onEvaluateFullscreenMode#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#36909#36961#0" expanded="false" />
-            <element signature="e#38190#38251#0" expanded="false" />
-            <element signature="e#38524#38587#0" expanded="false" />
-            <element signature="e#40099#40107#0" expanded="false" />
-            <element signature="e#40398#40456#0" expanded="false" />
-            <element signature="e#41465#41526#0" expanded="false" />
-            <element signature="e#41915#41968#0" expanded="false" />
-            <element signature="method#handleSelectionExpending#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#switchToNextPhysicalKeyboard#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#42940#42955#0" expanded="false" />
-            <element signature="e#43185#43244#0" expanded="false" />
-            <element signature="e#43694#43695#0" expanded="false" />
-            <element signature="e#43746#43747#0" expanded="false" />
-            <element signature="e#43797#43798#0" expanded="false" />
-            <element signature="e#43828#43829#0" expanded="false" />
-            <element signature="method#getMetaKeysStates#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#setInputConnectionMetaStateAsCurrentMetaKeyKeyListenerState#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#checkAddToDictionaryWithAutoDictionary#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#46814#46886#0" expanded="false" />
-            <element signature="method#swapPunctuationAndSpace#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#swapPeriodAndSpace#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#removeTrailingSpace#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#addWordToDictionary#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#removeFromUserDictionary#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#isAlphabet#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#onMultiTapStarted#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#onMultiTapEnded#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#51202#51258#0" expanded="false" />
-            <element signature="e#52063#52109#0" expanded="false" />
-            <element signature="method#setSpaceTimeStamp#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#62200#62201#0" expanded="false" />
-            <element signature="e#62242#62243#0" expanded="false" />
-            <element signature="method#openQuickTextPopup#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#outputCurrentQuickTextKey#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#isTerminalEmulation#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#sendTab#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#sendEscape#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#setKeyboardStuffBeforeSetToView#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#showOptionsDialogWithData#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#performOnTextDeletion#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#68966#69025#0" expanded="false" />
-            <element signature="method#handleBackWord#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#69741#69806#0" expanded="false" />
-            <element signature="e#70055#70069#0" expanded="false" />
-            <element signature="e#70537#70560#0" expanded="false" />
-            <element signature="e#71207#71269#0" expanded="false" />
-            <element signature="e#73023#73081#0" expanded="false" />
-            <element signature="e#73615#73672#0" expanded="false" />
-            <element signature="method#handleControl#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#handleShift#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#78451#78518#0" expanded="false" />
-            <element signature="e#79342#79407#0" expanded="false" />
-            <element signature="e#79663#79729#0" expanded="false" />
-            <element signature="e#79952#80015#0" expanded="false" />
-            <element signature="e#80452#80511#0" expanded="false" />
-            <element signature="e#80788#80852#0" expanded="false" />
-            <element signature="e#81297#81337#0" expanded="false" />
-            <element signature="e#83369#83370#0" expanded="false" />
-            <element signature="e#83418#83419#0" expanded="false" />
-            <element signature="method#postUpdateSuggestions#1;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#84126#84127#0" expanded="false" />
-            <element signature="e#84153#84154#0" expanded="false" />
-            <element signature="e#84205#84206#0" expanded="false" />
-            <element signature="e#84265#84266#0" expanded="false" />
-            <element signature="e#86531#86593#0" expanded="false" />
-            <element signature="method#isCursorTouchingWord#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#91149#91220#0" expanded="false" />
-            <element signature="method#revertLastWord#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#92737#92738#0" expanded="false" />
-            <element signature="e#92770#92771#0" expanded="false" />
-            <element signature="e#92813#92814#0" expanded="false" />
-            <element signature="e#92857#92858#0" expanded="false" />
-            <element signature="method#nextAlterKeyboard#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#nextKeyboard#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#93195#93261#0" expanded="false" />
-            <element signature="method#fillSeparatorsSparseArray#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#setKeyboardFinalStuff#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#onSwipeRight#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#onSwipeLeft#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#onSwipeDown#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#onSwipeUp#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#onPinch#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#onSeparate#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#sendKeyDown#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#sendKeyUp#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#onPress#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#98061#98112#0" expanded="false" />
-            <element signature="method#onRelease#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#99061#99062#0" expanded="false" />
-            <element signature="e#99148#99149#0" expanded="false" />
-            <element signature="method#loadSettings#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#setDictionariesForCurrentKeyboard#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#103511#103568#0" expanded="false" />
-            <element signature="method#launchDictionaryOverriding#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#showOptionsMenu#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#onConfigurationChanged#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#setInitialCondensedState#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#onSharedPreferenceChanged#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#deleteLastCharactersFromInput#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#showToastMessage#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#showToastMessage#1;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#onLowMemory#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#112683#112684#0" expanded="false" />
-            <element signature="e#112702#112703#0" expanded="false" />
-            <element signature="e#113148#113181#0" expanded="false" />
-            <element signature="method#onEvaluateInputViewShown#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="e#113455#113456#0" expanded="false" />
-            <element signature="e#113474#113475#0" expanded="false" />
-            <element signature="method#updateShiftStateNow#0;class#AnySoftKeyboard#0" expanded="false" />
-            <element signature="method#closeDictionaries#0;class#AnySoftKeyboard#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/android/support/v4/preference/PreferenceFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -5978,7 +6015,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27290836">
           <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5986,23 +6022,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AboveThresholdSuggestionProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/LocationResponder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -6010,31 +6029,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.25">
-          <caret line="42" column="65" selection-start-line="42" selection-start-column="65" selection-end-line="42" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shippable.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.962963">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -6042,26 +6043,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/issue_template.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fabric.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="47" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -6069,7 +6067,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -6077,14 +6074,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33266932">
           <caret line="317" column="11" selection-start-line="317" selection-start-column="11" selection-end-line="317" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="73" column="45" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.031380754">
+          <caret line="42" column="65" selection-start-line="42" selection-start-column="65" selection-end-line="42" selection-end-column="65" />
           <folding />
         </state>
       </provider>
@@ -6093,6 +6096,233 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32868525">
           <caret line="11" column="31" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.029880479">
+          <caret line="73" column="45" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/LocationResponder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/ISuggestionProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/intermediates/exploded-aar/com.github.AnySoftKeyboard/AnySoftKeyboard-API/1.3.4/res/values/values.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09977827">
+          <caret line="3" column="1494" selection-start-line="3" selection-start-column="1494" selection-end-line="3" selection-end-column="1494" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$ANDROID_HOME$/platforms/android-23/android.jar!/android/content/res/TypedArray.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.259259">
+          <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AboveThresholdSuggestionProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="88" selection-start-line="53" selection-start-column="88" selection-end-line="53" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AnySoftKeyboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.037037">
+          <caret line="2570" column="0" selection-start-line="2570" selection-start-column="0" selection-end-line="2570" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#getCursorPosition#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#getDictionaryOverrideKey#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#10250#10259#0" expanded="false" />
+            <element signature="method#onCreate#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#setInputView#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#14751#14812#0" expanded="false" />
+            <element signature="method#onCreateInputView#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#16259#16300#0" expanded="false" />
+            <element signature="method#onShowInputRequested#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#16715#16783#0" expanded="false" />
+            <element signature="method#hideWindow#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#onUpdateSelection#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#25035#25095#0" expanded="false" />
+            <element signature="method#postRestartWordSuggestion#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#canRestartWordSuggestion#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#performRestartWordSuggestion#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#onPhysicalKeyboardKeyPressed#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#30403#30461#0" expanded="false" />
+            <element signature="method#onComputeInsets#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#31252#31322#0" expanded="false" />
+            <element signature="method#setCandidatesViewShown#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#32609#32681#0" expanded="false" />
+            <element signature="method#onEvaluateFullscreenMode#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#onKeyDown#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#36962#37014#0" expanded="false" />
+            <element signature="e#38243#38304#0" expanded="false" />
+            <element signature="e#38577#38640#0" expanded="false" />
+            <element signature="e#40152#40160#0" expanded="false" />
+            <element signature="e#40451#40509#0" expanded="false" />
+            <element signature="e#41518#41579#0" expanded="false" />
+            <element signature="e#41968#42021#0" expanded="false" />
+            <element signature="method#handleSelectionExpending#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#switchToNextPhysicalKeyboard#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#42993#43008#0" expanded="false" />
+            <element signature="method#notifyKeyboardChangeIfNeeded#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#43238#43297#0" expanded="false" />
+            <element signature="method#onKeyUp#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#getMetaKeysStates#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#setInputConnectionMetaStateAsCurrentMetaKeyKeyListenerState#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#checkAddToDictionaryWithAutoDictionary#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#46867#46939#0" expanded="false" />
+            <element signature="method#commitTyped#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#swapPunctuationAndSpace#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#swapPeriodAndSpace#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#removeTrailingSpace#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#addWordToDictionary#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#removeFromUserDictionary#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#isAlphabet#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#onMultiTapStarted#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#onMultiTapEnded#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#onFunctionKey#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#51255#51311#0" expanded="false" />
+            <element signature="e#52116#52162#0" expanded="false" />
+            <element signature="method#onNonFunctionKey#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#onKey#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#setSpaceTimeStamp#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#showAllClipboardEntries#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#handleClipboardOperation#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#openQuickTextPopup#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#outputCurrentQuickTextKey#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#isTerminalEmulation#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#sendTab#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#sendEscape#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#setKeyboardStuffBeforeSetToView#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#showOptionsDialogWithData#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#showLanguageSelectionDialog#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#performOnTextDeletion#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#68892#68951#0" expanded="false" />
+            <element signature="method#handleBackWord#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#69667#69732#0" expanded="false" />
+            <element signature="e#69981#69995#0" expanded="false" />
+            <element signature="e#70457#70480#0" expanded="false" />
+            <element signature="e#71127#71189#0" expanded="false" />
+            <element signature="method#handleDeleteLastCharacter#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#72943#73001#0" expanded="false" />
+            <element signature="e#73535#73592#0" expanded="false" />
+            <element signature="method#handleControl#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#handleShift#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#abortCorrection#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#78375#78442#0" expanded="false" />
+            <element signature="e#79266#79331#0" expanded="false" />
+            <element signature="e#79587#79653#0" expanded="false" />
+            <element signature="e#79876#79939#0" expanded="false" />
+            <element signature="e#80376#80435#0" expanded="false" />
+            <element signature="e#80712#80776#0" expanded="false" />
+            <element signature="e#81221#81261#0" expanded="false" />
+            <element signature="method#handleClose#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#postUpdateSuggestions#1;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#pickDefaultSuggestion#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#86364#86426#0" expanded="false" />
+            <element signature="docComment;method#pickSuggestion#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#pickSuggestion#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#isCursorTouchingWord#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#90831#90902#0" expanded="false" />
+            <element signature="method#revertLastWord#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#nextAlterKeyboard#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#nextKeyboard#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#92877#92943#0" expanded="false" />
+            <element signature="method#fillSeparatorsSparseArray#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#setKeyboardFinalStuff#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#onSwipeRight#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#onSwipeLeft#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#onSwipeDown#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#onSwipeUp#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#onPinch#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#onSeparate#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#sendKeyDown#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#sendKeyUp#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#onPress#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#97743#97794#0" expanded="false" />
+            <element signature="method#onRelease#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#loadSettings#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#setDictionariesForCurrentKeyboard#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#103193#103250#0" expanded="false" />
+            <element signature="method#launchSettings#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#launchDictionaryOverriding#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#showOptionsMenu#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#onConfigurationChanged#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#setInitialCondensedState#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#onSharedPreferenceChanged#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#deleteLastCharactersFromInput#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#showToastMessage#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#showToastMessage#1;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#onLowMemory#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="docComment;method#onEvaluateInputViewShown#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="e#112830#112863#0" expanded="false" />
+            <element signature="method#onEvaluateInputViewShown#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#resetKeyboardView#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#updateShiftStateNow#0;class#AnySoftKeyboard#0" expanded="false" />
+            <element signature="method#closeDictionaries#0;class#AnySoftKeyboard#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$ANDROID_HOME$/platforms/android-23/android.jar!/android/graphics/Canvas.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8673684">
+          <caret line="440" column="0" selection-start-line="440" selection-start-column="0" selection-end-line="440" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/views/CandidateView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="275" column="61" selection-start-line="275" selection-start-column="61" selection-end-line="275" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/lean_light_candidates_background.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/styles_lean_light_keyboard_theme.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.625">
+          <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/lean_light_keyboard_background.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

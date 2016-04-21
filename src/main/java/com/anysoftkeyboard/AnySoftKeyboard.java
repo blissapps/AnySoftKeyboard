@@ -412,7 +412,6 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 		// Remove pending messages related to update suggestions
 		abortCorrection(true, false);
 
-
 		mLocationResponder.endLocationResponder(this);
 	}
 
@@ -462,7 +461,6 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 		mInputView.setOnKeyboardActionListener(this);
 
 		mDistinctMultiTouch = mInputView.hasDistinctMultitouch();
-
 
 
 		return mInputView;
@@ -637,7 +635,8 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 				mAutoSpace = true;
 		}
 
-		mPredicting = false;
+		mPredicting = true;
+		closeIcon.setVisibility(View.INVISIBLE);
 		mJustAddedAutoSpace = false;
 		setCandidatesViewShown(false);
 
@@ -988,10 +987,6 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 
 			List<SuggestionObject> suggestions = SuggestionObject.createFromStringListUsingDefaultColor(stringList);
 
-			if (mIsAboveSpeedTreshold)
-			{
-				suggestions = mAboveTresholdSuggestionProvider.getSuggestions(mWord, false);
-			}
 
 			// CharSequence typedWord = mWord.getTypedWord();
 			setSuggestions(suggestions, true, true, true);
@@ -1025,7 +1020,7 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 			}
 		}
 	}
-
+	View closeIcon;
 	@Override
 	public void setCandidatesView(@NonNull View view)
 	{
@@ -1052,7 +1047,7 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 		a.recycle();
 
 		mCandidateCloseText = (TextView) view.findViewById(R.id.close_suggestions_strip_text);
-		View closeIcon = view.findViewById(R.id.close_suggestions_strip_icon);
+		closeIcon = view.findViewById(R.id.close_suggestions_strip_icon);
 
 		closeIcon.setOnClickListener(new OnClickListener()
 		{
@@ -1092,6 +1087,12 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 	{
 		if (mCandidateView != null)
 		{
+
+			if (mIsAboveSpeedTreshold)
+			{
+				suggestions = mAboveTresholdSuggestionProvider.getSuggestions(mWord, false);
+			}
+
 			mCandidateView.setSuggestions(suggestions, completions,
 				typedWordValid, haveMinimalSuggestion && mAutoCorrectOn);
 		}
@@ -2306,11 +2307,6 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 
 		List<SuggestionObject> suggestions = SuggestionObject.createFromStringListUsingDefaultColor(mSuggest.getNextSuggestions(mCommittedWord, false));
 
-		if (mIsAboveSpeedTreshold)
-		{
-			suggestions = mAboveTresholdSuggestionProvider.getSuggestions(mCommittedWord, false);
-		}
-
 		setSuggestions(suggestions, false, false, false);
 	}
 
@@ -2368,7 +2364,7 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 		// 1) Either we do like Linux and Windows (and probably ALL desktop
 		// OSes):
 		// Delete all the characters till a complete word was deleted:
-        /*
+		/*
          * What to do: We delete until we find a separator (the function
          * isBackWordStopChar). Note that we MUST delete a delete a whole word!
          * So if the back-word starts at separators, we'll delete those, and then
@@ -2567,7 +2563,8 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 		{
 			Log.d(TAG, "handleCharacter: %d, isPredictionOn: %s, mPredicting: %s", primaryCode, isPredictionOn(), mPredicting);
 		}
-		if(mIsAboveSpeedTreshold){
+		if (mIsAboveSpeedTreshold)
+		{
 			mVibrator.vibrate(ABOVE_THRESHOLD_VIBRATE_DURATION);
 		}
 		mExpectingSelectionUpdateBy = SystemClock.uptimeMillis() + MAX_TIME_TO_EXPECT_SELECTION_UPDATE;
@@ -2792,10 +2789,6 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 		else if (!TextUtils.isEmpty(mCommittedWord))
 		{
 			List<SuggestionObject> suggestions = SuggestionObject.createFromStringListUsingDefaultColor(mSuggest.getNextSuggestions(mCommittedWord, mWord.isAllUpperCase()));
-			if (mIsAboveSpeedTreshold)
-			{
-				suggestions = mAboveTresholdSuggestionProvider.getSuggestions(mCommittedWord, mWord.isAllUpperCase());
-			}
 
 			setSuggestions(suggestions, false, false, false);
 			mWord.setFirstCharCapitalized(false);
@@ -2864,6 +2857,13 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 			mCandidateCloseText.setVisibility(View.GONE);
 		}
 
+		//if(mIsAboveSpeedTreshold && mWord != null && mWord.getTypedWord().length() > 0 ){
+		//	closeIcon.setVisibility(View.INVISIBLE);
+
+		//}else {
+		//	closeIcon.setVisibility(View.VISIBLE);
+		//}
+
 		if (!mPredicting)
 		{
 			clearSuggestions();
@@ -2885,12 +2885,6 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 		// Don't auto-correct words with multiple capital letter
 		correctionAvailable &= !mWord.isMostlyCaps();
 		correctionAvailable &= !TextEntryState.isCorrecting();
-
-		if (mIsAboveSpeedTreshold)
-		{
-			stringList.clear();
-			stringList = mAboveTresholdSuggestionProvider.getSuggestions(mWord, false);
-		}
 
 		setSuggestions(stringList, false, typedWordValid, correctionAvailable);
 		if (stringList.size() > 0)
@@ -3006,10 +3000,6 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 				//mJustAutoAddedWord == false, we most likely do not have a next-word suggestion for a newly added word.
 
 				List<SuggestionObject> suggestions = SuggestionObject.createFromStringListUsingDefaultColor(mSuggest.getNextSuggestions(mCommittedWord, mWord.isAllUpperCase()));
-				if (mIsAboveSpeedTreshold)
-				{
-					suggestions = mAboveTresholdSuggestionProvider.getSuggestions(mCommittedWord, mWord.isAllUpperCase());
-				}
 				setSuggestions(suggestions, false, false, false);
 				mWord.setFirstCharCapitalized(false);
 			}
