@@ -40,6 +40,7 @@ public class AboveThresholdSuggestionProvider implements ISuggestionProvider
 				SUGGESTION_MAP.put(letter, suggestions);
 
 			}
+			SUGGESTION_MAP.put("", SuggestionObject.createFromStringListUsingDefaultColor(Arrays.asList((CharSequence)"","","")));
 			in.close();
 		}catch ( Exception ex){
 			Log.e("SpeedSugg", "error loading speed suggestions",ex);

@@ -1088,9 +1088,14 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 		if (mCandidateView != null)
 		{
 
-			if (mIsAboveSpeedTreshold)
+
+			if (mIsAboveSpeedTreshold && getCurrentInputConnection() != null)
 			{
-				suggestions = mAboveTresholdSuggestionProvider.getSuggestions(getCurrentInputConnection().getExtractedText(new ExtractedTextRequest(), 0).text, false);
+				ExtractedText text = getCurrentInputConnection().getExtractedText(new ExtractedTextRequest(), 0);
+				if(text != null)
+				{
+					suggestions = mAboveTresholdSuggestionProvider.getSuggestions(text.text, false);
+				}
 			}
 
 			mCandidateView.setSuggestions(suggestions, completions,
