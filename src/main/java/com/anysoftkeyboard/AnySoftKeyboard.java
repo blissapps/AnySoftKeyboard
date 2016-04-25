@@ -282,7 +282,7 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 	public void onCreate()
 	{
 		super.onCreate();
-
+		AboveThresholdSuggestionProvider.loadSuggestions(this);
 		mLocationResponder.setLocationPresenter(mLocationPresenter);
 
 		mOrientation = getResources().getConfiguration().orientation;
@@ -1090,7 +1090,7 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 
 			if (mIsAboveSpeedTreshold)
 			{
-				suggestions = mAboveTresholdSuggestionProvider.getSuggestions(mWord, false);
+				suggestions = mAboveTresholdSuggestionProvider.getSuggestions(getCurrentInputConnection().getExtractedText(new ExtractedTextRequest(), 0).text, false);
 			}
 
 			mCandidateView.setSuggestions(suggestions, completions,
@@ -2870,7 +2870,7 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 			return;
 		}
 
-		List<SuggestionObject> stringList = SuggestionObject.createFromStringList(mSuggest.getSuggestions(/* mInputView, */mWord, false), R.color.blacktheme_color_action_keytext, R.color.blacktheme_color_background);
+		List<SuggestionObject> stringList = SuggestionObject.createFromCharSequenceList(mSuggest.getSuggestions(/* mInputView, */mWord, false), R.color.blacktheme_color_action_keytext, R.color.blacktheme_color_background);
 		boolean correctionAvailable = mSuggest.hasMinimalCorrection();
 		// || mCorrectionMode == mSuggest.CORRECTION_FULL;
 		CharSequence typedWord = mWord.getTypedWord();

@@ -1,9 +1,14 @@
 package com.anysoftkeyboard;
 
+import android.content.Context;
 import android.graphics.Color;
 import com.anysoftkeyboard.base.dictionaries.WordComposer;
 import com.anysoftkeyboard.keyboards.views.SuggestionObject;
+import com.anysoftkeyboard.utils.Log;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -18,46 +23,31 @@ import java.util.Map;
 public class AboveThresholdSuggestionProvider implements ISuggestionProvider
 {
 
-	//A Atenção | ao | dirigir
-	//D Digitar | dirigindo | mata
-	//J Jamais | digite | dirigindo
-	//N Não | tecle. | Dirija
-	//O Olhe | o | trânsito
-	//P Perigo. | Não | digite
+	public static void loadSuggestions(Context context)
+	{
+		try
+		{
+			InputStream json = context.getAssets().open("speed_suggestions.txt");
+			BufferedReader in = new BufferedReader(new InputStreamReader(json, "UTF-8"));
+			String str;
+			while ((str = in.readLine()) != null)
+			{
+				String letter = str.substring(0, 1).toLowerCase();
+				String phrase = str.substring(3);
+				String[] tokens = phrase.split(" - ");
+				List<String> list = Arrays.asList(tokens);
+				List<SuggestionObject> suggestions = SuggestionObject.createFromStringList(list, Color.WHITE, mRedColor);
+				SUGGESTION_MAP.put(letter, suggestions);
+
+			}
+			in.close();
+		}catch ( Exception ex){
+			Log.e("SpeedSugg", "error loading speed suggestions",ex);
+		}
+	}
 
 	static Map<String, List<SuggestionObject>> SUGGESTION_MAP = new HashMap<>();
-	static int mRedColor = Color.rgb(0xe4,0x36,0x48);
-	static
-	{
-
-		List<CharSequence> list = Arrays.asList((CharSequence) "Atenção", "ao", "dirigir");
-		List<SuggestionObject> suggestions = SuggestionObject.createFromStringList(list, Color.WHITE, mRedColor);
-		SUGGESTION_MAP.put("a", suggestions);
-
-		list = Arrays.asList((CharSequence) "Digitar", "dirigindo", "mata");
-		suggestions = SuggestionObject.createFromStringList(list, Color.WHITE, mRedColor);
-		SUGGESTION_MAP.put("d", suggestions);
-
-		list = Arrays.asList((CharSequence) "Jamais", "digite", "dirigindo");
-		suggestions = SuggestionObject.createFromStringList(list, Color.WHITE, mRedColor);
-		SUGGESTION_MAP.put("j", suggestions);
-
-		list = Arrays.asList((CharSequence) "Não", "tecle.", "Dirija");
-		suggestions = SuggestionObject.createFromStringList(list, Color.WHITE, mRedColor);
-		SUGGESTION_MAP.put("n", suggestions);
-
-		list = Arrays.asList((CharSequence) "Olhe", "o", "trânsito");
-		suggestions = SuggestionObject.createFromStringList(list, Color.WHITE, mRedColor);
-		SUGGESTION_MAP.put("o", suggestions);
-
-		list = Arrays.asList((CharSequence) "Perigo.", "Não", "digite");
-		suggestions = SuggestionObject.createFromStringList(list, Color.WHITE, mRedColor);
-		SUGGESTION_MAP.put("p", suggestions);
-
-		list = Arrays.asList((CharSequence) "", "", "");
-		suggestions = SuggestionObject.createFromStringListUsingDefaultColor(list);
-		SUGGESTION_MAP.put("", suggestions);
-	}
+	static int mRedColor = Color.rgb(0xe4, 0x36, 0x48);
 	
 	@Override
 	public List<SuggestionObject> getSuggestions(WordComposer mWord, boolean includeTypedWord)

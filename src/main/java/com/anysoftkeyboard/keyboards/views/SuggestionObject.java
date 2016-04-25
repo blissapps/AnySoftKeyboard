@@ -48,7 +48,19 @@ public class SuggestionObject
 	}
 
 
-	public static List<SuggestionObject> createFromStringList(List<CharSequence> list, int foregroundColor, int backgroundColor){
+	public static List<SuggestionObject> createFromStringList(List<String> list, int foregroundColor, int backgroundColor){
+		ArrayList<SuggestionObject> suggestionObjects = new ArrayList<>(list.size());
+
+		for (String suggestion :
+			list)
+		{
+			SuggestionObject object = SuggestionObject.create(suggestion, foregroundColor, backgroundColor);
+			suggestionObjects.add(object);
+		}
+		return suggestionObjects;
+	}
+
+	public static List<SuggestionObject> createFromCharSequenceList(List<CharSequence> list, int foregroundColor, int backgroundColor){
 		ArrayList<SuggestionObject> suggestionObjects = new ArrayList<>(list.size());
 
 		for (CharSequence suggestion :
