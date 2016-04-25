@@ -5,7 +5,7 @@ F. Fique - Concentrado - Dirigindo
 G. Garanta - Sua Segurança - Não Digite
 H. Hora - De Dirigir - Não Digite
 I. Imprudência - Mata - Não Digite
-J. Jamais - Digite - Dirigindo.
+J. Jamais - Digite - Dirigindo
 K. KD - A Atenção? - Não Digite
 L. Largue - O Celular - Dirigindo
 M. Mantenha - Atenção - Dirigindo
@@ -13,7 +13,7 @@ N. Nunca - Tecle - Dirigindo
 O. Olhe - O - Trânsito
 P. Perigo - Não - Digite
 Q. Que - Perigo - Não Digite
-R. Risco - Não - Digite.
+R. Risco - Não - Digite
 S. Salve - Vidas - Não Digite
 T. Tenha - Cuidado - Não Digite
 U. Uma - Mensagem - Mata
