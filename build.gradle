@@ -70,7 +70,7 @@ android {
     buildToolsVersion androidBuildTools
 
     defaultConfig {
-        applicationId 'com.blissapplications.safestkeyboard'
+        applicationId 'com.blissapplications.thesafetykeyboard'
         versionCode VersionBuilder.buildGitVersionNumber()
         versionName project.version
 
