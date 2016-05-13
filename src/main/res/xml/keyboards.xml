@@ -7,7 +7,7 @@
               physicalKeyboardMappingResId="@xml/physical"
               screenshotResId="@drawable/english_qwerty_screenshot"
             />
-    <Keyboard nameResId="@string/eng_keyboard"
+    <!--<Keyboard nameResId="@string/eng_keyboard"
               iconResId="@drawable/ic_stat_en" layoutResId="@xml/eng_16keys"
               landscapeResId="@xml/qwerty" id="12335055-4aa6-49dc-8456-c7d38a1a5123"
               defaultDictionaryLocale="en" description="16 keys English layout"
@@ -22,6 +22,6 @@
               index="3" defaultEnabled="false"
               physicalKeyboardMappingResId="@xml/physical"
               screenshotResId="@drawable/english_qwerty_with_symbols_screenshot"
-            />
+            />-->
 
 </Keyboards>

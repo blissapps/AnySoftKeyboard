@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <KeyboardThemes>
-    <KeyboardTheme
+    <!--<KeyboardTheme
         id="ac8ea510-ca66-11e1-9b23-0800200c9a66"
         nameResId="@string/lean_dark_keyboard_theme_name"
         themeRes="@style/LeanDark"
@@ -53,7 +53,7 @@
         iconsThemeRes="@style/AnyKeyboardBaseKeyIconTheme"
         themeScreenshot="@drawable/dark_lean_large_screenshot"
         description="@string/lean_dark_big_keyboard_theme_description"
-        index="6"/>
+        index="6"/>-->
     <KeyboardTheme
         id="c38a9214-4338-4cb0-b68e-11d1683d4424"
         nameResId="@string/lean_light_keyboard_theme_name"
@@ -63,7 +63,7 @@
         themeScreenshot="@drawable/lean_light_theme_screenshot"
         description="@string/lean_light_keyboard_theme_description"
         index="7"/>
-    <KeyboardTheme
+    <!--<KeyboardTheme
         id="b548be5a-1358-4b61-9bd9-1cd4a0511ccb"
         nameResId="@string/lean_light_2_keyboard_theme_name"
         themeRes="@style/LeanLight2"
@@ -80,5 +80,5 @@
         iconsThemeRes="@style/LeanLightKeyIconTheme"
         themeScreenshot="@drawable/lean_light_theme_screenshot"
         description="@string/lean_light_big_keyboard_theme_description"
-        index="8"/>
+        index="8"/>-->
 </KeyboardThemes>

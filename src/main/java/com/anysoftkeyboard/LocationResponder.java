@@ -125,8 +125,22 @@ public class LocationResponder implements ILocationResponder
 			return StartLocationResponderStatus.Failed;
 		}
 
+		//mHandler.post(mockRunnable);
+
+
 		return StartLocationResponderStatus.Success;
 	}
+
+	private Runnable mockRunnable = new Runnable()
+	{
+		@Override
+		public void run()
+		{
+			ensureLocationPresenter();
+			getLocationPresenter().aboveSpeedThreshold();
+			mHandler.postDelayed(mockRunnable, 1000);
+		}
+	};
 
 
 	@Override

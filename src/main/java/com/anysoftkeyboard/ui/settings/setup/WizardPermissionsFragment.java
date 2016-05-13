@@ -65,6 +65,7 @@ public class WizardPermissionsFragment extends WizardPageBaseFragment implements
         view.findViewById(R.id.ask_for_permissions_action).setOnClickListener(this);
 		view.findViewById(R.id.ask_for_location_permissions_action).setOnClickListener(this);
         view.findViewById(R.id.disable_contacts_dictionary).setOnClickListener(this);
+		view.findViewById(R.id.disable_location).setOnClickListener(this);
         view.findViewById(R.id.open_permissions_wiki_action).setOnClickListener(this);
     }
 
@@ -85,7 +86,7 @@ public class WizardPermissionsFragment extends WizardPageBaseFragment implements
     public void onClick(View v) {
         MainSettingsActivity activity = (MainSettingsActivity) getActivity();
         if (activity == null) return;
-
+		SharedPreferences sharedPreferences = null;
         switch (v.getId()) {
             case R.id.ask_for_permissions_action:
                 activity.startPermissionsRequest(mContactsPermissionRequest);
@@ -94,7 +95,7 @@ public class WizardPermissionsFragment extends WizardPageBaseFragment implements
 				activity.startPermissionsRequest(mLocationPermissionRequest);
 				break;
             case R.id.disable_contacts_dictionary:
-                SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(activity);
+				sharedPreferences = PreferenceManager.getDefaultSharedPreferences(activity);
                 SharedPreferencesCompat.EditorCompat.getInstance().apply(
                         sharedPreferences
                                 .edit()
@@ -102,6 +103,15 @@ public class WizardPermissionsFragment extends WizardPageBaseFragment implements
                 );
                 refreshWizardPager();
                 break;
+			case R.id.disable_location:
+				 sharedPreferences = PreferenceManager.getDefaultSharedPreferences(activity);
+				SharedPreferencesCompat.EditorCompat.getInstance().apply(
+					sharedPreferences
+						.edit()
+						.putBoolean(getString(R.string.settings_key_use_location), false)
+				);
+				refreshWizardPager();
+				break;
             case R.id.open_permissions_wiki_action:
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.permissions_wiki_site_url)));
                 try {

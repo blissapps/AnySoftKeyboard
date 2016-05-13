@@ -75,6 +75,7 @@
 
         <LinearLayout
             style="@style/Ask.Menu.Row"
+            android:visibility="gone"
             android:onClick="onNavigateToKeyboardThemeSettings">
 
             <TextView
@@ -88,7 +89,7 @@
             <!-- consider to show the Theme's icon -->
         </LinearLayout>
 
-        <View style="@style/Ask.Menu.Item.Divider" />
+        <View style="@style/Ask.Menu.Item.Divider" android:visibility="gone" />
 
         <TextView
             style="@style/Ask.Menu.Item"

@@ -9,6 +9,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
+                style="@style/Ask.Legal.Title"
+                android:text="@string/legal_this_app_uses_ask_source_code_title"/>
+        <TextView
+                style="@style/Ask.Legal.Text"
+                android:text="@string/legal_this_app_uses_ask_source_code_license"/>
+        <View
+                style="@style/Ask.Legal.Divider" />
+        <TextView
             style="@style/Ask.Legal.Title"
             android:text="@string/legal_this_app_uses_android_source_code_title"/>
         <TextView

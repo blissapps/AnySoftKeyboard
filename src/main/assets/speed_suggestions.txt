@@ -1,26 +1,26 @@
-A. Atenção - Ao - Dirigir
-B. Bora - Dirigir - Sem Digitar
-C. Cuidado - Não - Digite
-F. Fique - Concentrado - Dirigindo
-G. Garanta - Sua Segurança - Não Digite
-H. Hora - De Dirigir - Não Digite
-I. Imprudência - Mata - Não Digite
-J. Jamais - Digite - Dirigindo
-K. KD - A Atenção? - Não Digite
-L. Largue - O Celular - Dirigindo
-M. Mantenha - Atenção - Dirigindo
-N. Nunca - Tecle - Dirigindo
-O. Olhe - O - Trânsito
-P. Perigo - Não - Digite
-Q. Que - Perigo - Não Digite
-R. Risco - Não - Digite
-S. Salve - Vidas - Não Digite
-T. Tenha - Cuidado - Não Digite
-U. Uma - Mensagem - Mata
-V. Vá - Dirigir - Agora
-W. WOW - Não - Digite
-X. Xiiii - Digitando - Dirigindo
-Y. Yep! - Digitar - Mata
-Z. Zapzap - Agora Não - Dirija
-D. Digitar - Dirigindo - Mata
-E. Esteja - Atento - Dirigindo
+A. Atenção - ao - dirigir
+B. Bora - dirigir - sem digitar
+C. Cuidado - Não - digite
+D. Digitar - dirigindo - mata
+E. Esteja - atento - dirigindo
+F. Fique - concentrado - dirigindo
+G. Garanta-se - Não - digite
+H. Hora - de dirigir - Não digite
+I. Imprudência - mata - Não digite
+J. Jamais - digite - dirigindo
+K. KD - a atenção? - Não digite
+L. Largue - o celular - dirigindo
+M. Mantenha - atenção - dirigindo
+N. Nunca - tecle - dirigindo
+O. Olhe - o - trânsito
+P. Perigo - Não - digite
+Q. Que - perigo - Não digite
+R. Risco - Não - digite
+S. Salve - vidas - Não digite
+T. Tenha - cuidado - Não digite
+U. Uma - mensagem - mata
+V. Vá - dirigir - agora
+W. WOW - Não - digite
+X. Xiiii - Digitando - dirigindo
+Y. Yep! - Digitar - mata
+Z. Zapzap - agora não - Dirija
