@@ -253,21 +253,22 @@ public class CandidateView extends View {
 
             mWordX[i] = x;
 
+			int containerWidth = displayMetrics.widthPixels/3;
+
             if (touchX != OUT_OF_BOUNDS_X_CORD && !scrolled
                     && touchX + scrollX >= x
-                    && touchX + scrollX < x + wordWidth) {
+                    && touchX + scrollX < x + containerWidth) {
                 if (canvas != null && !mShowingAddToDictionary) {
-                    canvas.translate(x, 0);
-                    mSelectionHighlight.setBounds(0, bgPadding.top, wordWidth,
+                    canvas.translate(x+2, 0);
+                    mSelectionHighlight.setBounds(2, bgPadding.top, containerWidth,
                             height);
                     mSelectionHighlight.draw(canvas);
-                    canvas.translate(-x, 0);
+                    canvas.translate(-(x+2), 0);
                 }
                 mSelectedString = suggestion;
                 mSelectedIndex = i;
             }
 
-			int containerWidth = displayMetrics.widthPixels/3;
 
             if (canvas != null) {
                 // (+)This is the trick to get RTL/LTR text correct

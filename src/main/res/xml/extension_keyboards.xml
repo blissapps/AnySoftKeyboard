@@ -67,7 +67,7 @@
             description=""
             index="2"
             />
-    <ExtensionKeyboard
+    <!--<ExtensionKeyboard
             id="3659b9e0-dee2-11e0-9572-0800200c9a66"
             nameResId="@string/extension_kbd_bottom_iphone_with_voice"
             extensionKeyboardResId="@xml/ext_kbd_bottom_row_iphone_with_mic"
@@ -82,7 +82,7 @@
             extensionKeyboardType="@integer/extension_keyboard_type_bottom_row"
             description=""
             index="4"
-            />
+            />-->
     <ExtensionKeyboard
             id="3DFFC2AD-8BC8-47F3-962A-918156AD8DD0"
             nameResId="@string/extension_kbd_bottom_alt_with_mic"

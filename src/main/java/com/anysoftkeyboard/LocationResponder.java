@@ -18,7 +18,7 @@ import org.joda.time.DateTime;
  */
 public class LocationResponder implements ILocationResponder
 {
-
+	private final static String TAG = "LRSP";
 	private static final float SPEED_THRESHOLD_M_S = (15.0f * 1000) / 3600;
 	private float mSpeedThreshold = SPEED_THRESHOLD_M_S;
 	private static final long LOCATION_PROVIDER_MIN_TIME = 5000;
@@ -122,6 +122,7 @@ public class LocationResponder implements ILocationResponder
 		}
 		catch (SecurityException e)
 		{
+			Log.e(TAG,"Can't request location updates", e);
 			return StartLocationResponderStatus.Failed;
 		}
 

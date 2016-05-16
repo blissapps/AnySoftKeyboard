@@ -11,61 +11,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96ffe44a-7c98-4bdf-bf50-8e1129f84136" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-ar/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-be/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-bg/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-ca/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-cs/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-da/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-de/currency_data.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-de/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-el/currency_data.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-el/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-eo/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-es/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-fi/currency_data.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-fi/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-fr/currency_data.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-fr/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-hu/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-hy/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-in/currency_data.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-it/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-iw/currency_data.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-iw/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-ka/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-kn/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-ku/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-lt/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-mk/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-my/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-nl/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-no/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-pl/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-ro/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-ru/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-se/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-sk/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-sl/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-ta/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-th/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-tl/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-tlh/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-tr/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/res/values-vi/strings.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnySoftKeyboard-release.apk" afterPath="$PROJECT_DIR$/AnySoftKeyboard-release.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnySoftKeyboard.iws" afterPath="$PROJECT_DIR$/AnySoftKeyboard.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/versionbuilder/VersionBuilder.groovy" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/versionbuilder/VersionBuilder.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/assets/speed_suggestions.txt" afterPath="$PROJECT_DIR$/src/main/assets/speed_suggestions.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AnySoftKeyboard.java" afterPath="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AnySoftKeyboard.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/LocationResponder.java" afterPath="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/LocationResponder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/ui/settings/setup/WizardPermissionsFragment.java" afterPath="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/ui/settings/setup/WizardPermissionsFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout-w600dp/main_fragment.xml" afterPath="$PROJECT_DIR$/src/main/res/layout-w600dp/main_fragment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/additional_software_licenses.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/additional_software_licenses.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/keyboard_setup_wizard_page_permissions_layout.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/keyboard_setup_wizard_page_permissions_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/main_fragment.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/main_fragment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/main_fragment_top_info_layout.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/main_fragment_top_info_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/views/CandidateView.java" afterPath="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/views/CandidateView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/views/SuggestionObject.java" afterPath="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/views/SuggestionObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/keyboard_setup_wizard_page_additional_settings_layout.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/keyboard_setup_wizard_page_additional_settings_layout.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/side_menu_layout.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/side_menu_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-ar/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-ar/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-be/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-be/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-bg/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-bg/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-ca/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-ca/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-cs/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-cs/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-da/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-da/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-de/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-de/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-el/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-el/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-eo/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-eo/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-es/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-es/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-fi/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-fi/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-fr/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-fr/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-hu/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-hu/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-it/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-it/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-iw/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-iw/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-ka/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-ka/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-ku/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-ku/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-lt/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-lt/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-mk/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-mk/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-my/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-my/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-nl/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-nl/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-no/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-no/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-pl/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-pl/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-pt-rBR/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-pt-rBR/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-pt/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-pt/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-ro/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-ro/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-ru/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-ru/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-se/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-se/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-sk/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-sk/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-sl/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-sl/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-th/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-th/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-tl/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-tl/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-tlh/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-tlh/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-tr/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-tr/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-uk/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-uk/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-v21/settings_defaults_dont_translate.xml" afterPath="$PROJECT_DIR$/src/main/res/values-v21/settings_defaults_dont_translate.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-vi/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values-vi/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values/legal_strings_dont_translate.xml" afterPath="$PROJECT_DIR$/src/main/res/values/legal_strings_dont_translate.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values-v8/settings_defaults_dont_translate.xml" afterPath="$PROJECT_DIR$/src/main/res/values-v8/settings_defaults_dont_translate.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/src/main/res/values/colors.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values/settings_defaults_dont_translate.xml" afterPath="$PROJECT_DIR$/src/main/res/values/settings_defaults_dont_translate.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values/strings_dont_translate.xml" afterPath="$PROJECT_DIR$/src/main/res/values/strings_dont_translate.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/xml/keyboard_themes.xml" afterPath="$PROJECT_DIR$/src/main/res/xml/keyboard_themes.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/xml/keyboards.xml" afterPath="$PROJECT_DIR$/src/main/res/xml/keyboards.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/xml/extension_keyboards.xml" afterPath="$PROJECT_DIR$/src/main/res/xml/extension_keyboards.xml" />
     </list>
     <ignored path="AnySoftKeyboard.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -169,21 +171,7 @@
     <favorites_list name="AnySoftKeyboard" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="keyboard_setup_wizard_page_permissions_layout.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/res/layout/keyboard_setup_wizard_page_permissions_layout.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66592425">
-              <caret line="151" column="2" selection-start-line="151" selection-start-column="2" selection-end-line="151" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -4849,23 +4837,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/res/values/settings_defaults_dont_translate.xml" />
-        <option value="$PROJECT_DIR$/buildSrc/src/main/groovy/versionbuilder/VersionBuilder.groovy" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/additional_software_licenses.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/values/legal_strings_dont_translate.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/values-ar/strings.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/values-be/strings.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/values-da/strings.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/values-el/strings.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/values-eo/strings.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/values-fi/strings.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/values-iw/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values-ka/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values-ku/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values-mk/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values-my/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values-no/strings.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/values-pt-rBR/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values-ro/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values-se/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values-sk/strings.xml" />
@@ -4884,7 +4860,6 @@
         <option value="$PROJECT_DIR$/src/main/res/values-lt/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values-nl/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values-pl/strings.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/values-pt/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values-ru/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values-sl/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values-tr/strings.xml" />
@@ -4893,13 +4868,26 @@
         <option value="$PROJECT_DIR$/src/main/res/values/strings_dont_translate.xml" />
         <option value="$PROJECT_DIR$/src/main/res/xml/keyboards.xml" />
         <option value="$PROJECT_DIR$/src/main/res/xml/keyboard_themes.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/side_menu_layout.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/ui/settings/setup/WizardPermissionsFragment.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/main_fragment.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/main_fragment_top_info_layout.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout-w600dp/main_fragment.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/keyboard_setup_wizard_page_permissions_layout.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/LocationResponder.java" />
+        <option value="$PROJECT_DIR$/src/main/res/xml/extension_keyboards.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values-v8/settings_defaults_dont_translate.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/settings_defaults_dont_translate.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/xml/ext_kbd_bottom_row_ng.xml" />
+        <option value="$PROJECT_DIR$/build/generated/source/r/debug/com/menny/android/anysoftkeyboard/R.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/views/SuggestionObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AnySoftKeyboard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/views/CandidateView.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/side_menu_layout.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values-pt-rBR/strings.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/keyboard_setup_wizard_page_additional_settings_layout.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values-pt/strings.xml" />
       </list>
     </option>
   </component>
@@ -4965,6 +4953,104 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="AnySoftKeyboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnySoftKeyboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnySoftKeyboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnySoftKeyboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnySoftKeyboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnySoftKeyboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnySoftKeyboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnySoftKeyboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnySoftKeyboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnySoftKeyboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnySoftKeyboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -5366,7 +5452,7 @@
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
       <option name="PREFERRED_AVD" value="" />
       <option name="USE_COMMAND_LINE" value="true" />
       <option name="COMMAND_LINE" value="" />
@@ -5427,7 +5513,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1173" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="1173" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -5436,24 +5522,24 @@
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49763033" sideWeight="0.39456868" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49763033" sideWeight="0.456869" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985783" sideWeight="0.45527157" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985783" sideWeight="0.40681577" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49763033" sideWeight="0.6054313" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49763033" sideWeight="0.543131" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29286474" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29286474" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985783" sideWeight="0.45953143" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985783" sideWeight="0.81629395" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32985783" sideWeight="0.47870076" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -5496,25 +5582,25 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AnySoftKeyboard.java</url>
-          <line>3248</line>
+          <line>3253</line>
           <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AnySoftKeyboard.java</url>
-          <line>3256</line>
+          <line>3261</line>
           <properties />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AnySoftKeyboard.java</url>
-          <line>2293</line>
+          <line>2298</line>
           <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AnySoftKeyboard.java</url>
-          <line>1861</line>
+          <line>1866</line>
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
@@ -5533,334 +5619,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-ro/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5882353">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-se/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5882353">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-sk/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5882353">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-th/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5882353">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-tl/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5882353">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-tlh/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5882353">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-vi/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5882353">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-bg/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4313726">
-          <caret line="195" column="96" selection-start-line="195" selection-start-column="96" selection-end-line="195" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-ca/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4313726">
-          <caret line="416" column="14" selection-start-line="416" selection-start-column="14" selection-end-line="416" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-cs/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4313726">
-          <caret line="351" column="115" selection-start-line="351" selection-start-column="115" selection-end-line="351" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-de/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4313726">
-          <caret line="442" column="136" selection-start-line="442" selection-start-column="136" selection-end-line="442" selection-end-column="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-es/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4313726">
-          <caret line="355" column="114" selection-start-line="355" selection-start-column="114" selection-end-line="355" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-fr/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4313726">
-          <caret line="457" column="22" selection-start-line="457" selection-start-column="22" selection-end-line="457" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-hu/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4313726">
-          <caret line="329" column="22" selection-start-line="329" selection-start-column="22" selection-end-line="329" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-it/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4313726">
-          <caret line="451" column="127" selection-start-line="451" selection-start-column="127" selection-end-line="451" selection-end-column="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-lt/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4313726">
-          <caret line="458" column="22" selection-start-line="458" selection-start-column="22" selection-end-line="458" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-nl/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4313726">
-          <caret line="405" column="14" selection-start-line="405" selection-start-column="14" selection-end-line="405" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-pl/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4313726">
-          <caret line="383" column="22" selection-start-line="383" selection-start-column="22" selection-end-line="383" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-pt/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4313726">
-          <caret line="431" column="22" selection-start-line="431" selection-start-column="22" selection-end-line="431" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-ru/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4313726">
-          <caret line="386" column="105" selection-start-line="386" selection-start-column="105" selection-end-line="386" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-sl/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4313726">
-          <caret line="462" column="22" selection-start-line="462" selection-start-column="22" selection-end-line="462" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-tr/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4313726">
-          <caret line="98" column="22" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-uk/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4313726">
-          <caret line="397" column="124" selection-start-line="397" selection-start-column="124" selection-end-line="397" selection-end-column="124" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7777777">
-          <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/switch_preference_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/preference_list_fragment.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="8.6375">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/developer_tools.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.6875">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/keyboard_setup_wizard_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.7">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/keyboard_setup_wizard_page_additional_settings_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.125">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/main_keyboard_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/strings_dont_translate.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3598726">
-          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/ui/settings/MainSettingsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="146" column="53" selection-start-line="146" selection-start-column="53" selection-end-line="146" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#16042#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#4759#4760#0" expanded="false" />
-            <element signature="e#4800#4801#0" expanded="false" />
-            <element signature="e#4864#4865#0" expanded="false" />
-            <element signature="e#4907#4908#0" expanded="false" />
-            <element signature="e#9627#9628#0" expanded="false" />
-            <element signature="e#9685#9686#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/KeyboardFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#6988#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/addons/AddOnsFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="290" column="25" selection-start-line="290" selection-start-column="25" selection-end-line="290" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#15468#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1552#1553#0" expanded="false" />
-            <element signature="e#1621#1622#0" expanded="false" />
-            <element signature="e#8402#8403#0" expanded="false" />
-            <element signature="e#8430#8431#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/xml/eng_16keys.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/xml-pt/popup_domains.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/xml/ext_kbd_bottom_row_alt.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/xml/extension_keyboards.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/xml/keyboards.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/xml/qwerty.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.75">
@@ -5876,19 +5634,6 @@
           <folding>
             <element signature="e#2758#2798#0" expanded="false" />
             <element signature="e#3018#3065#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/side_menu_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.3773584">
-          <caret line="91" column="75" selection-start-line="91" selection-start-column="75" selection-end-line="91" selection-end-column="75" />
-          <folding>
-            <element signature="e#1897#1937#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5926,36 +5671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/ui/settings/setup/WizardPermissionsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6168421">
-          <caret line="110" column="80" selection-start-line="110" selection-start-column="80" selection-end-line="110" selection-end-column="80" />
-          <folding>
-            <element signature="e#4351#4407#0" expanded="true" />
-            <element signature="e#4956#5016#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7169811">
-          <caret line="648" column="18" selection-start-line="648" selection-start-column="18" selection-end-line="648" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout-w600dp/main_fragment.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4699332">
-          <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/main_fragment_non_release_layout.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -5967,13 +5682,410 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout-w600dp/main_fragment.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.90566">
+          <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/keyboard_setup_wizard_page_permissions_layout.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66592425">
-          <caret line="151" column="2" selection-start-line="151" selection-start-column="2" selection-end-line="151" selection-end-column="2" />
+        <state vertical-scroll-proportion="-1.018868">
+          <caret line="105" column="60" selection-start-line="105" selection-start-column="33" selection-end-line="105" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/ui/settings/setup/WizardPermissionsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="110" column="80" selection-start-line="110" selection-start-column="80" selection-end-line="110" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/ILocationResponder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/LocationResponder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="118" column="11" selection-start-line="118" selection-start-column="11" selection-end-line="118" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/xml/ext_kbd_bottom_row_alt.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="18.833334">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/xml/ext_kbd_bottom_row_alt_with_mic.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/xml/ext_kbd_bottom_row_iphone.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#240#271#0" expanded="false" />
+            <element signature="e#353#381#0" expanded="false" />
+            <element signature="e#458#490#0" expanded="false" />
+            <element signature="e#638#671#0" expanded="false" />
+            <element signature="e#791#816#0" expanded="false" />
+            <element signature="e#1116#1141#0" expanded="false" />
+            <element signature="e#1252#1279#0" expanded="false" />
+            <element signature="e#1361#1389#0" expanded="false" />
+            <element signature="e#1466#1498#0" expanded="false" />
+            <element signature="e#1646#1679#0" expanded="false" />
+            <element signature="e#1823#1853#0" expanded="false" />
+            <element signature="e#1946#1971#0" expanded="false" />
+            <element signature="e#2271#2296#0" expanded="false" />
+            <element signature="e#2408#2436#0" expanded="false" />
+            <element signature="e#2518#2546#0" expanded="false" />
+            <element signature="e#2623#2655#0" expanded="false" />
+            <element signature="e#2803#2836#0" expanded="false" />
+            <element signature="e#3036#3061#0" expanded="false" />
+            <element signature="e#3255#3281#0" expanded="false" />
+            <element signature="e#3360#3385#0" expanded="false" />
+            <element signature="e#3496#3526#0" expanded="false" />
+            <element signature="e#3608#3636#0" expanded="false" />
+            <element signature="e#3713#3745#0" expanded="false" />
+            <element signature="e#3893#3926#0" expanded="false" />
+            <element signature="e#4127#4152#0" expanded="false" />
+            <element signature="e#4346#4372#0" expanded="false" />
+            <element signature="e#4451#4476#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/xml/ext_kbd_ext_keyboard_numbers_symbols.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="11.333333">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#842#870#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/ui/settings/KeyboardThemeTweaksFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/xml/prefs_keyboard_theme_tweaks.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="41.333332">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/ui/settings/BottomRowSelectorFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35346097">
+          <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboardextensions/KeyboardExtensionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08836524">
+          <caret line="129" column="39" selection-start-line="129" selection-start-column="32" selection-end-line="129" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/addons/AddOnsFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="360" column="19" selection-start-line="360" selection-start-column="19" selection-end-line="360" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values-v21/settings_defaults_dont_translate.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values-v19/frankenrobot.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values-v16/frankenrobot.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values-v14/integers.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values-v11/settings_defaults_dont_translate.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values-v8/settings_defaults_dont_translate.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.091603056">
+          <caret line="4" column="95" selection-start-line="4" selection-start-column="95" selection-end-line="4" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/xml/extension_keyboards.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5">
+          <caret line="4" column="52" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/settings_defaults_dont_translate.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.375">
+          <caret line="49" column="84" selection-start-line="49" selection-start-column="84" selection-end-line="49" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/generated/source/r/debug/com/menny/android/anysoftkeyboard/R.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="29.004211">
+          <caret line="5841" column="34" selection-start-line="5841" selection-start-column="34" selection-end-line="5841" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/views/SuggestionObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="84" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="84" />
+          <folding>
+            <element signature="e#3121#3122#0" expanded="true" />
+            <element signature="e#3151#3152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AboveThresholdSuggestionProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45019922">
+          <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/views/CandidateView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1111112">
+          <caret line="253" column="26" selection-start-line="253" selection-start-column="26" selection-end-line="253" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/xml/prefs_addtional_ui_addons_prefs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="6.3333335">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/ui/settings/AdditionalUiSettingsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/ui/settings/MainSettingsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="225" column="33" selection-start-line="225" selection-start-column="33" selection-end-line="225" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/side_menu_layout.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.1698112">
+          <caret line="98" column="44" selection-start-line="98" selection-start-column="44" selection-end-line="98" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.291667">
+          <caret line="125" column="51" selection-start-line="125" selection-start-column="51" selection-end-line="125" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable-hdpi/ic_launcher.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58577406">
+          <caret line="56" column="74" selection-start-line="56" selection-start-column="74" selection-end-line="56" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/Keyboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="391.55554">
+          <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AnySoftKeyboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1915" column="26" selection-start-line="1915" selection-start-column="26" selection-end-line="1915" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/AskPrefsImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="571" column="28" selection-start-line="571" selection-start-column="28" selection-end-line="571" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/LayoutSwitchAnimationListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="133" column="26" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/AnyKeyboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.6296296">
+          <caret line="143" column="38" selection-start-line="143" selection-start-column="38" selection-end-line="143" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/intermediates/exploded-aar/com.github.AnySoftKeyboard/AnySoftKeyboard-API/1.3.4/res/values/values.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.4313726">
+          <caret line="40" column="48" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/xml/ext_kbd_bottom_row_ng.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.541667">
+          <caret line="64" column="61" selection-start-line="64" selection-start-column="61" selection-end-line="64" selection-end-column="61" />
+          <folding>
+            <element signature="e#434#474#0" expanded="false" />
+            <element signature="e#1576#1616#0" expanded="false" />
+            <element signature="e#2720#2760#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anysoftkeyboard/keyboards/views/AnyKeyboardBaseView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1642" column="71" selection-start-line="1642" selection-start-column="71" selection-end-line="1642" selection-end-column="71" />
+          <folding>
+            <element signature="e#73083#73137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/keyboard_setup_wizard_page_additional_settings_layout.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6993318">
+          <caret line="105" column="36" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values-pt/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9292453">
+          <caret line="535" column="0" selection-start-line="535" selection-start-column="0" selection-end-line="535" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values-pt-rBR/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14386792">
+          <caret line="505" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="535" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8514151">
+          <caret line="640" column="4" selection-start-line="640" selection-start-column="4" selection-end-line="642" selection-end-column="83" />
           <folding />
         </state>
       </provider>

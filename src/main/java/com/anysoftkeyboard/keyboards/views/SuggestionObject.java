@@ -15,7 +15,7 @@ public class SuggestionObject
 	private CharSequence suggestedWord;
 	private int foregroundColor;
 	private int backgroundColor;
-	private boolean useDefaultColors;
+	private boolean useDefaultColors = true;
 
 	public CharSequence getSuggestedWord()
 	{
@@ -72,6 +72,18 @@ public class SuggestionObject
 		return suggestionObjects;
 	}
 
+	public static List<SuggestionObject> createFromCharSequenceListUsingDefaultColor(List<CharSequence> list){
+		ArrayList<SuggestionObject> suggestionObjects = new ArrayList<>(list.size());
+
+		for (CharSequence suggestion :
+			list)
+		{
+			SuggestionObject object = SuggestionObject.createUsingDefaultColors(suggestion.toString());
+			suggestionObjects.add(object);
+		}
+		return suggestionObjects;
+	}
+
 	public static List<SuggestionObject> createFromStringListUsingDefaultColor(List<CharSequence> list)
 	{
 		ArrayList<SuggestionObject> suggestionObjects = new ArrayList<>(list.size());
@@ -88,18 +100,18 @@ public class SuggestionObject
 	private static SuggestionObject createUsingDefaultColors(String suggestion)
 	{
 		SuggestionObject result = new SuggestionObject();
-		result.useDefaultColors = true;
-		result.suggestedWord = suggestion;
+		result.setUseDefaultColors(true);
+		result.setSuggestedWord(suggestion);
 		return result;
 	}
 
 	private static SuggestionObject create(String suggestion, int foregroundColor, int backgroundColor)
 	{
 		SuggestionObject result = new SuggestionObject();
-		result.useDefaultColors = false;
-		result.backgroundColor = backgroundColor;
-		result.foregroundColor = foregroundColor;
-		result.suggestedWord = suggestion;
+		result.setUseDefaultColors(false);
+		result.setBackgroundColor(backgroundColor);
+		result.setForegroundColor(foregroundColor);
+		result.setSuggestedWord(suggestion);
 		return result;
 	}
 

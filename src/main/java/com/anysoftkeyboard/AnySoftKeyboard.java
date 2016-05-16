@@ -530,7 +530,12 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 			attribute.imeOptions, attribute.inputType, restarting);
 
 		super.onStartInputView(attribute, restarting);
-		mLocationResponder.startLocationResponder(this);
+		StartLocationResponderStatus status = mLocationResponder.startLocationResponder(this);
+
+		if(status.equals(StartLocationResponderStatus.Failed)){
+			Log.i(TAG, "Couldn't start Location Responder...");
+		}
+
 		if (mVoiceRecognitionTrigger != null)
 		{
 			mVoiceRecognitionTrigger.onStartInputView();
@@ -2875,7 +2880,7 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 			return;
 		}
 
-		List<SuggestionObject> stringList = SuggestionObject.createFromCharSequenceList(mSuggest.getSuggestions(/* mInputView, */mWord, false), R.color.blacktheme_color_action_keytext, R.color.blacktheme_color_background);
+		List<SuggestionObject> stringList = SuggestionObject.createFromCharSequenceListUsingDefaultColor(mSuggest.getSuggestions(/* mInputView, */mWord, false));
 		boolean correctionAvailable = mSuggest.hasMinimalCorrection();
 		// || mCorrectionMode == mSuggest.CORRECTION_FULL;
 		CharSequence typedWord = mWord.getTypedWord();
