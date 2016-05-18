@@ -210,26 +210,30 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 	{
 		public void aboveSpeedThreshold()
 		{
+			Log.d(TAG,"Above Speed Threshold!");
 			mIsAboveSpeedTreshold = true;
-			postUpdateSuggestions();
+			postUpdateSuggestions(-1);
 		}
 
 		public void belowSpeedThreshold()
 		{
+			Log.d(TAG,"Below Speed Threshold!");
 			mIsAboveSpeedTreshold = false;
-			postUpdateSuggestions();
+			postUpdateSuggestions(-1);
 		}
 
 		public void onLocationResponderDisabled()
 		{
+			Log.d(TAG,"Location Responder Disabled!");
 			mIsAboveSpeedTreshold = false;
-			postUpdateSuggestions();
+			postUpdateSuggestions(-1);
 		}
 
 		public void onLocationResponderEnabled()
 		{
+			Log.d(TAG,"Location Responder Enabled!");
 			mIsAboveSpeedTreshold = false;
-			postUpdateSuggestions();
+			postUpdateSuggestions(-1);
 		}
 	};
 
