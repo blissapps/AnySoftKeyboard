@@ -1631,9 +1631,12 @@ public class AnyKeyboardBaseView extends View implements
                 String langKeyText = null;
                 if (mSwitcher != null)//should show the next keyboard label, not a generic one.
                     langKeyText = mSwitcher.peekNextAlphabetKeyboard();
-                if (langKeyText == null)
+                if (langKeyText == null || langKeyText.trim().equals(""))
                     return getResources().getString(R.string.change_lang_regular);
-                else
+				if(langKeyText.length() > 7){
+					langKeyText = getResources().getString(R.string.change_lang_regular);
+				}
+
                     return langKeyText;
             case KeyCodes.MODE_SYMOBLS:
                 String symKeyText = null;
