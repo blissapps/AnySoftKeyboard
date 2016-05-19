@@ -1,4 +1,4 @@
-package com.anysoftkeyboard;
+package com.anysoftkeyboard.location;
 
 /**
  * Bliss Applications

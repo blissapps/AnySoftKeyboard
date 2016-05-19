@@ -1,4 +1,4 @@
-package com.anysoftkeyboard;
+package com.anysoftkeyboard.location;
 
 /**
  * Bliss Applications
@@ -6,7 +6,7 @@ package com.anysoftkeyboard;
  * Date: 18/04/16
  * Time: 13:12
  */
-enum StartLocationResponderStatus
+public enum StartLocationResponderStatus
 {
 	Failed, Success
 }

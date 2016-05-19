@@ -1,4 +1,4 @@
-package com.anysoftkeyboard;
+package com.anysoftkeyboard.location;
 
 import android.content.Context;
 import android.location.Location;
@@ -16,17 +16,10 @@ import org.joda.time.DateTime;
  * Date: 18/04/16
  * Time: 12:59
  */
-public class LocationResponder implements ILocationResponder
+public class GPSProviderLocationResponder extends BaseLocationResponder
 {
 	private final static String TAG = "LRSP";
-	private static final float SPEED_THRESHOLD_M_S = (15.0f * 1000) / 3600;
-	private float mSpeedThreshold = SPEED_THRESHOLD_M_S;
-	private static final long LOCATION_PROVIDER_MIN_TIME = 5000;
-	private static final float LOCATION_PROVIDER_MIN_DISTANCE = 10;
 
-	private float mSpeed = -1;
-	private long mLastLocationUpdate = 0;
-	private ILocationPresenter mLocationPresenter;
 	private LocationManager mLocationManager = null;
 	private Handler mHandler = new Handler();
 
@@ -132,16 +125,6 @@ public class LocationResponder implements ILocationResponder
 		return StartLocationResponderStatus.Success;
 	}
 
-	private Runnable mockRunnable = new Runnable()
-	{
-		@Override
-		public void run()
-		{
-			ensureLocationPresenter();
-			getLocationPresenter().aboveSpeedThreshold();
-			mHandler.postDelayed(mockRunnable, 1000);
-		}
-	};
 
 
 	@Override
@@ -165,35 +148,5 @@ public class LocationResponder implements ILocationResponder
 		return EndLocationResponderStatus.Success;
 	}
 
-	@Override
-	public void setLocationPresenter(ILocationPresenter locationPresenter)
-	{
-		this.mLocationPresenter = locationPresenter;
-		ensureLocationPresenter();
-	}
 
-	@Override
-	public ILocationPresenter getLocationPresenter()
-	{
-		ensureLocationPresenter();
-		return mLocationPresenter;
-	}
-
-	private void ensureLocationPresenter()
-	{
-		if (mLocationPresenter == null)
-		{
-			throw new LocationPresenterIsNullException();
-		}
-	}
-
-	public float getSpeedTreshold()
-	{
-		return mSpeedThreshold;
-	}
-
-	public void setSpeedTreshold(float speedTreshold)
-	{
-		this.mSpeedThreshold = speedTreshold;
-	}
 }

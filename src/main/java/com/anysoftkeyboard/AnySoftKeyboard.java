@@ -70,6 +70,7 @@ import com.anysoftkeyboard.keyboards.views.AnyKeyboardView;
 import com.anysoftkeyboard.keyboards.views.CandidateView;
 import com.anysoftkeyboard.keyboards.views.OnKeyboardActionListener;
 import com.anysoftkeyboard.keyboards.views.SuggestionObject;
+import com.anysoftkeyboard.location.*;
 import com.anysoftkeyboard.quicktextkeys.QuickTextKey;
 import com.anysoftkeyboard.quicktextkeys.QuickTextKeyFactory;
 import com.anysoftkeyboard.receivers.PackagesChangedReceiver;
@@ -110,7 +111,7 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 	private static final long ABOVE_THRESHOLD_VIBRATE_DURATION = 500;
 	
 	
-	private ILocationResponder mLocationResponder = new LocationResponder();
+	private ILocationResponder mLocationResponder = new LocationClientLocationResponder();
 	private boolean mIsAboveSpeedTreshold = false;
 	private ISuggestionProvider mAboveTresholdSuggestionProvider = new AboveThresholdSuggestionProvider();
 
