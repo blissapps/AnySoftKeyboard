@@ -62,7 +62,7 @@ public class GPSProviderLocationResponder extends BaseLocationResponder
 			{
 				mSpeed = -1;
 			}
-			mHandler.postDelayed(mTooLongWithoutUpdatesRunnable, LOCATION_PROVIDER_MIN_TIME * 2);
+			mHandler.postDelayed(mTooLongWithoutUpdatesRunnable, LOCATION_PROVIDER_MIN_TIME_MS * 2);
 			Log.d("AnySoft", "speed: " + mSpeed);
 
 		}
@@ -111,7 +111,7 @@ public class GPSProviderLocationResponder extends BaseLocationResponder
 
 		try
 		{
-			mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, LOCATION_PROVIDER_MIN_TIME, LOCATION_PROVIDER_MIN_DISTANCE, mLocationListener);
+			mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, LOCATION_PROVIDER_MIN_TIME_MS, LOCATION_PROVIDER_MIN_DISTANCE_M, mLocationListener);
 		}
 		catch (SecurityException e)
 		{
