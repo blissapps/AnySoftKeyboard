@@ -147,6 +147,37 @@
                         android:text="@string/turn_off_location"
                         android:background="@drawable/transparent_click_feedback_background"/>
 
+                <View
+                    style="@style/Ask.Menu.Divider"/>
+                <TextView
+                    style="@style/Ask.Text.Normal"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setup_wizard_step_storage_permissions_details"/>
+
+                <View
+                    style="@style/Ask.Menu.Divider"/>
+
+                <TextView
+                    android:id="@+id/ask_for_storage_permissions_action"
+                    style="@style/Ask.Text.Normal"
+                    android:padding="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/allow_permission"
+                    android:background="@drawable/transparent_click_feedback_background"/>
+                <TextView
+                    android:id="@+id/disable_storage"
+                    style="@style/Ask.Text.Normal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:padding="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/turn_off_storage"
+                    android:background="@drawable/transparent_click_feedback_background"/>
+
                 <TextView
                         android:id="@+id/open_permissions_wiki_action"
                         style="@style/Ask.Text.Normal"

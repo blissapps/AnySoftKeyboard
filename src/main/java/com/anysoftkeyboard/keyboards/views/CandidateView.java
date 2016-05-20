@@ -86,8 +86,9 @@ public class CandidateView extends View {
     private CharSequence mAddToDictionaryHint;
     private int mTargetScrollX;
     private int mTotalWidth;
-	KeyboardTheme mTheme;
-	AttributeSet mAttrs;
+    KeyboardTheme mTheme;
+    AttributeSet mAttrs;
+
     public CandidateView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
@@ -101,11 +102,11 @@ public class CandidateView extends View {
 
         mAddToDictionaryHint = context.getString(R.string.hint_add_to_dictionary);
         // themed
-		mAttrs = attrs;
-		mTheme = KeyboardThemeFactory
+        mAttrs = attrs;
+        mTheme = KeyboardThemeFactory
                 .getCurrentKeyboardTheme(context.getApplicationContext());
-		TypedArray a = mTheme.getPackageContext().obtainStyledAttributes(mAttrs,
-			R.styleable.AnyKeyboardViewTheme, 0, mTheme.getThemeResId());
+        TypedArray a = mTheme.getPackageContext().obtainStyledAttributes(mAttrs,
+                R.styleable.AnyKeyboardViewTheme, 0, mTheme.getThemeResId());
 
         int colorNormal = context.getResources().getColor(R.color.candidate_normal);
         int colorRecommended = context.getResources().getColor(R.color.candidate_recommended);
@@ -194,7 +195,7 @@ public class CandidateView extends View {
                     mDivider.getIntrinsicHeight());
         }
 
-		DisplayMetrics displayMetrics = Resources.getSystem().getDisplayMetrics();
+        DisplayMetrics displayMetrics = Resources.getSystem().getDisplayMetrics();
 
         final int dividerYOffset = (height - mDivider.getMinimumHeight()) / 2;
         final int count = mSuggestions.size();
@@ -204,14 +205,14 @@ public class CandidateView extends View {
         final int scrollX = getScrollX();
         final boolean scrolled = mScrolled;
         final boolean typedWordValid = mTypedWordValid;
-		TypedArray a = mTheme.getPackageContext().obtainStyledAttributes(mAttrs,
-			R.styleable.AnyKeyboardViewTheme, 0, mTheme.getThemeResId());
+        TypedArray a = mTheme.getPackageContext().obtainStyledAttributes(mAttrs,
+                R.styleable.AnyKeyboardViewTheme, 0, mTheme.getThemeResId());
         int x = 0;
         for (int i = 0; i < count; i++) {
-			SuggestionObject suggestionObject = mSuggestions.get(i);
+            SuggestionObject suggestionObject = mSuggestions.get(i);
             CharSequence suggestion = suggestionObject.getSuggestedWord();
 
-			if (suggestion == null)
+            if (suggestion == null)
                 continue;
 
             final int wordLength = suggestion.length();
@@ -230,17 +231,17 @@ public class CandidateView extends View {
                 paint.setColor(mColorOther);
             }
 
-			if(!suggestionObject.isUseDefaultColors()){
-				paint.setColor(suggestionObject.getForegroundColor());
-				setBackgroundColor(suggestionObject.getBackgroundColor());
-			}else {
-				final Drawable stripImage = a
-					.getDrawable(R.styleable.AnyKeyboardViewTheme_suggestionBackgroundImage);
-				if (stripImage == null)
-					setBackgroundColor(Color.BLACK);
-				else
-					setBackgroundDrawable(stripImage);
-			}
+            if (!suggestionObject.isUseDefaultColors()) {
+                paint.setColor(suggestionObject.getForegroundColor());
+                setBackgroundColor(suggestionObject.getBackgroundColor());
+            } else {
+                final Drawable stripImage = a
+                        .getDrawable(R.styleable.AnyKeyboardViewTheme_suggestionBackgroundImage);
+                if (stripImage == null)
+                    setBackgroundColor(Color.BLACK);
+                else
+                    setBackgroundDrawable(stripImage);
+            }
 
             // now that we set the typeFace, we can measure
             int wordWidth;
@@ -253,28 +254,27 @@ public class CandidateView extends View {
 
             mWordX[i] = x;
 
-			int containerWidth = displayMetrics.widthPixels/3;
+            int containerWidth = displayMetrics.widthPixels / 3;
 
             if (touchX != OUT_OF_BOUNDS_X_CORD && !scrolled
                     && touchX + scrollX >= x
                     && touchX + scrollX < x + containerWidth) {
-                if (canvas != null && !mShowingAddToDictionary) {
-                    canvas.translate(x+2, 0);
+                if (canvas != null && !mShowingAddToDictionary && suggestionObject.isUseDefaultColors()) {
+                    canvas.translate(x + 2, 0);
                     mSelectionHighlight.setBounds(2, bgPadding.top, containerWidth,
                             height);
                     mSelectionHighlight.draw(canvas);
-                    canvas.translate(-(x+2), 0);
+                    canvas.translate(-(x + 2), 0);
                 }
                 mSelectedString = suggestion;
                 mSelectedIndex = i;
             }
 
-
             if (canvas != null) {
                 // (+)This is the trick to get RTL/LTR text correct
                 if (AnyApplication.getConfig().workaround_alwaysUseDrawText()) {
                     final int y = (int) (height + paint.getTextSize() - paint.descent()) / 2;
-                    canvas.drawText(suggestion, 0, wordLength, x +  containerWidth / 2, y, paint);
+                    canvas.drawText(suggestion, 0, wordLength, x + containerWidth / 2, y, paint);
                 } else {
                     final int y = (int) (height - paint.getTextSize() + paint.descent()) / 2;
                     // no matter what: StaticLayout
@@ -287,7 +287,7 @@ public class CandidateView extends View {
 
                     StaticLayout suggestionText = new StaticLayout(suggestion,
                             mTextPaint, containerWidth
-						, Alignment.ALIGN_CENTER,
+                            , Alignment.ALIGN_CENTER,
                             1.0f, 0.0f, false);
                     suggestionText.draw(canvas);
 
@@ -372,7 +372,7 @@ public class CandidateView extends View {
         ArrayList<CharSequence> suggestions = new ArrayList<>();
         suggestions.add(word);
         suggestions.add(mAddToDictionaryHint);
-		List<SuggestionObject> objects = SuggestionObject.createFromStringListUsingDefaultColor(suggestions);
+        List<SuggestionObject> objects = SuggestionObject.createFromStringListUsingDefaultColor(suggestions);
         setSuggestions(objects, false, false, false);
         mShowingAddToDictionary = true;
     }
@@ -442,7 +442,8 @@ public class CandidateView extends View {
                             }
                         } else if (!mNoticing) {
                             if (!mShowingCompletions) {
-                                TextEntryState.acceptedSuggestion(mSuggestions.get(0).getSuggestedWord(), mSelectedString);
+                                if (mSuggestions.get(0).isUseDefaultColors())
+                                    TextEntryState.acceptedSuggestion(mSuggestions.get(0).getSuggestedWord(), mSelectedString);
                             }
                             mService.pickSuggestionManually(mSelectedIndex, mSelectedString);
                         } else if (mSelectedIndex == 1 && !TextUtils.isEmpty(mJustAddedWord)) {
@@ -465,7 +466,7 @@ public class CandidateView extends View {
         ArrayList<CharSequence> notice = new ArrayList<>(2);
         notice.add(getContext().getResources().getString(R.string.added_word, mJustAddedWord));
         notice.add(getContext().getResources().getString(R.string.revert_added_word_question));
-		List<SuggestionObject> suggestions = SuggestionObject.createFromStringListUsingDefaultColor(notice);
+        List<SuggestionObject> suggestions = SuggestionObject.createFromStringListUsingDefaultColor(notice);
         setSuggestions(suggestions, false, true, false);
         mNoticing = true;
     }
@@ -474,14 +475,14 @@ public class CandidateView extends View {
         mJustAddedWord = null;
         ArrayList<CharSequence> notice = new ArrayList<>(1);
         notice.add(getContext().getResources().getString(R.string.removed_word, word));
-		List<SuggestionObject> suggestions = SuggestionObject.createFromStringListUsingDefaultColor(notice);
+        List<SuggestionObject> suggestions = SuggestionObject.createFromStringListUsingDefaultColor(notice);
         setSuggestions(suggestions, false, true, false);
         mNoticing = true;
     }
 
     public void replaceTypedWord(CharSequence typedWord) {
         if (mSuggestions.size() > 0) {
-			mSuggestions.get(0).setSuggestedWord(typedWord);
+            mSuggestions.get(0).setSuggestedWord(typedWord);
             invalidate();
         }
     }

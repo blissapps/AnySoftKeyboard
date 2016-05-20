@@ -94,6 +94,8 @@ public interface AskPrefs {
 
 	boolean useLocation();
 
+    boolean useStorage();
+
     int getAutoDictionaryInsertionThreshold();
 
     boolean isStickyExtensionKeyboard();

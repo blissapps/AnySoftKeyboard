@@ -24,35 +24,52 @@ import net.evendanan.chauffeur.lib.permissions.PermissionsRequest;
 
 public class WizardPermissionsFragment extends WizardPageBaseFragment implements View.OnClickListener {
 
+    private MainSettingsActivity activity;
+
     private final PermissionsRequest mContactsPermissionRequest =
             new PermissionsRequest.PermissionsRequestBase(PermissionsRequestCodes.CONTACTS.getRequestCode(),
                     Manifest.permission.READ_CONTACTS) {
-        @Override
-        public void onPermissionsGranted() {
-            refreshWizardPager();
-        }
+                @Override
+                public void onPermissionsGranted() {
+                    activity.startPermissionsRequest(mLocationPermissionRequest);
+                }
 
-        @Override
-        public void onPermissionsDenied() {/*no-op*/}
+                @Override
+                public void onPermissionsDenied() {/*no-op*/}
 
-        @Override
-        public void onUserDeclinedPermissionsCompletely() {/*no-op - Main-Activity handles this case*/}
-    };
+                @Override
+                public void onUserDeclinedPermissionsCompletely() {/*no-op - Main-Activity handles this case*/}
+            };
 
-	private final PermissionsRequest mLocationPermissionRequest =
-		new PermissionsRequest.PermissionsRequestBase(PermissionsRequestCodes.LOCATION.getRequestCode(),
-			Manifest.permission.ACCESS_FINE_LOCATION) {
-			@Override
-			public void onPermissionsGranted() {
-				refreshWizardPager();
-			}
+    private final PermissionsRequest mLocationPermissionRequest =
+            new PermissionsRequest.PermissionsRequestBase(PermissionsRequestCodes.LOCATION.getRequestCode(),
+                    Manifest.permission.ACCESS_FINE_LOCATION) {
+                @Override
+                public void onPermissionsGranted() {
+                    activity.startPermissionsRequest(mStoragePermissionRequest);
+                }
 
-			@Override
-			public void onPermissionsDenied() {/*no-op*/}
+                @Override
+                public void onPermissionsDenied() {/*no-op*/}
 
-			@Override
-			public void onUserDeclinedPermissionsCompletely() {/*no-op - Main-Activity handles this case*/}
-		};
+                @Override
+                public void onUserDeclinedPermissionsCompletely() {/*no-op - Main-Activity handles this case*/}
+            };
+
+    private final PermissionsRequest mStoragePermissionRequest =
+            new PermissionsRequest.PermissionsRequestBase(PermissionsRequestCodes.STORAGE_WRITE.getRequestCode(),
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE) {
+                @Override
+                public void onPermissionsGranted() {
+                    refreshWizardPager();
+                }
+
+                @Override
+                public void onPermissionsDenied() {/*no-op*/}
+
+                @Override
+                public void onUserDeclinedPermissionsCompletely() {/*no-op - Main-Activity handles this case*/}
+            };
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -63,9 +80,11 @@ public class WizardPermissionsFragment extends WizardPageBaseFragment implements
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         view.findViewById(R.id.ask_for_permissions_action).setOnClickListener(this);
-		view.findViewById(R.id.ask_for_location_permissions_action).setOnClickListener(this);
+        view.findViewById(R.id.ask_for_location_permissions_action).setOnClickListener(this);
+        view.findViewById(R.id.ask_for_storage_permissions_action).setOnClickListener(this);
         view.findViewById(R.id.disable_contacts_dictionary).setOnClickListener(this);
-		view.findViewById(R.id.disable_location).setOnClickListener(this);
+        view.findViewById(R.id.disable_location).setOnClickListener(this);
+        view.findViewById(R.id.disable_storage).setOnClickListener(this);
         view.findViewById(R.id.open_permissions_wiki_action).setOnClickListener(this);
     }
 
@@ -73,8 +92,10 @@ public class WizardPermissionsFragment extends WizardPageBaseFragment implements
     protected boolean isStepCompleted() {
         return !AnyApplication.getConfig().useContactsDictionary() ||//either the user disabled Contacts
                 ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.READ_CONTACTS) == PackageManager.PERMISSION_GRANTED ||//or the user granted permission
-		!AnyApplication.getConfig().useLocation() ||//either the user disabled Contacts
-			ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED;//or the user granted permission
+                !AnyApplication.getConfig().useLocation() ||//either the user disabled location
+                ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||//or the user granted permission
+                !AnyApplication.getConfig().useStorage() ||//either the user disabled Storage access
+                ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;//or the user granted permission//or the user granted permission
     }
 
     @Override
@@ -84,18 +105,20 @@ public class WizardPermissionsFragment extends WizardPageBaseFragment implements
 
     @Override
     public void onClick(View v) {
-        MainSettingsActivity activity = (MainSettingsActivity) getActivity();
+        activity = (MainSettingsActivity) getActivity();
         if (activity == null) return;
-		SharedPreferences sharedPreferences = null;
+        SharedPreferences sharedPreferences = null;
         switch (v.getId()) {
             case R.id.ask_for_permissions_action:
                 activity.startPermissionsRequest(mContactsPermissionRequest);
                 break;
-			case R.id.ask_for_location_permissions_action:
-				activity.startPermissionsRequest(mLocationPermissionRequest);
-				break;
+            case R.id.ask_for_location_permissions_action:
+                activity.startPermissionsRequest(mLocationPermissionRequest);
+                break;
+            case R.id.ask_for_storage_permissions_action:
+                activity.startPermissionsRequest(mStoragePermissionRequest);
             case R.id.disable_contacts_dictionary:
-				sharedPreferences = PreferenceManager.getDefaultSharedPreferences(activity);
+                sharedPreferences = PreferenceManager.getDefaultSharedPreferences(activity);
                 SharedPreferencesCompat.EditorCompat.getInstance().apply(
                         sharedPreferences
                                 .edit()
@@ -103,15 +126,24 @@ public class WizardPermissionsFragment extends WizardPageBaseFragment implements
                 );
                 refreshWizardPager();
                 break;
-			case R.id.disable_location:
-				 sharedPreferences = PreferenceManager.getDefaultSharedPreferences(activity);
-				SharedPreferencesCompat.EditorCompat.getInstance().apply(
-					sharedPreferences
-						.edit()
-						.putBoolean(getString(R.string.settings_key_use_location), false)
-				);
-				refreshWizardPager();
-				break;
+            case R.id.disable_location:
+                sharedPreferences = PreferenceManager.getDefaultSharedPreferences(activity);
+                SharedPreferencesCompat.EditorCompat.getInstance().apply(
+                        sharedPreferences
+                                .edit()
+                                .putBoolean(getString(R.string.settings_key_use_location), false)
+                );
+                refreshWizardPager();
+                break;
+            case R.id.disable_storage:
+                sharedPreferences = PreferenceManager.getDefaultSharedPreferences(activity);
+                SharedPreferencesCompat.EditorCompat.getInstance().apply(
+                        sharedPreferences
+                                .edit()
+                                .putBoolean(getString(R.string.settings_key_use_storage), false)
+                );
+                refreshWizardPager();
+                break;
             case R.id.open_permissions_wiki_action:
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.permissions_wiki_site_url)));
                 try {

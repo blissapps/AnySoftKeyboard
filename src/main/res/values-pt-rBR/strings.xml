@@ -500,6 +500,7 @@
     <string name="wizard_step_this_step_complete_text_permissions"><i>The Safety Keyboard by Moto</i> precisa de acesso a permissões extra. Isto irá permitir uma melhor experiência.</string>
     <string name="setup_wizard_step_permissions_details">Neste passo, poderá aprovar o acesso do <i>The Safety Keyboard by Moto</i> aos contactos guardados no seu dispositivo. Se desejar bloquear este acesso poderá Desativar dicionário de contactos.</string>
     <string name="setup_wizard_step_location_permissions_details">Neste passo, poderá aprovar o acesso do <i>The Safety Keyboard by Moto</i> à localização do seu dispositivo. Se desejar bloquear este acesso poderá Desativar acesso à localização.</string>
+    <string name="setup_wizard_step_storage_permissions_details">Neste passo, poderá aprovar o acesso do <i>The Safety Keyboard by Moto</i> à memória externa do seu dispositivo. Se desejar bloquear este acesso poderá Desativar acesso à localização.</string>
 
     <string name="setup_wizard_step_three_title">O The Safety Keyboard by Moto está pronto!</string>
     <string name="setup_wizard_step_three_details">Obrigado por escolher o <i>The Safety Keyboard by Moto</i>.\nEste teclado pode ser bastante personalizado. Não tenha medo de o fazer:</string>
@@ -532,4 +533,5 @@
     <string name="location_permissions_dialog_message">The Safety Keyboard by Moto utiliza a localização do seu dispositivo para melhorar a sua segurança. Ao utilizar o teclado nós calculamos sua velocidade. Se estiver dirigindo não deve utilizar o telefone/tablet.</string>
     <string name="turn_off_contacts_dictionary">Desativar dicionário de contactos</string>
     <string name="turn_off_location">Desativar acesso à localização</string>
+    <string name="turn_off_storage">Desativar acesso à memória externa</string>
 </resources>

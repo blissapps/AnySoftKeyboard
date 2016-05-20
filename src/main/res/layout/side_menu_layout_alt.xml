@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ask="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/menu_background_normal"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_toggle_menu"
+            android:orientation="vertical">
+            <!-- consider adding a small flag or keyboard icon next to the Title -->
+            <TextView
+                style="@style/Ask.Menu.Item.Title"
+                android:text="@string/languages_cat" />
+
+            <LinearLayout
+                style="@style/Ask.Menu.Row"
+                android:onClick="onNavigateToKeyboardAddonSettings">
+
+                <TextView
+                    style="@style/Ask.Menu.Row.Item"
+                    android:drawableLeft="@drawable/ic_keyboard_black_24px"
+                    android:drawablePadding="15dp"
+                    android:text="@string/keyboards_group" />
+
+                <TextView
+                    android:id="@+id/keyboards_group_extra_data"
+                    style="@style/Ask.Menu.Row.Item.Extra"
+                    android:text="@string/keyboards_group_extra_template" />
+                <!-- consider showing the current language flag -->
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="21dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/blacktheme_color_action" />
+
+            <TextView
+                style="@style/Ask.Menu.Item"
+                android:layout_width="match_parent"
+                android:drawableLeft="@drawable/ic_language"
+                android:drawablePadding="15dp"
+                android:onClick="onNavigateToDictionarySettings"
+                android:text="@string/special_dictionaries_group" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="21dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/blacktheme_color_action" />
+
+            <TextView
+                style="@style/Ask.Menu.Item.More"
+                android:layout_width="match_parent"
+                android:drawableLeft="@drawable/ic_more_horiz"
+                android:drawablePadding="15dp"
+                android:onClick="onNavigateToLanguageSettings"
+                android:text="@string/menu_even_more_settings" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_toggle_menu"
+            android:orientation="vertical">
+            <!-- user interface -->
+            <!-- consider adding a small color platte icon next to the Title -->
+            <TextView
+                style="@style/Ask.Menu.Item.Title"
+                android:drawablePadding="4dp"
+                android:text="@string/ui_group" />
+
+            <LinearLayout
+                style="@style/Ask.Menu.Row"
+                android:onClick="onNavigateToKeyboardThemeSettings"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/Ask.Menu.Row.Item"
+                    android:text="@string/keyboard_theme_group" />
+
+                <TextView
+                    android:id="@+id/theme_extra_data"
+                    style="@style/Ask.Menu.Row.Item.Extra"
+                    android:text="@string/selected_add_on_summary" />
+                <!-- consider to show the Theme's icon -->
+            </LinearLayout>
+
+            <View
+                style="@style/Ask.Menu.Item.Divider"
+                android:visibility="gone" />
+
+            <TextView
+                style="@style/Ask.Menu.Item"
+                android:onClick="onNavigateToEffectsSettings"
+                android:drawableLeft="@drawable/ic_vibration_black_24px"
+                android:drawablePadding="15dp"
+                android:text="@string/effects_group" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="21dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/blacktheme_color_action" />
+
+            <TextView
+                style="@style/Ask.Menu.Item"
+                android:onClick="onNavigateToGestureSettings"
+                android:drawableLeft="@drawable/ic_gesture_black_24px"
+                android:drawablePadding="15dp"
+                android:text="@string/gesture_settings" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="21dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/blacktheme_color_action" />
+
+            <TextView
+                style="@style/Ask.Menu.Item"
+                android:onClick="onNavigateToQuickTextSettings"
+                android:drawableLeft="@drawable/ic_chat"
+                android:drawablePadding="15dp"
+                android:text="@string/quick_text_keys_group" />
+        </LinearLayout>
+
+        <!--<View style="@style/Ask.Menu.Item.Divider" />
+
+        <TextView
+            style="@style/Ask.Menu.Item.More"
+            android:text="@string/menu_even_more_settings"
+            android:onClick="onNavigateToUserInterfaceSettings" />-->
+
+        <!-- this empty view will allow us to push the About item all the way to the bottom of the menu -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0px"
+            android:layout_weight="1" />
+
+        <net.evendanan.pushingpixels.AboutAppView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_background"
+            android:onClick="onNavigateToRootClicked"
+            ask:appIcon="@drawable/ic_launcher"
+            ask:appName="@string/ime_name"
+            ask:appOwner="@string/copyright_owner"
+            ask:textColor="@android:color/black" />
+    </LinearLayout>
+</ScrollView>

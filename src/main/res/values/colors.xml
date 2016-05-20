@@ -24,6 +24,8 @@
     <color name="light_candidate_recommended">#FFE35900</color>
     <color name="light_candidate_other">#ff808080</color>
 
+    <color name="text_title">#FF009688</color>
+
     <color name="blacktheme_color_background">#FF000000</color>
     <color name="blacktheme_color_topborder">#FF333333</color>
     <color name="blacktheme_color_suggestion_background">#FF000000</color>
