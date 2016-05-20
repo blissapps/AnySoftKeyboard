@@ -18,7 +18,7 @@ public class VersionBuilder {
     public static def buildGitVersionName() {
         int gitVersion = buildGitVersionNumber()
         if (gitVersion < GIT_COMMIT_COUNT_MINOR_NORMALIZE) gitVersion = GIT_COMMIT_COUNT_MINOR_NORMALIZE + 1
-        return String.format("%d.%d.%d", 1, 0, 5)
+        return String.format("%d.%d.%d", 1, 0, 6)
     }
 
 }
