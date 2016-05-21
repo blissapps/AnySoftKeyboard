@@ -14,7 +14,7 @@
     <string name="menu_about_item">Sobre</string>
     <!-- main form -->
     <!-- welcome tab -->
-    <string name="how_to_pointer_title">Bem-vindo ao The Safety Keyboard by Moto</string>
+    <string name="how_to_pointer_title">The Safety Keyboard by Moto</string>
     <string name="how_to_pointer_not_app">O The Safety Keyboard by Moto não é uma aplicaçao qualquer - é um substituto para
         o seu teclado.    </string>
     <!-- links tab -->
@@ -84,6 +84,7 @@
     </string-array>
     <string name="sound_on">Som ao pressionar</string>
     <string name="sound_on_summary">Emitir som ao pressionar teclas.</string>
+    <string name="sound_off_summary">Não emitir som ao pressionar teclas.</string>
     <string name="use_custom_sound_volume">Definir volume</string>
     <string name="use_custom_sound_volume_on_summary">Utilizar volume personalizado.</string>
     <string name="use_custom_sound_volume_off_summary">O volume dos efeitos de som é igual ao das notificações.</string>

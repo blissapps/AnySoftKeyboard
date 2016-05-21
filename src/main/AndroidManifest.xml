@@ -64,15 +64,21 @@
         I use this, so I can 'disable' this activity at runtime, and so remove ASK from the launcher's icons -->
         <activity
             android:theme="@style/Theme.AskApp"
-            android:name="com.menny.android.anysoftkeyboard.LauncherSettingsActivity"
+            android:name="com.menny.android.anysoftkeyboard.SplashActivity"
             android:icon="@drawable/ic_launcher_settings"
             android:launchMode="singleTop"
             android:label="@string/ime_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.AskApp"
+            android:name="com.menny.android.anysoftkeyboard.LauncherSettingsActivity"
+            android:icon="@drawable/ic_launcher_settings"
+            android:launchMode="singleTop"
+            android:label="@string/ime_name">
         </activity>
         <activity
             android:theme="@style/Theme.AskApp"

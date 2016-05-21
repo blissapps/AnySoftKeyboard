@@ -6,8 +6,8 @@
         android:summary="@string/swipe_tweak_group" />
 
     <PreferenceCategory
-        android:key="swipe_tweak_group"
-        android:title="@string/gesture_settings">
+        android:key="swipe_tweak_group">
+        <!-- android:title="@string/gesture_settings"> -->
 
         <net.evendanan.pushingpixels.ListPreference
             android:defaultValue="@string/swipe_action_value_shift"

@@ -84,8 +84,9 @@
         <item name="android:disableDependentsState">false</item>
     </style>
 
-    <style name="Theme.AskApp" parent="Theme.AppCompat.Light">
-
+    <style name="Theme.AskApp" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:color">@color/safety_keyboard_color</item>
+        <item name="colorAccent">@color/safety_keyboard_color</item>
     </style>
 
     <style name="Theme.AskApp.NoTitle" parent="Theme.AskApp">
@@ -100,6 +101,10 @@
 
     <style name="Theme.AskApp.Popup.NoTitle" parent="Theme.AskApp.Popup">
         <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Preference" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/safety_keyboard_color</item>
     </style>
 
     <style name="Ask"/>
@@ -185,7 +190,7 @@
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:layout_marginLeft">12dp</item>
         <item name="android:drawableBottom">@drawable/selected_tab</item>
-        <item name="android:textColor">@color/text_title</item>
+        <item name="android:textColor">@color/safety_keyboard_color</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:singleLine">true</item>

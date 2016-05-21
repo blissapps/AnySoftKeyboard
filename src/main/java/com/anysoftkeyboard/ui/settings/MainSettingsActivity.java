@@ -32,6 +32,7 @@ import android.support.v4.content.SharedPreferencesCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
@@ -67,7 +68,8 @@ public class MainSettingsActivity extends PermissionsFragmentChauffeurActivity {
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.main_ui);
-
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
         mTitle = mDrawerTitle = getTitle();
 
         mDrawerRootLayout = (DrawerLayout) findViewById(R.id.main_root_layout);
