@@ -7,15 +7,27 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/menu_background_normal"
         android:orientation="vertical"
         android:weightSum="1">
 
+        <TextView
+            style="@style/Ask.Menu.Item"
+            android:onClick="onNavigateToRootClicked"
+            android:text="@string/menu_home_item" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/blacktheme_color_action" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/card_toggle_menu"
             android:orientation="vertical">
             <!-- consider adding a small flag or keyboard icon next to the Title -->
             <TextView
@@ -72,10 +84,17 @@
                 android:text="@string/menu_even_more_settings" />
         </LinearLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/blacktheme_color_action" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/card_toggle_menu"
             android:orientation="vertical">
             <!-- user interface -->
             <!-- consider adding a small color platte icon next to the Title -->
@@ -106,9 +125,9 @@
 
             <TextView
                 style="@style/Ask.Menu.Item"
-                android:onClick="onNavigateToEffectsSettings"
                 android:drawableLeft="@drawable/ic_vibration_black_24px"
                 android:drawablePadding="15dp"
+                android:onClick="onNavigateToEffectsSettings"
                 android:text="@string/effects_group" />
 
             <View
@@ -121,9 +140,9 @@
 
             <TextView
                 style="@style/Ask.Menu.Item"
-                android:onClick="onNavigateToGestureSettings"
                 android:drawableLeft="@drawable/ic_gesture_black_24px"
                 android:drawablePadding="15dp"
+                android:onClick="onNavigateToGestureSettings"
                 android:text="@string/gesture_settings" />
 
             <View
@@ -136,9 +155,9 @@
 
             <TextView
                 style="@style/Ask.Menu.Item"
-                android:onClick="onNavigateToQuickTextSettings"
                 android:drawableLeft="@drawable/ic_chat"
                 android:drawablePadding="15dp"
+                android:onClick="onNavigateToQuickTextSettings"
                 android:text="@string/quick_text_keys_group" />
         </LinearLayout>
 
@@ -151,15 +170,23 @@
 
         <!-- this empty view will allow us to push the About item all the way to the bottom of the menu -->
         <View
-            android:layout_width="1dp"
-            android:layout_height="0px"
-            android:layout_weight="1" />
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/blacktheme_color_action" />
+
+        <TextView
+            style="@style/Ask.Menu.Item"
+            android:layout_marginTop="10dp"
+            android:text="@string/menu_about_item" />
 
         <net.evendanan.pushingpixels.AboutAppView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/menu_background"
-            android:onClick="onNavigateToRootClicked"
+            android:onClick="onNavigateToAboutClicked"
             ask:appIcon="@drawable/ic_launcher"
             ask:appName="@string/ime_name"
             ask:appOwner="@string/copyright_owner"
