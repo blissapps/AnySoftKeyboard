@@ -76,6 +76,7 @@
     <string name="gesture_settings">Gestos</string>
     <string name="effects_group">Efeitos</string>
     <string name="ime_settings">Definições do teclado</string>
+    <string name="configure_keyboard">Configurações Gerais</string>
     <!-- <string name="vibrate_on">Vibrate on key-press</string>-->
     <string name="vibrate_on_key_press_title">Vibrar ao pressionar</string>
     <string name="vibrate_on_key_press_summary">Nível de vibração para pressionar. Atualmente: %s</string>

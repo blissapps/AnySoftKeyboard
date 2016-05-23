@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.anysoftkeyboard.ui.settings.KeyboardAddOnSettingsFragment;
 import com.anysoftkeyboard.ui.settings.KeyboardThemeSelectorFragment;
-import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
+import com.anysoftkeyboard.ui.settings.MainSettingsAlternativeActivity;
 import com.menny.android.anysoftkeyboard.R;
 
 import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;
@@ -55,7 +55,7 @@ public class WizardPageDoneAndMoreSettingsFragment extends WizardPageBaseFragmen
 
     @Override
     public void onClick(View v) {
-        MainSettingsActivity activity = (MainSettingsActivity) getActivity();
+        MainSettingsAlternativeActivity activity = (MainSettingsAlternativeActivity) getActivity();
         switch (v.getId()) {
             case R.id.show_keyboard_view_action:
                 InputMethodManager inputMethodManager = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -74,7 +74,7 @@ public class WizardPageDoneAndMoreSettingsFragment extends WizardPageBaseFragmen
                 break;
             case R.id.go_to_all_settings_action:
                 activity.onNavigateToRootClicked(v);
-                activity.openDrawer();
+                //activity.openDrawer();
                 break;
         }
     }

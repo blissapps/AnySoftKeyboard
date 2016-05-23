@@ -14,7 +14,7 @@ import android.widget.CompoundButton;
 
 import com.anysoftkeyboard.quicktextkeys.QuickTextKey;
 import com.anysoftkeyboard.quicktextkeys.QuickTextKeyFactory;
-import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
+import com.anysoftkeyboard.ui.settings.MainSettingsAlternativeActivity;
 import com.anysoftkeyboard.utils.Log;
 import com.emtronics.dragsortrecycler.DragSortRecycler;
 import com.menny.android.anysoftkeyboard.R;
@@ -95,7 +95,7 @@ public class QuickKeysOrderedListFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        MainSettingsActivity.setActivityTitle(this, getString(R.string.quick_text_keys_order_dialog_title));
+        MainSettingsAlternativeActivity.setActivityTitle(this, getString(R.string.quick_text_keys_order_dialog_title));
     }
 
     @Override

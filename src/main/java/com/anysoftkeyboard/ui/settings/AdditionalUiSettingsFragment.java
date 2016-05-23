@@ -50,7 +50,7 @@ public class AdditionalUiSettingsFragment extends PreferenceFragment implements 
     @Override
     public void onStart() {
         super.onStart();
-        MainSettingsActivity.setActivityTitle(this, getString(R.string.more_ui_settings_group));
+        MainSettingsAlternativeActivity.setActivityTitle(this, getString(R.string.more_ui_settings_group));
         Context appContext = getActivity().getApplicationContext();
         //updating the data in the add-on selectors
         AddOnListPreference bottomRow = (AddOnListPreference) findPreference(getString(R.string.settings_key_ext_kbd_bottom_row_key));

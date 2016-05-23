@@ -3,6 +3,7 @@ package com.anysoftkeyboard.ui.settings.setup;
 import android.support.v4.app.Fragment;
 import android.view.View;
 
+import com.anysoftkeyboard.ui.settings.MainSettingsAlternativeActivity;
 import com.menny.android.anysoftkeyboard.R;
 
 public abstract class WizardPageBaseFragment extends Fragment {
@@ -24,6 +25,7 @@ public abstract class WizardPageBaseFragment extends Fragment {
         super.onStart();
         //enabling or disabling the views.
         refreshFragmentUi();
+        getActivity().setTitle(getString(R.string.configure_keyboard));
     }
 
     protected void refreshWizardPager() {

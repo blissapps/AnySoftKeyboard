@@ -33,6 +33,6 @@ public class EffectsSettingsFragment extends PreferenceFragment {
     @Override
     public void onStart() {
         super.onStart();
-        MainSettingsActivity.setActivityTitle(this, getString(R.string.effects_group));
+        MainSettingsAlternativeActivity.setActivityTitle(this, getString(R.string.effects_group));
     }
 }

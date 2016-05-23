@@ -13,44 +13,47 @@
      limitations under the License.
 -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="fill_parent"
-             android:layout_height="wrap_content"
-             android:padding="6dp">
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/safety_keyboard_color"
+    android:padding="6dp">
 
     <ImageView
         android:id="@+id/app_icon"
-        android:scaleType="centerInside"
         android:layout_width="48dp"
         android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="8dp"
         android:adjustViewBounds="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginRight="8dp"/>
+        android:scaleType="centerInside" />
 
     <TextView
         android:id="@+id/app_name"
         style="@android:style/TextAppearance.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/app_icon"
-        android:layout_alignParentTop="true"/>
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/app_version"
         style="@android:style/TextAppearance.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/version_text"
         android:layout_below="@id/app_name"
-        android:layout_toRightOf="@id/app_icon"/>
+        android:layout_centerHorizontal="true"
+        android:text="@string/version_text"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/app_copyright"
         style="@android:style/TextAppearance.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/copyright_text"
+        android:layout_centerHorizontal="true"
         android:layout_below="@id/app_icon"
-        android:layout_alignParentLeft="true"/>
+        android:text="@string/copyright_text"
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>

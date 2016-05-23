@@ -54,7 +54,7 @@ public class UiTweaksFragment extends PreferenceFragment implements Preference.O
     @Override
     public void onStart() {
         super.onStart();
-        MainSettingsActivity.setActivityTitle(this, getString(R.string.tweaks_group));
+        MainSettingsAlternativeActivity.setActivityTitle(this, getString(R.string.tweaks_group));
     }
 
     @Override

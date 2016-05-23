@@ -32,6 +32,6 @@ public class GesturesSettingsFragment extends PreferenceFragment {
     @Override
     public void onStart() {
         super.onStart();
-        MainSettingsActivity.setActivityTitle(this, getString(R.string.swipe_tweak_group));
+        MainSettingsAlternativeActivity.setActivityTitle(this, getString(R.string.swipe_tweak_group));
     }
 }

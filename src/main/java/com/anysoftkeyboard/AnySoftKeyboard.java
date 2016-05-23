@@ -85,7 +85,7 @@ import com.anysoftkeyboard.theme.KeyboardTheme;
 import com.anysoftkeyboard.theme.KeyboardThemeFactory;
 import com.anysoftkeyboard.ui.VoiceInputNotInstalledActivity;
 import com.anysoftkeyboard.ui.dev.DeveloperUtils;
-import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
+import com.anysoftkeyboard.ui.settings.MainSettingsAlternativeActivity;
 import com.anysoftkeyboard.utils.Log;
 import com.anysoftkeyboard.utils.ModifierKeyState;
 import com.anysoftkeyboard.utils.Workarounds;
@@ -495,7 +495,7 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
 
         super.onStartInputView(attribute, restarting);
         try {
-            Intent locationRequired = PermissionsFragmentChauffeurActivity.createIntentToPermissionsRequest(mContext, MainSettingsActivity.class, PermissionsRequestCodes.LOCATION.getRequestCode(), Manifest.permission.ACCESS_FINE_LOCATION);
+            Intent locationRequired = PermissionsFragmentChauffeurActivity.createIntentToPermissionsRequest(mContext, MainSettingsAlternativeActivity.class, PermissionsRequestCodes.LOCATION.getRequestCode(), Manifest.permission.ACCESS_FINE_LOCATION);
             if (locationRequired != null) {
                 //we are running OUTSIDE an Activity
                 locationRequired.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -3017,7 +3017,7 @@ public abstract class AnySoftKeyboard extends InputMethodService implements
     private void launchSettings() {
         handleClose();
         Intent intent = new Intent();
-        intent.setClass(AnySoftKeyboard.this, MainSettingsActivity.class);
+        intent.setClass(AnySoftKeyboard.this, MainSettingsAlternativeActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }

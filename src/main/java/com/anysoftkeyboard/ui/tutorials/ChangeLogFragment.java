@@ -27,6 +27,7 @@ import android.widget.TextView;
 
 import com.anysoftkeyboard.ui.settings.MainFragment;
 import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
+import com.anysoftkeyboard.ui.settings.MainSettingsAlternativeActivity;
 import com.menny.android.anysoftkeyboard.R;
 
 import net.evendanan.chauffeur.lib.FragmentChauffeurActivity;
@@ -107,7 +108,7 @@ public class ChangeLogFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        MainSettingsActivity.setActivityTitle(this, getString(R.string.changelog));
+        MainSettingsAlternativeActivity.setActivityTitle(this, getString(R.string.changelog));
     }
 
     public static class CardedChangeLogFragment extends ChangeLogFragment {

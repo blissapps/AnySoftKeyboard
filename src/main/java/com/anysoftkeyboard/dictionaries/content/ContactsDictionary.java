@@ -32,7 +32,7 @@ import android.support.v4.app.NotificationManagerCompat;
 import com.anysoftkeyboard.PermissionsRequestCodes;
 import com.anysoftkeyboard.base.dictionaries.WordsCursor;
 import com.anysoftkeyboard.dictionaries.BTreeDictionary;
-import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
+import com.anysoftkeyboard.ui.settings.MainSettingsAlternativeActivity;
 import com.menny.android.anysoftkeyboard.R;
 
 import net.evendanan.chauffeur.lib.permissions.PermissionsFragmentChauffeurActivity;
@@ -87,7 +87,7 @@ public class ContactsDictionary extends BTreeDictionary {
     @Override
     public WordsCursor getWordsCursor() {
         //we required Contacts permission
-        Intent contactsRequired = PermissionsFragmentChauffeurActivity.createIntentToPermissionsRequest(mContext, MainSettingsActivity.class, PermissionsRequestCodes.CONTACTS.getRequestCode(), Manifest.permission.READ_CONTACTS);
+        Intent contactsRequired = PermissionsFragmentChauffeurActivity.createIntentToPermissionsRequest(mContext, MainSettingsAlternativeActivity.class, PermissionsRequestCodes.CONTACTS.getRequestCode(), Manifest.permission.READ_CONTACTS);
         if (contactsRequired != null) {
             //we are running OUTSIDE an Activity
             contactsRequired.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

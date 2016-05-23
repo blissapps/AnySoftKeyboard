@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ask="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/safety_keyboard_color"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <net.evendanan.pushingpixels.AboutAppView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:onClick="onNavigateToAboutClicked"
+            ask:appIcon="@drawable/ic_launcher"
+            ask:appName="@string/ime_name"
+            ask:appOwner="@string/copyright_owner"
+            ask:textColor="@android:color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginRight="21dp"
+            android:layout_marginTop="21dp"
+            android:background="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- consider adding a small flag or keyboard icon next to the Title -->
+            <TextView
+                android:id="@+id/tvMenuLanguages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="21dp"
+                android:layout_marginTop="21dp"
+                android:text="@string/languages_cat"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="21dp"
+                android:layout_marginTop="21dp"
+                android:background="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tvMenuLanguagesKeyboards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="21dp"
+                android:layout_marginTop="21dp"
+                android:onClick="onNavigateToKeyboardAddonSettings"
+                android:text="@string/keyboards_group"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvMenuLanguagesDictionaries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="21dp"
+                android:layout_marginTop="21dp"
+                android:onClick="onNavigateToDictionarySettings"
+                android:text="@string/special_dictionaries_group"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvMenuLanguagesMoreSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="21dp"
+                android:layout_marginTop="21dp"
+                android:onClick="onNavigateToLanguageSettings"
+                android:text="@string/menu_even_more_settings"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginRight="21dp"
+            android:layout_marginTop="21dp"
+            android:background="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- user interface -->
+            <!-- consider adding a small color platte icon next to the Title -->
+            <TextView
+                android:id="@+id/tvMenuUI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="21dp"
+                android:layout_marginTop="21dp"
+                android:text="@string/ui_group"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="21dp"
+                android:layout_marginTop="21dp"
+                android:background="@android:color/white" />
+
+
+            <LinearLayout
+                style="@style/Ask.Menu.Row"
+                android:onClick="onNavigateToKeyboardThemeSettings"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/Ask.Menu.Row.Item"
+                    android:text="@string/keyboard_theme_group" />
+
+                <TextView
+                    android:id="@+id/theme_extra_data"
+                    style="@style/Ask.Menu.Row.Item.Extra"
+                    android:text="@string/selected_add_on_summary" />
+                <!-- consider to show the Theme's icon -->
+            </LinearLayout>
+
+            <View
+                style="@style/Ask.Menu.Item.Divider"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvMenuUIEffects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="21dp"
+                android:layout_marginTop="21dp"
+                android:onClick="onNavigateToEffectsSettings"
+                android:text="@string/effects_group"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvMenuUIGestures"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="21dp"
+                android:layout_marginTop="21dp"
+                android:onClick="onNavigateToGestureSettings"
+                android:text="@string/gesture_settings"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvMenuUIQuickText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="21dp"
+                android:layout_marginTop="21dp"
+                android:onClick="onNavigateToQuickTextSettings"
+                android:text="@string/quick_text_keys_group"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvMenuUIGeneral"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="21dp"
+                android:layout_marginTop="21dp"
+                android:onClick="onNavigateToConfigureKeyboard"
+                android:text="@string/configure_keyboard"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

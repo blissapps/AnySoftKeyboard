@@ -50,12 +50,12 @@ public class DictionariesFragment extends PreferenceFragment implements Preferen
     @Override
     public void onStart() {
         super.onStart();
-        MainSettingsActivity.setActivityTitle(this, getString(R.string.special_dictionaries_group));
+        MainSettingsAlternativeActivity.setActivityTitle(this, getString(R.string.special_dictionaries_group));
     }
 
     @Override
     public boolean onPreferenceClick(Preference preference) {
-        MainSettingsActivity activity = (MainSettingsActivity) getActivity();
+        MainSettingsAlternativeActivity activity = (MainSettingsAlternativeActivity) getActivity();
         if (activity == null) return false;
         if (preference.getKey().equals(getString(R.string.user_dict_editor_key))) {
             activity.addFragmentToUi(new UserDictionaryEditorFragment(), TransitionExperiences.DEEPER_EXPERIENCE_TRANSITION);

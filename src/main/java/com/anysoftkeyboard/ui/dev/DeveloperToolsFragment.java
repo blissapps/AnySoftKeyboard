@@ -30,7 +30,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
+import com.anysoftkeyboard.ui.settings.MainSettingsAlternativeActivity;
 import com.anysoftkeyboard.utils.Log;
 import com.menny.android.anysoftkeyboard.R;
 
@@ -83,7 +83,7 @@ public class DeveloperToolsFragment extends Fragment implements AsyncTaskWithPro
     public void onStart() {
         super.onStart();
         updateTracingState();
-        MainSettingsActivity.setActivityTitle(this, getString(R.string.developer_tools));
+        MainSettingsAlternativeActivity.setActivityTitle(this, getString(R.string.developer_tools));
     }
 
     private void updateTracingState() {

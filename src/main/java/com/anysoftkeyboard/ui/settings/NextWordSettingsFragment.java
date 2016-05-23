@@ -77,7 +77,7 @@ public class NextWordSettingsFragment extends PreferenceFragment implements Asyn
     @Override
     public void onStart() {
         super.onStart();
-        MainSettingsActivity.setActivityTitle(this, getString(R.string.next_word_dict_settings));
+        MainSettingsAlternativeActivity.setActivityTitle(this, getString(R.string.next_word_dict_settings));
         loadUsageStatistics();
     }
 

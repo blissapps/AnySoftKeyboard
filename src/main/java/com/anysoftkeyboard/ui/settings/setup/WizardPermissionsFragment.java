@@ -17,7 +17,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.anysoftkeyboard.PermissionsRequestCodes;
-import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
+import com.anysoftkeyboard.ui.settings.MainSettingsAlternativeActivity;
 import com.anysoftkeyboard.utils.Log;
 import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.menny.android.anysoftkeyboard.R;
@@ -26,7 +26,7 @@ import net.evendanan.chauffeur.lib.permissions.PermissionsRequest;
 
 public class WizardPermissionsFragment extends WizardPageBaseFragment implements View.OnClickListener {
 
-    private MainSettingsActivity activity;
+    private MainSettingsAlternativeActivity activity;
     private Typeface tf1, tf2;
 
     private final PermissionsRequest mContactsPermissionRequest =
@@ -123,7 +123,7 @@ public class WizardPermissionsFragment extends WizardPageBaseFragment implements
 
     @Override
     public void onClick(View v) {
-        activity = (MainSettingsActivity) getActivity();
+        activity = (MainSettingsAlternativeActivity) getActivity();
         if (activity == null) return;
         SharedPreferences sharedPreferences = null;
         switch (v.getId()) {

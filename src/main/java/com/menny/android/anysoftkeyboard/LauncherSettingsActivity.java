@@ -20,7 +20,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
+import com.anysoftkeyboard.ui.settings.MainSettingsAlternativeActivity;
 import com.anysoftkeyboard.ui.settings.setup.SetUpKeyboardWizardFragment;
 import com.anysoftkeyboard.ui.settings.setup.SetupSupport;
 
@@ -52,10 +52,10 @@ public class LauncherSettingsActivity extends Activity {
             finish();
         } else {
             if (SetupSupport.isThisKeyboardEnabled(getApplication())) {
-                startActivity(new Intent(this, MainSettingsActivity.class));
+                startActivity(new Intent(this, MainSettingsAlternativeActivity.class));
             } else {
-                Intent startSetupWizard = MainSettingsActivity.createStartActivityIntentForAddingFragmentToUi(
-                        this, MainSettingsActivity.class,
+                Intent startSetupWizard = MainSettingsAlternativeActivity.createStartActivityIntentForAddingFragmentToUi(
+                        this, MainSettingsAlternativeActivity.class,
                         new SetUpKeyboardWizardFragment(), TransitionExperiences.ROOT_FRAGMENT_EXPERIENCE_TRANSITION);
                 startActivity(startSetupWizard);
             }

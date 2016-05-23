@@ -46,7 +46,7 @@ public class QuickTextSettingsFragment extends PreferenceFragment implements Pre
     @Override
     public void onStart() {
         super.onStart();
-        MainSettingsActivity.setActivityTitle(this, getString(R.string.quick_text_keys_group));
+        MainSettingsAlternativeActivity.setActivityTitle(this, getString(R.string.quick_text_keys_group));
     }
 
     @Override

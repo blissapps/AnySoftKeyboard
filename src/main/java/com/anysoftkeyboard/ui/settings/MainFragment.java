@@ -62,7 +62,7 @@ public class MainFragment extends Fragment {
                     .commit();
         }
         View testingView = view.findViewById(R.id.testing_build_message);
-        testingView.setVisibility(BuildConfig.TESTING_BUILD? View.VISIBLE : View.GONE);
+        testingView.setVisibility(BuildConfig.TESTING_BUILD ? View.VISIBLE : View.GONE);
     }
 
     @Override
@@ -117,8 +117,8 @@ public class MainFragment extends Fragment {
         ClickableSpan openSettingsLink = new ClickableSpan() {
             @Override
             public void onClick(View widget) {
-                MainSettingsActivity mainSettingsActivity = (MainSettingsActivity) getActivity();
-                mainSettingsActivity.openDrawer();
+                MainSettingsAlternativeActivity mainSettingsActivity = (MainSettingsAlternativeActivity) getActivity();
+                mainSettingsActivity.onOpenMenu();
             }
         };
         setupLink(getView(), R.id.open_settings_view, openSettingsLink, false);
