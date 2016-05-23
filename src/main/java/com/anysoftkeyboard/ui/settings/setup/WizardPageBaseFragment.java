@@ -9,6 +9,7 @@ public abstract class WizardPageBaseFragment extends Fragment {
 
     /**
      * calculate whether the step has completed. This should check OS configuration.
+     *
      * @return true if step setup is valid in OS
      */
     protected abstract boolean isStepCompleted();

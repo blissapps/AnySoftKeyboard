@@ -1,56 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent"
+    android:background="@color/safety_keyboard_color"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="6dp">
 
     <TextView
+        android:id="@+id/tvTitleSndStep"
         style="@style/Ask.Text.Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
         android:gravity="center"
-        android:text="@string/setup_wizard_step_two_title"/>
+        android:text="@string/setup_wizard_step_two_title"
+        android:textColor="@android:color/white"
+        android:textSize="31sp" />
 
-    <include android:id="@id/previous_step_not_complete"
+    <include
+        android:id="@id/previous_step_not_complete"
         layout="@layout/keyboard_setup_wizard_previous_step_not_complete_layout"
-        android:visibility="gone"/>
-
+        android:visibility="gone" />
 
     <LinearLayout
         android:id="@id/this_step_complete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
         android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
         android:visibility="gone">
 
         <TextView
             style="@style/Ask.Text.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/wizard_step_this_step_complete_title"
-            android:drawableTop="@drawable/ic_accept"
+            android:layout_marginTop="16dp"
             android:drawablePadding="8dp"
-            android:layout_marginTop="16dp"/>
+            android:drawableTop="@drawable/ic_accept"
+            android:gravity="center"
+            android:text="@string/wizard_step_this_step_complete_title" />
 
         <TextView
             style="@style/Ask.Text.Normal"
-            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:gravity="center"
             android:text="@string/wizard_step_this_step_complete_text_switched" />
 
         <TextView
             style="@style/Ask.Text.Normal"
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:gravity="center"
             android:text="@string/wizard_step_swipe_to_next" />
     </LinearLayout>
@@ -59,37 +65,66 @@
         android:id="@id/this_step_needs_setup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_gravity="center"
         android:gravity="center"
-        android:layout_gravity="center">
+        android:orientation="vertical">
 
-        <TextView
+        <!-- <TextView
             style="@style/Ask.Text.Small"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_marginTop="4dp"
-            android:text="@string/setup_wizard_step_two_small_sub_title"/>
-
-        <TextView
-            style="@style/Ask.Text.Normal"
-            android:layout_marginTop="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/setup_wizard_step_two_details" />
+            android:gravity="center"
+            android:text="@string/setup_wizard_step_two_small_sub_title" /> -->
 
         <View
-            style="@style/Ask.Menu.Divider" />
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="42dp"
+            android:layout_marginRight="42dp"
+            android:layout_marginTop="21dp"
+            android:background="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tvExplainSndStep"
+            style="@style/Ask.Text.Normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="42dp"
+            android:layout_marginRight="42dp"
+            android:layout_marginTop="21dp"
+            android:gravity="center"
+            android:text="@string/setup_wizard_step_two_details"
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
+
+        <!--  <View style="@style/Ask.Menu.Divider" /> -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="42dp"
+            android:layout_marginRight="42dp"
+            android:layout_marginTop="21dp"
+            android:background="@android:color/white" />
+
+        <!--   android:drawableLeft="@drawable/ic_user_interface_category"
+            android:drawablePadding="6dp" -->
 
         <TextView
             android:id="@+id/go_to_switch_keyboard_action"
             style="@style/Ask.Text.Normal"
-            android:padding="4dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawablePadding="6dp"
-            android:drawableLeft="@drawable/ic_user_interface_category"
+            android:layout_gravity="center"
+            android:layout_marginLeft="42dp"
+            android:layout_marginRight="42dp"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/transparent_click_feedback_background"
+            android:gravity="center"
+            android:padding="4dp"
             android:text="@string/setup_wizard_step_two_action"
-            android:background="@drawable/transparent_click_feedback_background"/>
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
     </LinearLayout>
 </LinearLayout>

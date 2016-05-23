@@ -29,6 +29,9 @@
     <!-- settings -->
     <string name="languages_cat">Idiomas</string>
     <!-- welcome -->
+    <string name="safety_keyboard_intro_1">The Safety Keyboard by Moto  não é um aplicativo qualquer.\n Ele foi pensado para substituir  o seu teclado.</string>
+    <string name="safety_keyboard_intro_2">Para usar  o Safety Keyboard by Moto  você precisa configurá-lo primeiro.</string>
+    <string name="safety_keyboard_intro_3">CLIQUE AQUI</string>
     <!-- changelog -->
     <string name="changelog">Alterações</string>
     <string name="search_market_for_addons">Procurar extras</string>
@@ -516,6 +519,7 @@
     <string name="ime_crashed_send_button">Enviar</string>
     <string name="ime_crashed_cancel_button">Cancelar</string>
     <string name="ime_crashed_intent_selector_title">Enviar relatório de erros com</string>
+    <string name="setup_wizard_intro">Início:</string>
     <string name="setup_wizard_step_one">Passo 1:</string>
     <string name="setup_wizard_step_two">Passo 2:</string>
     <string name="setup_wizard_step_three">Passo 3:</string>

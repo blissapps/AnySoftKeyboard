@@ -28,6 +28,29 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:layout_marginBottom="8dp"
+            android:text="@string/setup_wizard_intro"/>
+
+        <FrameLayout
+            android:id="@+id/wizard_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/Ask.Card"
+        android:layout_width="0px"
+        android:layout_weight="1"
+        android:layout_margin="12dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Ask.Text.SubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
             android:text="@string/setup_wizard_step_one"/>
 
         <FrameLayout

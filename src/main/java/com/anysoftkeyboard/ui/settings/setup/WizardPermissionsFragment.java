@@ -5,6 +5,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -13,6 +14,7 @@ import android.support.v4.content.SharedPreferencesCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.anysoftkeyboard.PermissionsRequestCodes;
 import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
@@ -25,6 +27,7 @@ import net.evendanan.chauffeur.lib.permissions.PermissionsRequest;
 public class WizardPermissionsFragment extends WizardPageBaseFragment implements View.OnClickListener {
 
     private MainSettingsActivity activity;
+    private Typeface tf1, tf2;
 
     private final PermissionsRequest mContactsPermissionRequest =
             new PermissionsRequest.PermissionsRequestBase(PermissionsRequestCodes.CONTACTS.getRequestCode(),
@@ -79,6 +82,21 @@ public class WizardPermissionsFragment extends WizardPageBaseFragment implements
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        tf1 = Typeface.createFromAsset(getActivity().getApplicationContext().getAssets(), "fonts/ropa_soft_bold.ttf");
+        tf2 = Typeface.createFromAsset(getActivity().getApplicationContext().getAssets(), "fonts/ropa_soft_light.ttf");
+        ((TextView) view.findViewById(R.id.tvTitleTrdStep)).setTypeface(tf2);
+        ((TextView) view.findViewById(R.id.tvLocationDialog)).setTypeface(tf2);
+        ((TextView) view.findViewById(R.id.tvContactsDialog)).setTypeface(tf2);
+        ((TextView) view.findViewById(R.id.tvAccessContacts)).setTypeface(tf2);
+        ((TextView) view.findViewById(R.id.tvAccessLocation)).setTypeface(tf2);
+        ((TextView) view.findViewById(R.id.tvAccessStorage)).setTypeface(tf2);
+        ((TextView) view.findViewById(R.id.ask_for_permissions_action)).setTypeface(tf1);
+        ((TextView) view.findViewById(R.id.ask_for_location_permissions_action)).setTypeface(tf1);
+        ((TextView) view.findViewById(R.id.ask_for_storage_permissions_action)).setTypeface(tf1);
+        ((TextView) view.findViewById(R.id.disable_contacts_dictionary)).setTypeface(tf1);
+        ((TextView) view.findViewById(R.id.disable_location)).setTypeface(tf1);
+        ((TextView) view.findViewById(R.id.disable_storage)).setTypeface(tf1);
+        ((TextView) view.findViewById(R.id.open_permissions_wiki_action)).setTypeface(tf1);
         view.findViewById(R.id.ask_for_permissions_action).setOnClickListener(this);
         view.findViewById(R.id.ask_for_location_permissions_action).setOnClickListener(this);
         view.findViewById(R.id.ask_for_storage_permissions_action).setOnClickListener(this);

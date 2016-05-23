@@ -31,6 +31,9 @@
     <!-- settings -->
     <string name="languages_cat">Languages</string>
     <!-- welcome -->
+    <string name="safety_keyboard_intro_1">The Safety Keyboard by Moto isn\'t like any other application.\n It was designed to replace your current keyboard.</string>
+    <string name="safety_keyboard_intro_2">In order to use The Safety Keyboard by Moto need to set it up first.</string>
+    <string name="safety_keyboard_intro_3">CLICK HERE</string>
     <!-- changelog -->
     <string name="changelog">Change Log</string>
     <string name="search_market_for_addons">Search for add-ons</string>
@@ -623,6 +626,7 @@
     <string name="ime_crashed_send_button">Send</string>
     <string name="ime_crashed_cancel_button">Cancel</string>
     <string name="ime_crashed_intent_selector_title">Send crash report via</string>
+    <string name="setup_wizard_intro">Intro:</string>
     <string name="setup_wizard_step_one">Step one:</string>
     <string name="setup_wizard_step_two">Step two:</string>
     <string name="setup_wizard_step_three">Step three:</string>

@@ -4,6 +4,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.database.ContentObserver;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -12,6 +13,7 @@ import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.menny.android.anysoftkeyboard.R;
@@ -20,6 +22,7 @@ public class WizardPageEnableKeyboardFragment extends WizardPageBaseFragment {
 
     private static final int KEY_MESSAGE_UNREGISTER_LISTENER = 447;
     private static final int KEY_MESSAGE_RETURN_TO_APP = 446;
+    private Typeface tf1, tf2;
 
 
     @SuppressWarnings("HandlerLeak"/*I want this fragment to stay in memory as long as possible*/)
@@ -72,6 +75,10 @@ public class WizardPageEnableKeyboardFragment extends WizardPageBaseFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        tf1 = Typeface.createFromAsset(getActivity().getApplicationContext().getAssets(), "fonts/ropa_soft_bold.ttf");
+        tf2 = Typeface.createFromAsset(getActivity().getApplicationContext().getAssets(), "fonts/ropa_soft_light.ttf");
+        ((TextView) view.findViewById(R.id.tvTitleFstStep)).setTypeface(tf2);
+        ((TextView) view.findViewById(R.id.tvExplainFstStep)).setTypeface(tf2);
         view.findViewById(R.id.go_to_language_settings_action).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,7 +89,7 @@ public class WizardPageEnableKeyboardFragment extends WizardPageBaseFragment {
                 //If the user is taking too long to change one checkbox, I say forget about it.
                 mGetBackHereHandler.removeMessages(KEY_MESSAGE_UNREGISTER_LISTENER);
                 mGetBackHereHandler.sendMessageDelayed(mGetBackHereHandler.obtainMessage(KEY_MESSAGE_UNREGISTER_LISTENER),
-                        45*1000/*45 seconds to change a checkbox is enough. After that, I wont listen to changes anymore.*/);
+                        45 * 1000/*45 seconds to change a checkbox is enough. After that, I wont listen to changes anymore.*/);
                 Intent startSettings = new Intent(android.provider.Settings.ACTION_INPUT_METHOD_SETTINGS);
                 startSettings.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startSettings.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
@@ -95,6 +102,7 @@ public class WizardPageEnableKeyboardFragment extends WizardPageBaseFragment {
                 }
             }
         });
+        ((TextView) view.findViewById(R.id.go_to_language_settings_action)).setTypeface(tf1);
     }
 
     @Override

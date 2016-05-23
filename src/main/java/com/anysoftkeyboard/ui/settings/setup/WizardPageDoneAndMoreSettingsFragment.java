@@ -1,11 +1,13 @@
 package com.anysoftkeyboard.ui.settings.setup;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.TextView;
 
 import com.anysoftkeyboard.ui.settings.KeyboardAddOnSettingsFragment;
 import com.anysoftkeyboard.ui.settings.KeyboardThemeSelectorFragment;
@@ -15,6 +17,9 @@ import com.menny.android.anysoftkeyboard.R;
 import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;
 
 public class WizardPageDoneAndMoreSettingsFragment extends WizardPageBaseFragment implements View.OnClickListener {
+
+    private Typeface tf1, tf2;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.keyboard_setup_wizard_page_additional_settings_layout, container, false);
@@ -23,11 +28,19 @@ public class WizardPageDoneAndMoreSettingsFragment extends WizardPageBaseFragmen
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        tf1 = Typeface.createFromAsset(getActivity().getApplicationContext().getAssets(), "fonts/ropa_soft_bold.ttf");
+        tf2 = Typeface.createFromAsset(getActivity().getApplicationContext().getAssets(), "fonts/ropa_soft_light.ttf");
         view.findViewById(R.id.show_keyboard_view_action).setOnClickListener(this);
         view.findViewById(R.id.go_to_home_fragment_action).setOnClickListener(this);
         view.findViewById(R.id.go_to_languages_action).setOnClickListener(this);
         view.findViewById(R.id.go_to_theme_action).setOnClickListener(this);
         view.findViewById(R.id.go_to_all_settings_action).setOnClickListener(this);
+        ((TextView) view.findViewById(R.id.show_keyboard_view_action)).setTypeface(tf1);
+        ((TextView) view.findViewById(R.id.go_to_home_fragment_action)).setTypeface(tf1);
+        ((TextView) view.findViewById(R.id.go_to_languages_action)).setTypeface(tf1);
+        ((TextView) view.findViewById(R.id.go_to_theme_action)).setTypeface(tf1);
+        ((TextView) view.findViewById(R.id.go_to_all_settings_action)).setTypeface(tf1);
+        ((TextView) view.findViewById(R.id.tvTitleTrdStep)).setTypeface(tf1);
     }
 
     @Override

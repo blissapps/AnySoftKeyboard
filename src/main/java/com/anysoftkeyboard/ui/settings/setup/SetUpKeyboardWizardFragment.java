@@ -47,7 +47,6 @@ public class SetUpKeyboardWizardFragment extends Fragment {
         public void handleMessage(Message msg) {
             SetUpKeyboardWizardFragment fragment = mWeakFragment.get();
             if (fragment == null) return;
-
             switch (msg.what) {
                 case KEY_MESSAGE_SCROLL_TO_PAGE:
                     int pageToScrollTo = msg.arg1;
@@ -153,15 +152,16 @@ public class SetUpKeyboardWizardFragment extends Fragment {
                 //See: https://github.com/AnySoftKeyboard/AnySoftKeyboard/issues/285
                 FragmentManager fragmentManager = getChildFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.replace(R.id.wizard_step_one, wizardPagesAdapter.getItem(0));
-                transaction.replace(R.id.wizard_step_two, wizardPagesAdapter.getItem(1));
-                if (wizardPagesAdapter.getCount() == 4) {
+                transaction.replace(R.id.wizard_intro, wizardPagesAdapter.getItem(0));
+                transaction.replace(R.id.wizard_step_one, wizardPagesAdapter.getItem(1));
+                transaction.replace(R.id.wizard_step_two, wizardPagesAdapter.getItem(2));
+                if (wizardPagesAdapter.getCount() == 5) {
                     view.findViewById(R.id.wizard_step_permissions_card).setVisibility(View.VISIBLE);
-                    transaction.replace(R.id.wizard_step_permissions, wizardPagesAdapter.getItem(2));
-                    transaction.replace(R.id.wizard_step_three, wizardPagesAdapter.getItem(3));
+                    transaction.replace(R.id.wizard_step_permissions, wizardPagesAdapter.getItem(3));
+                    transaction.replace(R.id.wizard_step_three, wizardPagesAdapter.getItem(4));
                 } else {
                     view.findViewById(R.id.wizard_step_permissions_card).setVisibility(View.GONE);
-                    transaction.replace(R.id.wizard_step_three, wizardPagesAdapter.getItem(2));
+                    transaction.replace(R.id.wizard_step_three, wizardPagesAdapter.getItem(3));
                 }
                 transaction.commit();
             }
@@ -193,6 +193,7 @@ public class SetUpKeyboardWizardFragment extends Fragment {
     public void refreshFragmentsUi() {
         if (mWizardPager == null/*meaning, this is a tablet - showing all fragments*/) {
             FragmentManager fragmentManager = getChildFragmentManager();
+            refreshFragmentUi(fragmentManager, R.id.wizard_intro);
             refreshFragmentUi(fragmentManager, R.id.wizard_step_one);
             refreshFragmentUi(fragmentManager, R.id.wizard_step_two);
             refreshFragmentUi(fragmentManager, R.id.wizard_step_permissions);

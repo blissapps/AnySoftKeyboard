@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/safety_keyboard_color"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="6dp">
+
+    <include android:id="@id/previous_step_not_complete"
+        layout="@layout/keyboard_setup_wizard_previous_step_not_complete_layout"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@id/this_step_complete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/Ask.Text.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/wizard_step_this_step_complete_title"
+            android:drawableTop="@drawable/ic_accept"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            style="@style/Ask.Text.Normal"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/wizard_step_this_step_complete_text_switched" />
+
+        <TextView
+            style="@style/Ask.Text.Normal"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/wizard_step_swipe_to_next" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@id/this_step_needs_setup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvIntro1"
+            android:layout_width="176dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/keyboard_background"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="21dp"
+            android:gravity="center"
+            android:text="@string/safety_keyboard_intro_1"
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/keyboard_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/bg_keyboard" />
+
+        <TextView
+            android:id="@+id/tvIntro2"
+            android:layout_width="176dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/keyboard_background"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:gravity="center"
+            android:text="@string/safety_keyboard_intro_2"
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/bEnableKeyboard"
+            android:layout_width="176dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvIntro2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:onClick="enableKeyboard"
+            android:padding="20dp"
+            android:text="@string/safety_keyboard_intro_3"
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+</LinearLayout>

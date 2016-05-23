@@ -3,119 +3,180 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/safety_keyboard_color"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="6dp">
 
     <!-- note, since this page is always at incomplete state, we'll hide the step_complete nad step_not_complete views. -->
-    <include android:id="@id/previous_step_not_complete"
-             layout="@layout/keyboard_setup_wizard_previous_step_not_complete_layout"
-             android:visibility="gone"/>
+    <include
+        android:id="@id/previous_step_not_complete"
+        layout="@layout/keyboard_setup_wizard_previous_step_not_complete_layout"
+        android:visibility="gone" />
 
-    <View android:id="@id/this_step_complete" android:layout_width="1px" android:layout_height="1px" android:visibility="gone"/>
+    <View
+        android:id="@id/this_step_complete"
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:visibility="gone" />
 
-    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
-    <LinearLayout
-        android:id="@id/this_step_needs_setup"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_gravity="center">
-
-        <TextView
-            style="@style/Ask.Text.Large"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/setup_wizard_step_three_title"
-            android:drawableTop="@drawable/ic_accept"
-            android:drawablePadding="8dp"/>
+        android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
-            android:weightSum="10">
-            <TextView
-                android:id="@+id/show_keyboard_view_action"
-                style="@style/Ask.Text.Normal"
-                android:padding="8dp"
-                android:layout_width="0px"
-                android:layout_weight="4"
-                android:layout_height="wrap_content"
-                android:drawablePadding="6dp"
-                android:drawableLeft="@drawable/ic_user_interface_category"
-                android:drawableStart="@drawable/ic_user_interface_category"
-                android:text="@string/setup_wizard_step_three_action_show_keyboard"
-                android:background="@drawable/transparent_click_feedback_background"
-                android:gravity="center_horizontal"/>
-
-            <View
-                android:layout_width="24dp"
-                android:layout_height="1px"/>
-
-            <TextView
-                android:id="@+id/go_to_home_fragment_action"
-                style="@style/Ask.Text.Normal"
-                android:padding="8dp"
-                android:layout_width="0px"
-                android:layout_weight="4"
-                android:layout_height="wrap_content"
-                android:drawablePadding="6dp"
-                android:drawableLeft="@drawable/ic_action_settings_light"
-                android:drawableStart="@drawable/ic_action_settings_light"
-                android:text="@string/setup_wizard_step_three_action_go_to_home_fragment"
-                android:background="@drawable/transparent_click_feedback_background"
-                android:gravity="center_horizontal"/>
-        </LinearLayout>
-
-        <View style="@style/Ask.Menu.Divider" />
-
-        <TextView
-            style="@style/Ask.Text.Normal"
-            android:layout_marginTop="16dp"
+            android:id="@id/this_step_needs_setup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/setup_wizard_step_three_details" />
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/go_to_languages_action"
-            style="@style/Ask.Text.Normal"
-            android:padding="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawablePadding="6dp"
-            android:drawableLeft="@drawable/ic_language_category"
-            android:drawableStart="@drawable/ic_language_category"
-            android:text="@string/setup_wizard_step_three_action_languages"
-            android:background="@drawable/transparent_click_feedback_background"/>
+            <!--  android:drawablePadding="8dp"
+                android:drawableTop="@drawable/ic_accept" -->
 
-        <TextView
-            android:id="@+id/go_to_theme_action"
-            style="@style/Ask.Text.Normal"
-            android:padding="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawablePadding="6dp"
-            android:drawableLeft="@drawable/ic_user_interface_category"
-            android:drawableStart="@drawable/ic_user_interface_category"
-            android:text="@string/setup_wizard_step_three_action_themes"
-            android:visibility="gone"
-            android:background="@drawable/transparent_click_feedback_background"/>
+            <TextView
+                android:id="@+id/tvTitleTrdStep"
+                style="@style/Ask.Text.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="42dp"
+                android:gravity="center"
+                android:text="@string/setup_wizard_step_three_title"
+                android:textColor="@android:color/white"
+                android:textSize="31sp" />
 
-        <TextView
-            android:id="@+id/go_to_all_settings_action"
-            style="@style/Ask.Text.Normal"
-            android:padding="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="28dp"
-            android:layout_marginStart="28dp"
-            android:text="@string/setup_wizard_step_three_action_all_settings"
-            android:background="@drawable/transparent_click_feedback_background"/>
-    </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="42dp"
+                android:layout_marginTop="21dp"
+                android:background="@android:color/white" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <!--   android:drawableLeft="@drawable/ic_user_interface_category"
+                android:drawablePadding="6dp"
+                android:drawableStart="@drawable/ic_user_interface_category" -->
+
+                <TextView
+                    android:id="@+id/show_keyboard_view_action"
+                    style="@style/Ask.Text.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="21dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/transparent_click_feedback_background"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:text="@string/setup_wizard_step_three_action_show_keyboard"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <!-- android:drawableLeft="@drawable/ic_action_settings_light"
+                    android:drawablePadding="6dp"
+                    android:drawableStart="@drawable/ic_action_settings_light" -->
+
+                <TextView
+                    android:id="@+id/go_to_home_fragment_action"
+                    style="@style/Ask.Text.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/transparent_click_feedback_background"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:text="@string/setup_wizard_step_three_action_go_to_home_fragment"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <!-- <View style="@style/Ask.Menu.Divider" /> -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="42dp"
+                android:layout_marginTop="21dp"
+                android:background="@android:color/white" />
+
+            <TextView
+                style="@style/Ask.Text.Normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="42dp"
+                android:layout_marginTop="21dp"
+                android:gravity="center"
+                android:text="@string/setup_wizard_step_three_details"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="42dp"
+                android:layout_marginTop="21dp"
+                android:background="@android:color/white" />
+
+            <!--                 android:drawableLeft="@drawable/ic_language_category"
+                android:drawablePadding="6dp"
+                android:drawableStart="@drawable/ic_language_category" -->
+
+            <TextView
+                android:id="@+id/go_to_languages_action"
+                style="@style/Ask.Text.Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="21dp"
+                android:background="@drawable/transparent_click_feedback_background"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/setup_wizard_step_three_action_languages"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/go_to_theme_action"
+                style="@style/Ask.Text.Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/transparent_click_feedback_background"
+                android:drawableLeft="@drawable/ic_user_interface_category"
+                android:drawablePadding="6dp"
+                android:drawableStart="@drawable/ic_user_interface_category"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/setup_wizard_step_three_action_themes"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/go_to_all_settings_action"
+                style="@style/Ask.Text.Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/transparent_click_feedback_background"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/setup_wizard_step_three_action_all_settings"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
     </ScrollView>
 </LinearLayout>
