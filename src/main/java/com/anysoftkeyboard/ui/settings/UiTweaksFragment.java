@@ -37,6 +37,7 @@ public class UiTweaksFragment extends PreferenceFragment implements Preference.O
     @Override
     public void onCreate(Bundle paramBundle) {
         super.onCreate(paramBundle);
+        getActivity().setTheme(R.style.Theme_Preference);
         addPreferencesFromResource(R.xml.prefs_ui_tweaks);
     }
 

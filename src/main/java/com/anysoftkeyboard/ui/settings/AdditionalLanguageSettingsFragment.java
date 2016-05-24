@@ -34,6 +34,7 @@ public class AdditionalLanguageSettingsFragment extends PreferenceFragment imple
     @Override
     public void onCreate(Bundle paramBundle) {
         super.onCreate(paramBundle);
+        getActivity().setTheme(R.style.Theme_Preference);
         addPreferencesFromResource(R.xml.prefs_addtional_language_prefs);
     }
 
@@ -54,7 +55,7 @@ public class AdditionalLanguageSettingsFragment extends PreferenceFragment imple
         if (preference.getKey().equals(getString(R.string.tweaks_group_key))) {
             Activity activity = getActivity();
             if (activity != null && activity instanceof FragmentChauffeurActivity) {
-                ((FragmentChauffeurActivity)activity).addFragmentToUi(new LanguageTweaksFragment(), TransitionExperiences.DEEPER_EXPERIENCE_TRANSITION);
+                ((FragmentChauffeurActivity) activity).addFragmentToUi(new LanguageTweaksFragment(), TransitionExperiences.DEEPER_EXPERIENCE_TRANSITION);
                 return true;
             }
         }

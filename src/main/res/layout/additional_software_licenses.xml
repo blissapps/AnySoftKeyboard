@@ -1,121 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/safety_keyboard_color"
     android:fillViewport="true"
     android:paddingLeft="@dimen/global_content_padding_side"
-    android:paddingRight="@dimen/global_content_padding_side"
-    android:layout_width="match_parent">
+    android:paddingRight="@dimen/global_content_padding_side">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <TextView
-                style="@style/Ask.Legal.Title"
-                android:text="@string/legal_this_app_uses_ask_source_code_title"/>
-        <TextView
-                style="@style/Ask.Legal.Text"
-                android:text="@string/legal_this_app_uses_ask_source_code_license"/>
-        <View
-                style="@style/Ask.Legal.Divider" />
-        <TextView
+            android:id="@+id/tvLegal1"
             style="@style/Ask.Legal.Title"
-            android:text="@string/legal_this_app_uses_android_source_code_title"/>
+            android:text="@string/legal_this_app_uses_ask_source_code_title" />
+
         <TextView
+            android:id="@+id/tvLegal2"
             style="@style/Ask.Legal.Text"
-            android:text="@string/legal_this_app_uses_android_source_code_license"/>
+            android:text="@string/legal_this_app_uses_ask_source_code_license" />
 
-
-
-        <View
-            style="@style/Ask.Legal.Divider" />
+        <View style="@style/Ask.Legal.Divider" />
 
         <TextView
+            android:id="@+id/tvLegal3"
             style="@style/Ask.Legal.Title"
-            android:text="@string/legal_this_app_uses_frankenrobot_title"/>
+            android:text="@string/legal_this_app_uses_android_source_code_title" />
+
         <TextView
+            android:id="@+id/tvLegal4"
             style="@style/Ask.Legal.Text"
-            android:text="@string/legal_this_app_uses_frankenrobot_license"/>
+            android:text="@string/legal_this_app_uses_android_source_code_license" />
 
 
-
-        <View
-            style="@style/Ask.Legal.Divider" />
+        <View style="@style/Ask.Legal.Divider" />
 
         <TextView
+            android:id="@+id/tvLegal5"
             style="@style/Ask.Legal.Title"
-            android:text="@string/legal_this_app_uses_preferences_fragment_title"/>
+            android:text="@string/legal_this_app_uses_frankenrobot_title" />
+
         <TextView
+            android:id="@+id/tvLegal6"
             style="@style/Ask.Legal.Text"
-            android:text="@string/legal_this_app_uses_preferences_fragment_license"/>
+            android:text="@string/legal_this_app_uses_frankenrobot_license" />
 
 
-
-        <View
-            style="@style/Ask.Legal.Divider" />
+        <View style="@style/Ask.Legal.Divider" />
 
         <TextView
+            android:id="@+id/tvLegal7"
             style="@style/Ask.Legal.Title"
-            android:text="@string/legal_this_app_uses_chauffeur_title"/>
+            android:text="@string/legal_this_app_uses_preferences_fragment_title" />
+
         <TextView
+            android:id="@+id/tvLegal8"
             style="@style/Ask.Legal.Text"
-            android:text="@string/legal_this_app_uses_chauffeur_license"/>
+            android:text="@string/legal_this_app_uses_preferences_fragment_license" />
 
 
-
-        <View
-            style="@style/Ask.Legal.Divider" />
+        <View style="@style/Ask.Legal.Divider" />
 
         <TextView
+            android:id="@+id/tvLegal9"
             style="@style/Ask.Legal.Title"
-            android:text="@string/legal_this_app_uses_jsr305_title"/>
+            android:text="@string/legal_this_app_uses_chauffeur_title" />
+
         <TextView
+            android:id="@+id/tvLegal10"
             style="@style/Ask.Legal.Text"
-            android:text="@string/legal_this_app_uses_jsr305_license"/>
+            android:text="@string/legal_this_app_uses_chauffeur_license" />
 
 
-
-        <View
-            style="@style/Ask.Legal.Divider" />
+        <View style="@style/Ask.Legal.Divider" />
 
         <TextView
+            android:id="@+id/tvLegal11"
             style="@style/Ask.Legal.Title"
-            android:text="@string/legal_this_app_uses_greek_jni_ime_title"/>
+            android:text="@string/legal_this_app_uses_jsr305_title" />
+
         <TextView
+            android:id="@+id/tvLegal12"
             style="@style/Ask.Legal.Text"
-            android:text="@string/legal_this_app_uses_greek_jni_ime_license"/>
+            android:text="@string/legal_this_app_uses_jsr305_license" />
 
 
-
-        <View
-            style="@style/Ask.Legal.Divider" />
+        <View style="@style/Ask.Legal.Divider" />
 
         <TextView
+            android:id="@+id/tvLegal13"
             style="@style/Ask.Legal.Title"
-            android:text="@string/legal_this_app_uses_drag_sort_recycler_title"/>
+            android:text="@string/legal_this_app_uses_greek_jni_ime_title" />
+
         <TextView
+            android:id="@+id/tvLegal14"
             style="@style/Ask.Legal.Text"
-            android:text="@string/legal_this_app_uses_drag_sort_recycler_license"/>
+            android:text="@string/legal_this_app_uses_greek_jni_ime_license" />
 
 
-        <View
-            style="@style/Ask.Legal.Divider" />
+        <View style="@style/Ask.Legal.Divider" />
 
         <TextView
+            android:id="@+id/tvLegal15"
             style="@style/Ask.Legal.Title"
-            android:text="@string/legal_this_app_uses_relinker_title"/>
+            android:text="@string/legal_this_app_uses_drag_sort_recycler_title" />
+
         <TextView
+            android:id="@+id/tvLegal16"
             style="@style/Ask.Legal.Text"
-            android:text="@string/legal_this_app_uses_relinker_license"/>
+            android:text="@string/legal_this_app_uses_drag_sort_recycler_license" />
 
-        <View
-            style="@style/Ask.Legal.Divider" />
+
+        <View style="@style/Ask.Legal.Divider" />
 
         <TextView
+            android:id="@+id/tvLegal17"
             style="@style/Ask.Legal.Title"
-            android:text="@string/legal_this_app_uses_voiceime_utils_title"/>
+            android:text="@string/legal_this_app_uses_relinker_title" />
+
         <TextView
+            android:id="@+id/tvLegal18"
             style="@style/Ask.Legal.Text"
-            android:text="@string/legal_this_app_uses_voiceime_utils_license"/>
+            android:text="@string/legal_this_app_uses_relinker_license" />
+
+        <View style="@style/Ask.Legal.Divider" />
+
+        <TextView
+            android:id="@+id/tvLegal19"
+            style="@style/Ask.Legal.Title"
+            android:text="@string/legal_this_app_uses_voiceime_utils_title" />
+
+        <TextView
+            android:id="@+id/tvLegal20"
+            style="@style/Ask.Legal.Text"
+            android:text="@string/legal_this_app_uses_voiceime_utils_license" />
     </LinearLayout>
 </ScrollView>

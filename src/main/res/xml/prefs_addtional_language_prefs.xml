@@ -6,17 +6,19 @@
         android:key="grammar_group"
         android:title="@string/grammar_group">
 
-        <CheckBoxPreference
+        <com.anysoftkeyboard.ui.settings.widget.SKCheckBoxPreference
             android:defaultValue="true"
             android:key="auto_caps"
             android:persistent="true"
+            android:layout="@layout/skcheckboxpreference"
             android:title="@string/auto_caps"/>
 
-        <CheckBoxPreference
+        <com.anysoftkeyboard.ui.settings.widget.SKCheckBoxPreference
             android:defaultValue="true"
             android:key="candidates_on"
             android:persistent="true"
             android:title="@string/candidates_on"
+            android:layout="@layout/skcheckboxpreference"
             android:summaryOn="@string/candidates_on_summary"
             android:summaryOff="@string/candidates_off_summary"/>
 
@@ -35,36 +37,40 @@
     <PreferenceCategory
         android:key="behavior_group"
         android:title="@string/keyboard_behavior_group">
-        <CheckBoxPreference
+        <com.anysoftkeyboard.ui.settings.widget.SKCheckBoxPreference
             android:defaultValue="@bool/settings_default_allow_suggestions_restart"
             android:dependency="candidates_on"
             android:key="@string/settings_key_allow_suggestions_restart"
             android:persistent="true"
             android:summaryOff=""
+            android:layout="@layout/skcheckboxpreference"
             android:summaryOn="@string/allow_suggestions_restart_summary"
             android:title="@string/allow_suggestions_restart"/>
 
 
-        <CheckBoxPreference
+        <com.anysoftkeyboard.ui.settings.widget.SKCheckBoxPreference
             android:defaultValue="@bool/settings_default_switch_to_alphabet_on_space"
             android:key="@string/settings_key_switch_keyboard_on_space"
             android:persistent="true"
+            android:layout="@layout/skcheckboxpreference"
             android:summaryOff="@string/switch_keyboard_on_space_off_summary"
             android:summaryOn="@string/switch_keyboard_on_space_on_summary"
             android:title="@string/switch_keyboard_on_space"/>
 
-        <CheckBoxPreference
+        <com.anysoftkeyboard.ui.settings.widget.SKCheckBoxPreference
             android:defaultValue="true"
             android:key="double_space_to_period"
             android:persistent="true"
             android:summaryOff=""
+            android:layout="@layout/skcheckboxpreference"
             android:summaryOn="@string/double_space_to_period_summary"
             android:title="@string/double_space_to_period"/>
 
-        <CheckBoxPreference
+        <com.anysoftkeyboard.ui.settings.widget.SKCheckBoxPreference
             android:defaultValue="@bool/settings_default_persistent_layout_per_package_id"
             android:key="@string/settings_key_persistent_layout_per_package_id"
             android:persistent="true"
+            android:layout="@layout/skcheckboxpreference"
             android:summaryOff="@string/persistent_layout_per_package_id_off_summary"
             android:summaryOn="@string/persistent_layout_per_package_id_on_summary"
             android:title="@string/persistent_layout_per_package_id_title"/>
@@ -75,25 +81,28 @@
         android:key="hardware_keys_group"
         android:title="@string/hardware_keys_group">
 
-        <CheckBoxPreference
+        <com.anysoftkeyboard.ui.settings.widget.SKCheckBoxPreference
             android:defaultValue="@bool/settings_default_use_camera_key_for_backspace_backword"
             android:key="@string/settings_key_use_camera_key_for_backspace_backword"
             android:persistent="true"
+            android:layout="@layout/skcheckboxpreference"
             android:summaryOff="@string/camera_key_for_backspace_backword_support_off_summary"
             android:summaryOn="@string/camera_key_for_backspace_backword_support_on_summary"
             android:title="@string/camera_key_for_backspace_backword_support"/>
 
-        <CheckBoxPreference
+        <com.anysoftkeyboard.ui.settings.widget.SKCheckBoxPreference
             android:defaultValue="@bool/settings_default_use_volume_key_for_left_right"
             android:key="@string/settings_key_use_volume_key_for_left_right"
             android:persistent="true"
+            android:layout="@layout/skcheckboxpreference"
             android:summaryOff="@string/volume_key_for_left_right_support_off_summary"
             android:summaryOn="@string/volume_key_for_left_right_support_on_summary"
             android:title="@string/volume_key_for_left_right_support"/>
     </PreferenceCategory>
 
-    <Preference
+    <com.anysoftkeyboard.ui.settings.widget.SKPreference
         android:key="@string/tweaks_group_key"
+        android:layout="@layout/skpreference"
         android:title="@string/tweaks_group"/>
 
 </PreferenceScreen>

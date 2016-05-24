@@ -21,6 +21,7 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
@@ -34,6 +35,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.anysoftkeyboard.PermissionsRequestCodes;
 import com.anysoftkeyboard.ui.settings.setup.SetUpKeyboardWizardFragment;
@@ -44,16 +46,21 @@ import net.evendanan.chauffeur.lib.permissions.PermissionsFragmentChauffeurActiv
 import net.evendanan.chauffeur.lib.permissions.PermissionsRequest;
 import net.evendanan.pushingpixels.EdgeEffectHacker;
 
+import org.w3c.dom.Text;
+
 public class MainSettingsAlternativeActivity extends PermissionsFragmentChauffeurActivity {
 
     private CharSequence mTitle;
     private Toolbar myToolbar;
     private boolean isMainMenu;
+    private Typeface tf1, tf2;
 
     @Override
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.main_ui_alt);
+        tf1 = Typeface.createFromAsset(getApplicationContext().getAssets(), "fonts/ropa_soft_bold.ttf");
+        tf2 = Typeface.createFromAsset(getApplicationContext().getAssets(), "fonts/ropa_soft_light.ttf");
         myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
         mTitle = getTitle();

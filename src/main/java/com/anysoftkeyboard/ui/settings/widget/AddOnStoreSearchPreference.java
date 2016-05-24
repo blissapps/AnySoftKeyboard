@@ -25,6 +25,7 @@ package com.anysoftkeyboard.ui.settings.widget;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.preference.Preference;
 import android.text.TextUtils;
@@ -41,6 +42,7 @@ public class AddOnStoreSearchPreference extends Preference implements OnClickLis
     private static final String TAG = "AddOnStoreSearchPreference";
 
     private View mStoreNotFoundView;
+    private Typeface tf1, tf2;
 
     public AddOnStoreSearchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -51,15 +53,18 @@ public class AddOnStoreSearchPreference extends Preference implements OnClickLis
     @Override
     protected View onCreateView(ViewGroup parent) {
         View layout = super.onCreateView(parent);
-
+        tf1 = Typeface.createFromAsset(getContext().getAssets(), "fonts/ropa_soft_bold.ttf");
+        tf2 = Typeface.createFromAsset(getContext().getAssets(), "fonts/ropa_soft_light.ttf");
         layout.setOnClickListener(this);
         CharSequence title = getTitle();
         if (!TextUtils.isEmpty(title)) {
             TextView cta = (TextView) layout.findViewById(R.id.cta_title);
+            cta.setTypeface(tf2);
             cta.setText(title);
         }
         mStoreNotFoundView = layout.findViewById(R.id.no_store_found_error);
         mStoreNotFoundView.setVisibility(View.GONE);
+        ((TextView) mStoreNotFoundView).setTypeface(tf2);
         return layout;
     }
 

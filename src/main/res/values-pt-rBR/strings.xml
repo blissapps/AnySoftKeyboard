@@ -297,6 +297,7 @@
     <string name="quick_fix_summary">Corrigir os erros frequentes e expandir as abreviaturas</string>
     <string name="allow_suggestions_restart">Reiniciar sugestões</string>
     <string name="allow_suggestions_restart_summary">Reiniciar sugestões ao mover o cursor</string>
+    <string name="setup_wizard_step_three_action_show_keyboard">Veja\nThe Safety Keyboard!</string>
     <!-- settings - keyboard group -->
     <string name="keyboards_group_extra_template"><xliff:g id="enabledLayouts">%s</xliff:g>/<xliff:g id="totalLayouts">%s</xliff:g></string>
     <string name="keyboards_group">Teclados</string>
@@ -509,7 +510,7 @@
     <string name="setup_wizard_step_storage_permissions_details">Neste passo, poderá aprovar o acesso do <i>The Safety Keyboard by Moto</i> à memória externa do seu dispositivo. Se desejar bloquear este acesso poderá Desativar acesso à localização.</string>
 
     <string name="setup_wizard_step_three_title">O The Safety Keyboard by Moto está pronto!</string>
-    <string name="setup_wizard_step_three_details">Obrigado por escolher o <i>The Safety Keyboard by Moto</i>.\nEste teclado pode ser bastante personalizado. Não tenha medo de o fazer:</string>
+    <string name="setup_wizard_step_three_details">Obrigado por escolher o <i>The Safety Keyboard by Moto</i>.</string>
     <string name="setup_wizard_step_three_action_languages">Configurar idiomas...</string>
     <string name="setup_wizard_step_three_action_themes">Escolher tema...</string>
     <string name="setup_wizard_step_three_action_all_settings">Outras configurações...</string>

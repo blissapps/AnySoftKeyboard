@@ -26,8 +26,10 @@ package com.anysoftkeyboard.ui.settings.widget;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.preference.Preference;
+import android.support.v4.content.res.ResourcesCompat;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
@@ -60,6 +62,7 @@ public class AddOnCheckBoxPreference extends Preference implements
     private ImageView mAddOnIcon;
     private View mIconOverlay;
     private AddOn mAddOn;
+    private Typeface tf1, tf2;
 
     public AddOnCheckBoxPreference(Context context) {
         this(context, null);
@@ -78,11 +81,16 @@ public class AddOnCheckBoxPreference extends Preference implements
     @Override
     protected View onCreateView(ViewGroup parent) {
         View layout = super.onCreateView(parent);
-
+        tf1 = Typeface.createFromAsset(getContext().getAssets(), "fonts/ropa_soft_bold.ttf");
+        tf2 = Typeface.createFromAsset(getContext().getAssets(), "fonts/ropa_soft_light.ttf");
         mCheckBox = (CheckBox) layout.findViewById(R.id.addon_checkbox);
         mCheckBox.setOnCheckedChangeListener(this);
         mName = (TextView) layout.findViewById(R.id.addon_title);
+        mName.setTypeface(tf2);
+        mName.setTextColor(ResourcesCompat.getColor(parent.getResources(), android.R.color.white, getContext().getTheme()));
         mDescription = (TextView) layout.findViewById(R.id.addon_description);
+        mDescription.setTypeface(tf2);
+        mDescription.setTextColor(ResourcesCompat.getColor(parent.getResources(), android.R.color.white, getContext().getTheme()));
         mAddOnIcon = (ImageView) layout.findViewById(R.id.addon_image);
         mIconOverlay = layout.findViewById(R.id.addon_image_more_overlay);
         populateViews();

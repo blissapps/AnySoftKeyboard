@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@color/candidate_normal"
+    android:background="@color/safety_keyboard_color"
     android:padding="6dp">
 
     <LinearLayout
@@ -69,7 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:buttonTint="@color/safety_keyboard_color"
+            android:buttonTint="@android:color/white"
             android:gravity="center_vertical" />
     </LinearLayout>
 

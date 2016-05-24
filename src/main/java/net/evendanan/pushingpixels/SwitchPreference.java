@@ -19,23 +19,29 @@ package net.evendanan.pushingpixels;
 import android.app.Service;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
+import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.preference.Preference;
+import android.support.v4.content.res.ResourcesCompat;
+import android.support.v7.widget.SwitchCompat;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityManager;
 import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.menny.android.anysoftkeyboard.R;
 
 /**
  * A {@link Preference} that provides Switch widget. Or a ToggleButton in API 13 or prior.
- * <p>
+ * <p/>
  * This preference will store a boolean into the SharedPreferences.
  *
  * @attr ref android.R.styleable#CheckBoxPreference_summaryOff
@@ -46,6 +52,7 @@ public class SwitchPreference extends Preference implements CompoundButton.OnChe
 
     private CharSequence mSummaryOn;
     private CharSequence mSummaryOff;
+    private Typeface tf1, tf2;
 
     private boolean mChecked;
     private boolean mSendAccessibilityEventViewClickedType;
@@ -67,6 +74,9 @@ public class SwitchPreference extends Preference implements CompoundButton.OnChe
         mAccessibilityManager =
                 (AccessibilityManager) getContext().getSystemService(Service.ACCESSIBILITY_SERVICE);
 
+        tf1 = Typeface.createFromAsset(getContext().getAssets(), "fonts/ropa_soft_bold.ttf");
+        tf2 = Typeface.createFromAsset(getContext().getAssets(), "fonts/ropa_soft_light.ttf");
+
         setLayoutResource(R.layout.switch_preference_layout);
         setWidgetLayoutResource(R.layout.toggle_view);
     }
@@ -87,13 +97,12 @@ public class SwitchPreference extends Preference implements CompoundButton.OnChe
     @Override
     protected void onBindView(View view) {
         super.onBindView(view);
-
         View toggleView = view.findViewById(R.id.toggle_button);
         if (toggleView != null && toggleView instanceof CompoundButton) {
-            CompoundButton toggleButton = (CompoundButton)toggleView;
+
+            CompoundButton toggleButton = (CompoundButton) toggleView;
             toggleButton.setChecked(mChecked);
             toggleButton.setOnCheckedChangeListener(this);
-
             // send an event to announce the value change of the CheckBox and is done here
             // because clicking a preference does not immediately change the checked state
             // for example when enabling the WiFi
@@ -107,9 +116,16 @@ public class SwitchPreference extends Preference implements CompoundButton.OnChe
             }
         }
 
+        //Sync the title View
+        TextView titleView = (TextView) view.findViewById(android.R.id.title);
+        titleView.setTextColor(ResourcesCompat.getColor(getContext().getResources(), android.R.color.white, getContext().getTheme()));
+        titleView.setTypeface(tf1);
+
         // Sync the summary view
         TextView summaryView = (TextView) view.findViewById(android.R.id.summary);
         if (summaryView != null) {
+            summaryView.setTypeface(tf2);
+            summaryView.setTextColor(ResourcesCompat.getColor(getContext().getResources(), android.R.color.white, getContext().getTheme()));
             boolean useDefaultSummary = true;
             if (mChecked && mSummaryOn != null) {
                 summaryView.setText(mSummaryOn);
@@ -197,8 +213,8 @@ public class SwitchPreference extends Preference implements CompoundButton.OnChe
     }
 
     /**
-     * @see #setSummaryOn(CharSequence)
      * @param summaryResId The summary as a resource.
+     * @see #setSummaryOn(CharSequence)
      */
     public void setSummaryOn(int summaryResId) {
         setSummaryOn(getContext().getString(summaryResId));
@@ -206,6 +222,7 @@ public class SwitchPreference extends Preference implements CompoundButton.OnChe
 
     /**
      * Returns the summary to be shown when checked.
+     *
      * @return The summary.
      */
     public CharSequence getSummaryOn() {
@@ -225,8 +242,8 @@ public class SwitchPreference extends Preference implements CompoundButton.OnChe
     }
 
     /**
-     * @see #setSummaryOff(CharSequence)
      * @param summaryResId The summary as a resource.
+     * @see #setSummaryOff(CharSequence)
      */
     public void setSummaryOff(int summaryResId) {
         setSummaryOff(getContext().getString(summaryResId));
@@ -234,6 +251,7 @@ public class SwitchPreference extends Preference implements CompoundButton.OnChe
 
     /**
      * Returns the summary to be shown when unchecked.
+     *
      * @return The summary.
      */
     public CharSequence getSummaryOff() {
@@ -245,7 +263,7 @@ public class SwitchPreference extends Preference implements CompoundButton.OnChe
      * or when this preference is off ({@code false}).
      *
      * @return Whether dependents are disabled when this preference is on ({@code true})
-     *         or when this preference is off ({@code false}).
+     * or when this preference is off ({@code false}).
      */
     public boolean getDisableDependentsState() {
         return mDisableDependentsState;

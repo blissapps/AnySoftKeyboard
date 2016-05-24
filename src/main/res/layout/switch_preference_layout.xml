@@ -2,14 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:minHeight="@dimen/comfortable_min_row_height"
     android:orientation="vertical"
-    android:padding="8dp"
-    android:minHeight="@dimen/comfortable_min_row_height">
+    android:gravity="center_vertical"
+    android:paddingRight="?android:attr/scrollbarSize">
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical">
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="6dip"
+        android:layout_marginTop="6dip"
+        android:layout_marginBottom="6dip"
+        android:layout_weight="1">
 
         <FrameLayout
             android:id="@android:id/widget_frame"
@@ -19,17 +24,21 @@
 
         <TextView
             android:id="@android:id/title"
-            style="@android:style/TextAppearance.Medium"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_toLeftOf="@android:id/widget_frame" />
+
+        <TextView
+            android:id="@android:id/summary"
+            android:layout_below="@android:id/title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginTop="21dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp" />
     </RelativeLayout>
 
-    <TextView
-        android:id="@android:id/summary"
-        android:paddingTop="4dp"
-        style="@android:style/TextAppearance.Small"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+
 </LinearLayout>

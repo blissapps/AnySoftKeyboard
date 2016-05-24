@@ -34,6 +34,7 @@ public class KeyboardAddOnSettingsFragment extends PreferenceFragment {
     @Override
     public void onCreate(Bundle paramBundle) {
         super.onCreate(paramBundle);
+        getActivity().setTheme(R.style.Theme_Preference);
         addPreferencesFromResource(R.xml.prefs_keyboards);
     }
 

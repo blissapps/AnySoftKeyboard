@@ -34,6 +34,7 @@ public class QuickTextSettingsFragment extends PreferenceFragment implements Pre
     @Override
     public void onCreate(Bundle paramBundle) {
         super.onCreate(paramBundle);
+        getActivity().setTheme(R.style.Theme_Preference);
         addPreferencesFromResource(R.xml.prefs_quick_text_addons_prefs);
     }
 

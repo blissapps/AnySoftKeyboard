@@ -35,6 +35,7 @@ public class DictionariesFragment extends PreferenceFragment implements Preferen
     @Override
     public void onCreate(Bundle paramBundle) {
         super.onCreate(paramBundle);
+        getActivity().setTheme(R.style.Theme_Preference_Switch);
         addPreferencesFromResource(R.xml.prefs_dictionaries);
     }
 

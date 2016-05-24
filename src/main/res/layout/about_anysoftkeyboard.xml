@@ -3,6 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/safety_keyboard_color"
     android:orientation="vertical"
     android:weightSum="1">
 
@@ -25,12 +26,14 @@
             android:src="@drawable/ic_launcher" />
 
         <TextView
+            android:id="@+id/about_app_title"
             style="@style/Ask.Text.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
-            android:text="@string/ime_name" />
+            android:text="@string/ime_name"
+            android:textColor="@android:color/white" />
 
         <TextView
             android:id="@+id/about_app_version"
@@ -39,7 +42,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="4dp"
-            android:text="@string/version_text" />
+            android:text="@string/version_text"
+            android:textColor="@android:color/white" />
 
         <TextView
             android:id="@+id/about_copyright"
@@ -48,7 +52,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="4dp"
-            android:text="@string/about_copyright_text" />
+            android:text="@string/about_copyright_text"
+            android:textColor="@android:color/white" />
     </LinearLayout>
 
     <View
@@ -77,5 +82,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:padding="8dp"
-        android:text="@string/about_additional_software_licenses" />
+        android:text="@string/about_additional_software_licenses"
+        android:textColor="@android:color/white"
+        android:textColorLink="@android:color/white" />
 </LinearLayout>

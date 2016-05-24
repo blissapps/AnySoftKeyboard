@@ -28,6 +28,7 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.TypedArray;
+import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,6 +47,7 @@ public class AboutAppView extends FrameLayout {
     private int mAppIconResId = 0;
     private String mAppName = null;
     private String mAppOwner = null;
+    private Typeface tf1, tf2;
 
     public AboutAppView(Context context) {
         this(context, null);
@@ -63,6 +65,9 @@ public class AboutAppView extends FrameLayout {
         mAppIconResId = array.getResourceId(R.styleable.AboutAppPreferenceAttributes_appIcon, 0);
         mAppName = getStringOrReference(array, R.styleable.AboutAppPreferenceAttributes_appName);
         mAppOwner = getStringOrReference(array, R.styleable.AboutAppPreferenceAttributes_appOwner);
+
+        tf1 = Typeface.createFromAsset(getContext().getAssets(), "fonts/ropa_soft_bold.ttf");
+        tf2 = Typeface.createFromAsset(getContext().getAssets(), "fonts/ropa_soft_light.ttf");
 
         array.recycle();
 
@@ -95,6 +100,7 @@ public class AboutAppView extends FrameLayout {
 
         TextView name = (TextView)rootLayout.findViewById(R.id.app_name);
         name.setText(mAppName);
+        name.setTypeface(tf1);
 
         String appVersionName = "";
         int appVersionNumber = 0;
@@ -112,6 +118,7 @@ public class AboutAppView extends FrameLayout {
         }
         TextView version = (TextView)rootLayout.findViewById(R.id.app_version);
         version.setText(getContext().getString(R.string.version_text, appVersionName, appVersionNumber));
+        version.setTypeface(tf2);
 
         TextView appCopyright = (TextView)rootLayout.findViewById(R.id.app_copyright);
         if (mAppOwner == null) {
@@ -120,6 +127,7 @@ public class AboutAppView extends FrameLayout {
             int year = Calendar.getInstance().get(Calendar.YEAR);
             appCopyright.setText(getContext().getString(R.string.copyright_text, year, mAppOwner));
         }
+        appCopyright.setTypeface(tf2);
 
         removeAllViews();
         addView(rootLayout);

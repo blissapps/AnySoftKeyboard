@@ -17,14 +17,26 @@
 package net.evendanan.pushingpixels;
 
 import android.content.Context;
+import android.graphics.Typeface;
+import android.support.v4.content.res.ResourcesCompat;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.TypedValue;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.menny.android.anysoftkeyboard.R;
 
 /**
  * The same as the regular ListPreference, but allows formatting of the summary field.
  * This is not needed if your min-API is Honeycomb (since it's there already).
  */
 public class ListPreference extends android.preference.ListPreference {
+
+    private Typeface tf1, tf2;
 
     public ListPreference(Context context) {
         super(context);
@@ -50,6 +62,23 @@ public class ListPreference extends android.preference.ListPreference {
             return baseSummary;
         else
             return String.format(baseSummary.toString(), getEntry());
+    }
+
+    @Override
+    protected void onBindView(View view) {
+        super.onBindView(view);
+        getContext().setTheme(R.style.Theme_Preference);
+        tf1 = Typeface.createFromAsset(getContext().getAssets(), "fonts/ropa_soft_bold.ttf");
+        tf2 = Typeface.createFromAsset(getContext().getAssets(), "fonts/ropa_soft_light.ttf");
+        ((TextView) view.findViewById(android.R.id.title)).setTextAppearance(getContext(), android.R.style.TextAppearance_Large);
+        ((TextView) view.findViewById(android.R.id.title)).setTypeface(tf1);
+        ((TextView) view.findViewById(android.R.id.title)).setTextColor(ResourcesCompat.getColor(getContext().getResources(), android.R.color.white, getContext().getTheme()));
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        params.setMargins(0, 0, 0, Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getContext().getResources().getDisplayMetrics())));
+        ((TextView) view.findViewById(android.R.id.title)).setLayoutParams(params);
+        ((TextView) view.findViewById(android.R.id.summary)).setTextAppearance(getContext(), android.R.style.TextAppearance_Medium);
+        ((TextView) view.findViewById(android.R.id.summary)).setTypeface(tf2);
+        ((TextView) view.findViewById(android.R.id.summary)).setTextColor(ResourcesCompat.getColor(getContext().getResources(), android.R.color.white, getContext().getTheme()));
     }
 
     @Override

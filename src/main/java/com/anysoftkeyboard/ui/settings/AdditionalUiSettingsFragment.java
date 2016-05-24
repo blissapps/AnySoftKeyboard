@@ -38,6 +38,7 @@ public class AdditionalUiSettingsFragment extends PreferenceFragment implements 
     @Override
     public void onCreate(Bundle paramBundle) {
         super.onCreate(paramBundle);
+        getActivity().setTheme(R.style.Theme_Preference);
         addPreferencesFromResource(R.xml.prefs_addtional_ui_addons_prefs);
     }
 
