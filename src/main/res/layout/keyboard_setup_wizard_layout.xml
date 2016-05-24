@@ -35,56 +35,40 @@
             android:layout_marginBottom="4dp">
 
             <ImageView
-                android:id="@+id/left_fromcenter_indicator"
+                android:id="@+id/center_indicator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:src="@drawable/indicator_empty"
+                android:layout_centerHorizontal="true"
                 android:contentDescription="@null"
-                android:padding="6dp"
-                android:layout_toLeftOf="@id/center"
-                android:src="@drawable/indicator_empty" />
-
-            <View
-                android:id="@+id/center"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_centerHorizontal="true"/>
+                android:padding="6dp"/>
 
             <ImageView
                 android:id="@+id/left_most_indicator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toLeftOf="@id/left_fromcenter_indicator"
+                android:src="@drawable/indicator_empty"
+                android:layout_toLeftOf="@id/center_indicator"
                 android:contentDescription="@null"
-                android:padding="6dp"
-                android:src="@drawable/indicator_empty" />
-
-
-            <ImageView
-                android:id="@+id/right_fromcenter_indicator"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/center"
-                android:contentDescription="@null"
-                android:padding="6dp"
-                android:src="@drawable/indicator_empty" />
+                android:padding="6dp"/>
 
             <ImageView
                 android:id="@+id/right_most_indicator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/right_fromcenter_indicator"
+                android:src="@drawable/indicator_empty"
+                android:layout_toRightOf="@id/center_indicator"
                 android:contentDescription="@null"
-                android:padding="6dp"
-                android:src="@drawable/indicator_empty" />
+                android:padding="6dp"/>
 
             <ImageView
                 android:id="@+id/selected_page_indicator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:src="@drawable/indicator_full"
                 android:layout_alignLeft="@id/left_most_indicator"
                 android:contentDescription="@null"
-                android:padding="6dp"
-                android:src="@drawable/indicator_full" />
+                android:padding="6dp"/>
         </RelativeLayout>
 
     </FrameLayout>

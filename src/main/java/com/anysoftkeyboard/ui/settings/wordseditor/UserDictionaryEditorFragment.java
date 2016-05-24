@@ -50,6 +50,7 @@ import com.anysoftkeyboard.dictionaries.UserDictionary;
 import com.anysoftkeyboard.keyboards.KeyboardAddOnAndBuilder;
 import com.anysoftkeyboard.keyboards.KeyboardFactory;
 import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
+import com.anysoftkeyboard.ui.settings.MainSettingsAlternativeActivity;
 import com.anysoftkeyboard.utils.Log;
 import com.menny.android.anysoftkeyboard.R;
 
@@ -169,7 +170,7 @@ public class UserDictionaryEditorFragment extends Fragment
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        MainSettingsActivity mainSettingsActivity = (MainSettingsActivity) getActivity();
+        MainSettingsAlternativeActivity mainSettingsActivity = (MainSettingsAlternativeActivity) getActivity();
         if (mainSettingsActivity == null) return super.onOptionsItemSelected(item);
         switch (item.getItemId()) {
             case R.id.add_user_word:

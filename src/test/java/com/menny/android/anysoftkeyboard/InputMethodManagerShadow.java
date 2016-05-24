@@ -20,11 +20,11 @@ public class InputMethodManagerShadow extends org.robolectric.shadows.ShadowInpu
 
     public InputMethodManagerShadow() {
         //adding three IMEs, ASK, Google, and AOSP (disabled)
-        mInputMethodInfos.add(new InputMethodInfo("com.menny.android.anysoftkeyboard", "SoftKeyboard", "AnySoftKeyboard", ".MainSettingsActivity"));
+        mInputMethodInfos.add(new InputMethodInfo("com.menny.android.anysoftkeyboard", "SoftKeyboard", "AnySoftKeyboard", ".MainSettingsAlternativeActivity"));
         mEnabledInputMethods.add("com.menny.android.anysoftkeyboard");
-        mInputMethodInfos.add(new InputMethodInfo("com.google.keyboard", "GoogleKeyboard", "GoogleKeyboard", ".MainSettingsActivity"));
+        mInputMethodInfos.add(new InputMethodInfo("com.google.keyboard", "GoogleKeyboard", "GoogleKeyboard", ".MainSettingsAlternativeActivity"));
         mEnabledInputMethods.add("com.google.keyboard");
-        mInputMethodInfos.add(new InputMethodInfo("android.ime.KeyboardService", "SoftKeyboard", "AOSP Keyboard", ".MainSettingsActivity"));
+        mInputMethodInfos.add(new InputMethodInfo("android.ime.KeyboardService", "SoftKeyboard", "AOSP Keyboard", ".MainSettingsAlternativeActivity"));
     }
 
     @Implementation

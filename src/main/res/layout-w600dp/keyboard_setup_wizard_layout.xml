@@ -3,78 +3,55 @@
 <!-- I'm ignoring InconsistentLayout because we have different elements for tablet and phone -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:id="@+id/steps_container"
-              tools:ignore="InconsistentLayout"
-              android:orientation="horizontal"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:weightSum="3"
-              android:layout_gravity="center"
-              android:paddingTop="24dp"
-              android:baselineAligned="false">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/steps_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:paddingTop="24dp"
+    android:weightSum="3"
+    tools:ignore="InconsistentLayout">
 
     <LinearLayout
         style="@style/Ask.Card"
         android:layout_width="0px"
-        android:layout_weight="1"
-        android:layout_margin="12dp"
         android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <TextView
             style="@style/Ask.Text.SubTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
             android:layout_marginBottom="8dp"
-            android:text="@string/setup_wizard_intro"/>
-
-        <FrameLayout
-            android:id="@+id/wizard_intro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        style="@style/Ask.Card"
-        android:layout_width="0px"
-        android:layout_weight="1"
-        android:layout_margin="12dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            style="@style/Ask.Text.SubTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:layout_marginBottom="8dp"
-            android:text="@string/setup_wizard_step_one"/>
+            android:text="@string/setup_wizard_step_one" />
 
         <FrameLayout
             android:id="@+id/wizard_step_one"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
     <LinearLayout
         style="@style/Ask.Card"
         android:layout_width="0px"
-        android:layout_weight="1"
-        android:layout_margin="12dp"
         android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <TextView
             style="@style/Ask.Text.SubTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
             android:layout_marginBottom="8dp"
-            android:text="@string/setup_wizard_step_two"/>
+            android:gravity="center_horizontal"
+            android:text="@string/setup_wizard_step_two" />
 
         <!-- replaces
             android:name="com.anysoftkeyboard.ui.settings.setup.WizardPageSwitchToKeyboardFragment"
@@ -83,49 +60,49 @@
         <FrameLayout
             android:id="@+id/wizard_step_two"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
     <LinearLayout
-        style="@style/Ask.Card"
         android:id="@+id/wizard_step_permissions_card"
+        style="@style/Ask.Card"
         android:layout_width="0px"
-        android:layout_weight="1"
-        android:layout_margin="12dp"
         android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <TextView
             style="@style/Ask.Text.SubTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
             android:layout_marginBottom="8dp"
-            android:text="@string/setup_wizard_step_permissions_title"/>
+            android:gravity="center_horizontal"
+            android:text="@string/setup_wizard_step_permissions_title" />
 
         <FrameLayout
             android:id="@+id/wizard_step_permissions"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
     <LinearLayout
         style="@style/Ask.Card"
         android:layout_width="0px"
-        android:layout_weight="1"
-        android:layout_margin="12dp"
         android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <TextView
             style="@style/Ask.Text.SubTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
             android:layout_marginBottom="8dp"
-            android:text="@string/setup_wizard_step_three"/>
+            android:gravity="center_horizontal"
+            android:text="@string/setup_wizard_step_three" />
 
         <!-- replaces
             android:name="com.anysoftkeyboard.ui.settings.setup.WizardPageDoneAndMoreSettingsFragment"
@@ -134,7 +111,7 @@
         <FrameLayout
             android:id="@+id/wizard_step_three"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 

@@ -23,6 +23,7 @@ import android.os.Bundle;
 import com.anysoftkeyboard.ui.settings.MainSettingsAlternativeActivity;
 import com.anysoftkeyboard.ui.settings.setup.SetUpKeyboardWizardFragment;
 import com.anysoftkeyboard.ui.settings.setup.SetupSupport;
+import com.anysoftkeyboard.ui.settings.setup.WizardPageIntroFragment;
 
 import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;
 
@@ -56,7 +57,7 @@ public class LauncherSettingsActivity extends Activity {
             } else {
                 Intent startSetupWizard = MainSettingsAlternativeActivity.createStartActivityIntentForAddingFragmentToUi(
                         this, MainSettingsAlternativeActivity.class,
-                        new SetUpKeyboardWizardFragment(), TransitionExperiences.ROOT_FRAGMENT_EXPERIENCE_TRANSITION);
+                        new WizardPageIntroFragment(), TransitionExperiences.ROOT_FRAGMENT_EXPERIENCE_TRANSITION);
                 startActivity(startSetupWizard);
             }
         }

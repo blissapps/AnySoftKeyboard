@@ -36,6 +36,7 @@ public class WizardPageDoneAndMoreSettingsFragment extends WizardPageBaseFragmen
         view.findViewById(R.id.go_to_theme_action).setOnClickListener(this);
         view.findViewById(R.id.go_to_all_settings_action).setOnClickListener(this);
         ((TextView) view.findViewById(R.id.show_keyboard_view_action)).setTypeface(tf1);
+        ((TextView) view.findViewById(R.id.tvThankYouNote)).setTypeface(tf2);
         ((TextView) view.findViewById(R.id.go_to_home_fragment_action)).setTypeface(tf1);
         ((TextView) view.findViewById(R.id.go_to_languages_action)).setTypeface(tf1);
         ((TextView) view.findViewById(R.id.go_to_theme_action)).setTypeface(tf1);

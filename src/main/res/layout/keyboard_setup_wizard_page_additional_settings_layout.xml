@@ -111,6 +111,7 @@
                 android:background="@android:color/white" />
 
             <TextView
+                android:id="@+id/tvThankYouNote"
                 style="@style/Ask.Text.Normal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

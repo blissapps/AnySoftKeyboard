@@ -33,7 +33,7 @@
     <!-- welcome -->
     <string name="safety_keyboard_intro_1">The Safety Keyboard by Moto isn\'t like any other application.\n It was designed to replace your current keyboard.</string>
     <string name="safety_keyboard_intro_2">In order to use The Safety Keyboard by Moto you need to set it up first.</string>
-    <string name="safety_keyboard_intro_3">SWIPE TO START</string>
+    <string name="safety_keyboard_intro_3">CLICK HERE</string>
     <!-- changelog -->
     <string name="changelog">Change Log</string>
     <string name="search_market_for_addons">Search for add-ons</string>

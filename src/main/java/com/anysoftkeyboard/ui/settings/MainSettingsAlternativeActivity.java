@@ -32,6 +32,7 @@ import android.support.v4.content.SharedPreferencesCompat;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.anysoftkeyboard.PermissionsRequestCodes;
@@ -63,15 +64,18 @@ public class MainSettingsAlternativeActivity extends PermissionsFragmentChauffeu
                 @Override
                 public void onClick(View v) {
                     if (!isMainMenu) {
-                        addFragmentToUi(new MainSettingsFragment(), TransitionExperiences.ROOT_FRAGMENT_EXPERIENCE_TRANSITION);
-                        myToolbar.setNavigationIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_menu_white_24dp, getTheme()));
-                        setTitle(getString(R.string.ime_name));
-                        isMainMenu = true;
+                        if (getSupportFragmentManager().getBackStackEntryCount() == 2) {
+                            getSupportFragmentManager().popBackStackImmediate();
+                            myToolbar.setNavigationIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_menu_white_24dp, getTheme()));
+                            setTitle(getString(R.string.ime_name));
+                            isMainMenu = true;
+                        } else {
+                            getSupportFragmentManager().popBackStackImmediate();
+                        }
                     }
                 }
             });
         }
-
     }
 
     @Override
@@ -86,7 +90,9 @@ public class MainSettingsAlternativeActivity extends PermissionsFragmentChauffeu
     @NonNull
     @Override
     protected Fragment createRootFragmentInstance() {
-        return new MainFragment();
+        myToolbar.setNavigationIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_menu_white_24dp, getTheme()));
+        isMainMenu = true;
+        return new MainSettingsFragment();
     }
 
     @Override
@@ -118,11 +124,11 @@ public class MainSettingsAlternativeActivity extends PermissionsFragmentChauffeu
         super.onConfigurationChanged(newConfig);
     }
 
-
     @Override
     public void setTitle(CharSequence title) {
         mTitle = title;
-        getSupportActionBar().setTitle(mTitle);
+        if (getSupportActionBar() != null)
+            getSupportActionBar().setTitle(mTitle);
     }
 
     private void exitMainMenu() {
@@ -141,6 +147,7 @@ public class MainSettingsAlternativeActivity extends PermissionsFragmentChauffeu
 
     public void onNavigateToRootClicked(View v) {
         exitMainMenu();
+        setTitle(getString(R.string.ime_name));
         addFragmentToUi(createRootFragmentInstance(), TransitionExperiences.ROOT_FRAGMENT_EXPERIENCE_TRANSITION);
     }
 

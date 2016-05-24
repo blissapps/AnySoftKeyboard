@@ -108,12 +108,16 @@ public class WizardPermissionsFragment extends WizardPageBaseFragment implements
 
     @Override
     protected boolean isStepCompleted() {
-        return !AnyApplication.getConfig().useContactsDictionary() ||//either the user disabled Contacts
-                ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.READ_CONTACTS) == PackageManager.PERMISSION_GRANTED ||//or the user granted permission
-                !AnyApplication.getConfig().useLocation() ||//either the user disabled location
-                ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||//or the user granted permission
-                !AnyApplication.getConfig().useStorage() ||//either the user disabled Storage access
-                ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;//or the user granted permission//or the user granted permission
+        if (getActivity() != null) {
+            return !AnyApplication.getConfig().useContactsDictionary() ||//either the user disabled Contacts
+                    ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.READ_CONTACTS) == PackageManager.PERMISSION_GRANTED || //or the user granted permission
+                    !AnyApplication.getConfig().useLocation() ||//either the user disabled location
+                    ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED || //or the user granted permission
+                    !AnyApplication.getConfig().useStorage() ||//either the user disabled Storage access
+                    ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED; //or the user granted permission//or the user granted permission
+        } else {
+            return false;
+        }
     }
 
     @Override

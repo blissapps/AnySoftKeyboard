@@ -60,6 +60,5 @@ public class MainSettingsFragment extends Fragment{
         ((TextView) view.findViewById(R.id.tvMenuUIGestures)).setTypeface(tf2);
         ((TextView) view.findViewById(R.id.tvMenuUIQuickText)).setTypeface(tf2);
         ((TextView) view.findViewById(R.id.tvMenuUIGeneral)).setTypeface(tf2);
-
     }
 }
