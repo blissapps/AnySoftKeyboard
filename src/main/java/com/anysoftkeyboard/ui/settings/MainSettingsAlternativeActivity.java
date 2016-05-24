@@ -59,7 +59,6 @@ public class MainSettingsAlternativeActivity extends PermissionsFragmentChauffeu
         mTitle = getTitle();
 
         if (myToolbar != null) {
-            myToolbar.setNavigationIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_arrow_left_white_24dp, getTheme()));
             myToolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
