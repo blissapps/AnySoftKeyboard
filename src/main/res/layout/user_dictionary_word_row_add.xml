@@ -10,8 +10,9 @@
         android:layout_gravity="center"
         android:minHeight="@dimen/comfortable_min_row_height"
         android:gravity="center"
+        android:textColor="@android:color/white"
         android:text="@string/click_to_add_new_word"
         android:drawablePadding="4dp"
-        android:drawableLeft="@drawable/ic_action_content_new" />
+        android:drawableLeft="@drawable/ic_action_content_new_alt" />
 
 </FrameLayout>

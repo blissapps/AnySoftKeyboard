@@ -29,8 +29,8 @@
     <!-- settings -->
     <string name="languages_cat">Idiomas</string>
     <!-- welcome -->
-    <string name="safety_keyboard_intro_1">The Safety Keyboard by Moto  não é um aplicativo qualquer.\n Ele foi pensado para substituir  o seu teclado.</string>
-    <string name="safety_keyboard_intro_2">Para usar  o Safety Keyboard by Moto  você precisa configurá-lo primeiro.</string>
+    <string name="safety_keyboard_intro_1">The Safety Keyboard by Moto não é um aplicativo qualquer.\nEle foi pensado para substituir o seu teclado.</string>
+    <string name="safety_keyboard_intro_2">Para usar o Safety Keyboard by Moto você precisa configurá-lo primeiro.</string>
     <string name="safety_keyboard_intro_3">CLIQUE AQUI</string>
     <!-- changelog -->
     <string name="changelog">Alterações</string>
@@ -493,15 +493,15 @@
     <string name="wizard_step_this_step_complete_text_switched">O <i>The Safety Keyboard by Moto</i> é o teclado definido. Mas o mais provável é que você pretenda configurar algumas definições, certo?</string>
     <string name="wizard_step_swipe_to_next">Avance para a próxima página.</string>
     <string name="setup_wizard_step_one_title">Ativar o The Safety Keyboard by Moto</string>
-    <string name="setup_wizard_step_one_details">Neste passo, irá ativar <i>The Safety Keyboard by Moto</i>. Por favor selecione <i>\'The Safety Keyboard\'</i> nas definições de <i>Idioma e texto</i>. Isto irá ativar o teclado no seu dispositivo.</string>
-    <string name="setup_wizard_step_one_action">Ir para definições de <i>Idioma e texto</i>…</string>
+    <string name="setup_wizard_step_one_details">Entre em <i>\'Configurar\'</i> e acesse <i>\'Idioma e texto\'</i>.\nSelecione o <i>The Safety Keyboard</i> by <i>Moto</i> como teclado principal</string>
+    <string name="setup_wizard_step_one_action">Ir para a definição de <i>\'Idioma e texto\'</i>...</string>
     <string name="setup_wizard_step_one_action_error_no_settings_activity">Erro: O seu dispositivo não permite outros teclados. The Safety Keyboard by Moto não pode ser ativado!</string>
     <string name="setup_wizard_step_small_sub_title">Este é o passo 1. Mas não se preocupe pois só existem 3.</string>
     <string name="setup_wizard_top_title">Configurar\nutilização do\nThe Safety Keyboard by Moto</string>
     <string name="setup_wizard_step_two_title">Trocar para o The Safety Keyboard by Moto</string>
     <string name="setup_wizard_step_two_small_sub_title">Passo dois de três</string>
-    <string name="setup_wizard_step_two_details">O seu sistema pode utilizar o <i>The Safety Keyboard by Moto</i>, mas este não está definido como o teclado ativo.\nAo trocar, o <i>The Safety Keyboard by Moto</i> será o seu novo teclado!</string>
-    <string name="setup_wizard_step_two_action">Trocar teclado ativo</string>
+    <string name="setup_wizard_step_two_details">Para utilizar o <i>The Safety Keyboard</i> by <i>Moto</i>, você precisa defini-lo como teclado activo</string>
+    <string name="setup_wizard_step_two_action">Alterar o teclado ativo</string>
 
     <string name="setup_wizard_step_permissions_title">Ativar permissões</string>
     <string name="wizard_step_this_step_complete_text_permissions"><i>The Safety Keyboard by Moto</i> precisa de acesso a permissões extra. Isto irá permitir uma melhor experiência.</string>

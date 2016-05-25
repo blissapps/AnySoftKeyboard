@@ -7,6 +7,7 @@
     android:paddingLeft="8dp"
     android:paddingRight="8dp"
     android:minHeight="@dimen/comfortable_min_row_height"
+    android:background="@color/safety_keyboard_color"
     android:gravity="center_vertical"
     android:weightSum="1">
 
@@ -20,6 +21,8 @@
         android:maxLength="16"
         android:lines="1"
         android:hint="@string/enter_abbreviation_hint"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
         android:imeOptions="actionNext"
         android:inputType="textNoSuggestions|text"
         android:layout_gravity="center_vertical"/>
@@ -27,6 +30,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
         android:padding="6dp"
         android:text="\u2192"
         tools:ignore="HardcodedText" />
@@ -42,6 +46,8 @@
         android:lines="1"
         android:hint="@string/enter_abbreviation_target_hint"
         android:imeOptions="actionDone"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
         android:inputType="textNoSuggestions|text"
         android:layout_gravity="center_vertical"/>
 
@@ -52,7 +58,7 @@
         android:layout_marginLeft="8dp"
         android:adjustViewBounds="true"
         android:scaleType="centerInside"
-        android:src="@drawable/ic_accept"
+        android:src="@drawable/ic_accept_alt"
         android:background="@drawable/transparent_click_feedback_background"/>
     <ImageView
         android:id="@+id/cancel_user_word"
@@ -61,6 +67,6 @@
         android:layout_marginLeft="8dp"
         android:adjustViewBounds="true"
         android:scaleType="centerInside"
-        android:src="@drawable/ic_cancel"
+        android:src="@drawable/ic_cancel_alt"
         android:background="@drawable/transparent_click_feedback_background"/>
 </LinearLayout>

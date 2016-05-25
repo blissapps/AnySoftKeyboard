@@ -25,7 +25,12 @@ package net.evendanan.pushingpixels;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.PorterDuff;
+import android.graphics.Typeface;
+import android.os.Build;
 import android.preference.Preference;
+import android.support.v4.content.res.ResourcesCompat;
+import android.support.v7.widget.AppCompatSeekBar;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,15 +42,18 @@ import com.menny.android.anysoftkeyboard.R;
 
 public class SlidePreference extends Preference implements SeekBar.OnSeekBarChangeListener {
 
-    private SeekBar mSeekBar;
-    private TextView mMaxValue, mCurrentValue, mMinValue;
+    private AppCompatSeekBar mSeekBar;
+    private TextView mMaxValue, mCurrentValue, mMinValue, mSlideTitle;
     private String mTitle;
+    private Typeface tf1, tf2;
 
     private int mDefault = 50, mMax = 100, mMin = 0, mValue = 0;
 
     public SlidePreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         setLayoutResource(R.layout.slide_pref);
+        tf1 = Typeface.createFromAsset(getContext().getAssets(), "fonts/ropa_soft_bold.ttf");
+        tf2 = Typeface.createFromAsset(getContext().getAssets(), "fonts/ropa_soft_light.ttf");
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.SlidePreferenceAttributes);
         mDefault = array.getInteger(R.styleable.SlidePreferenceAttributes_android_defaultValue, 0);
         mMax = array.getInteger(R.styleable.SlidePreferenceAttributes_slideMaximum, 100);
@@ -61,13 +69,22 @@ public class SlidePreference extends Preference implements SeekBar.OnSeekBarChan
     @Override
     protected View onCreateView(ViewGroup parent) {
         View mySeekBarLayout = super.onCreateView(parent);
-        mSeekBar = (SeekBar) mySeekBarLayout.findViewById(R.id.pref_seekbar);
+        mSeekBar = (AppCompatSeekBar) mySeekBarLayout.findViewById(R.id.pref_seekbar);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            mSeekBar.getThumb().setColorFilter(ResourcesCompat.getColor(getContext().getResources(), android.R.color.white, getContext().getTheme()), PorterDuff.Mode.SRC_ATOP);
+        }
+        mSeekBar.getProgressDrawable().setColorFilter(ResourcesCompat.getColor(getContext().getResources(), android.R.color.white, getContext().getTheme()), PorterDuff.Mode.SRC_ATOP);
         if (shouldPersist())
             mValue = getPersistedInt(mDefault);
 
+        mSlideTitle = (TextView) mySeekBarLayout.findViewById(R.id.pref_title);
+        mSlideTitle.setTypeface(tf2);
         mCurrentValue = (TextView) mySeekBarLayout.findViewById(R.id.pref_current_value);
+        mCurrentValue.setTypeface(tf1);
         mMaxValue = (TextView) mySeekBarLayout.findViewById(R.id.pref_max_value);
+        mMaxValue.setTypeface(tf2);
         mMinValue = (TextView) mySeekBarLayout.findViewById(R.id.pref_min_value);
+        mMinValue.setTypeface(tf2);
         mCurrentValue.setText(Integer.toString(mValue));
         ((TextView) mySeekBarLayout.findViewById(R.id.pref_title)).setText(mTitle);
 

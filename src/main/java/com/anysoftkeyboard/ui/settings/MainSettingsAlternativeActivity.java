@@ -33,6 +33,7 @@ import android.support.v4.content.SharedPreferencesCompat;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
+import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -47,6 +48,8 @@ import net.evendanan.chauffeur.lib.permissions.PermissionsRequest;
 import net.evendanan.pushingpixels.EdgeEffectHacker;
 
 import org.w3c.dom.Text;
+
+import java.lang.reflect.Field;
 
 public class MainSettingsAlternativeActivity extends PermissionsFragmentChauffeurActivity {
 
@@ -64,6 +67,17 @@ public class MainSettingsAlternativeActivity extends PermissionsFragmentChauffeu
         myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
         mTitle = getTitle();
+
+        Field f = null;
+
+        try {
+            f = myToolbar.getClass().getDeclaredField("mTitleTextView");
+            f.setAccessible(true);
+            ((TextView) f.get(myToolbar)).setTypeface(tf2);
+            ((TextView) f.get(myToolbar)).setTextSize(Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 10, getResources().getDisplayMetrics())));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         if (myToolbar != null) {
             myToolbar.setNavigationOnClickListener(new View.OnClickListener() {

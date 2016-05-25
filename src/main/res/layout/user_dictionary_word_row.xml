@@ -14,6 +14,7 @@
         android:id="@+id/word_view"
         android:layout_width="0px"
         android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
         android:layout_weight="1"/>
 
     <ImageView
@@ -23,7 +24,7 @@
         android:layout_marginLeft="8dp"
         android:adjustViewBounds="true"
         android:scaleType="centerInside"
-        android:src="@drawable/ic_action_content_discard"
+        android:src="@drawable/ic_action_content_discard_alt"
         android:background="@drawable/transparent_click_feedback_background"/>
 
 </LinearLayout>

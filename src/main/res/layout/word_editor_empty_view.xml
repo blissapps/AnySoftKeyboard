@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:padding="16dp"
-    android:background="@drawable/transparent_click_feedback_background">
+    android:background="@android:color/transparent"
+    android:padding="16dp">
 
     <TextView
+        android:id="@+id/no_words_dictionary"
         style="@style/Ask.Text.SubTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:drawablePadding="12dp"
+        android:drawableTop="@drawable/ic_large_new_alt"
         android:gravity="center"
         android:text="@string/user_dict_settings_empty_text"
-        android:drawablePadding="12dp"
-        android:drawableTop="@drawable/ic_large_new"/>
+        android:textColor="@android:color/white" />
 </LinearLayout>

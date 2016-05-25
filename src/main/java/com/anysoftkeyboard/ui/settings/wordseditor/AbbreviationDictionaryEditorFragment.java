@@ -2,7 +2,10 @@ package com.anysoftkeyboard.ui.settings.wordseditor;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.PorterDuff;
+import android.graphics.Typeface;
 import android.support.annotation.Nullable;
+import android.support.v4.content.res.ResourcesCompat;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,10 +44,13 @@ public class AbbreviationDictionaryEditorFragment extends UserDictionaryEditorFr
     private static class AbbreviationEditorWordsAdapter extends EditorWordsAdapter {
 
         private final Context mContext;
+        private Typeface tf1, tf2;
 
         public AbbreviationEditorWordsAdapter(List<EditorWord> editorWords, Context context, DictionaryCallbacks dictionaryCallbacks) {
             super(editorWords, LayoutInflater.from(context), dictionaryCallbacks);
             mContext = context;
+            tf1 = Typeface.createFromAsset(mContext.getAssets(), "fonts/ropa_soft_bold.ttf");
+            tf2 = Typeface.createFromAsset(mContext.getAssets(), "fonts/ropa_soft_light.ttf");
         }
 
         @Override
@@ -66,12 +72,16 @@ public class AbbreviationDictionaryEditorFragment extends UserDictionaryEditorFr
         protected void bindEditingWordViewText(EditText wordView, EditorWord editorWord) {
             wordView.setText(getAbbreviation(editorWord));
             EditText explodedSentence = (EditText) ((View)wordView.getParent()).findViewById(R.id.word_target_view);
+            explodedSentence.getBackground().setColorFilter(ResourcesCompat.getColor(mContext.getResources(), android.R.color.white, mContext.getTheme()), PorterDuff.Mode.SRC_ATOP);
+            explodedSentence.setTypeface(tf2);
             explodedSentence.setText(getExplodedSentence(editorWord));
         }
 
         @Override
         protected EditorWord createNewEditorWord(EditText wordView, EditorWord oldEditorWord) {
             EditText explodedSentenceView = (EditText) ((View)wordView.getParent()).findViewById(R.id.word_target_view);
+            explodedSentenceView.getBackground().setColorFilter(ResourcesCompat.getColor(mContext.getResources(), android.R.color.white, mContext.getTheme()), PorterDuff.Mode.SRC_ATOP);
+            explodedSentenceView.setTypeface(tf2);
             final String newAbbreviation = wordView.getText().toString();
             final String newExplodedSentence = explodedSentenceView.getText().toString();
             if (TextUtils.isEmpty(newAbbreviation) || TextUtils.isEmpty(newExplodedSentence)) {

@@ -1,5 +1,9 @@
 package com.anysoftkeyboard.ui.settings.wordseditor;
 
+import android.content.Context;
+import android.graphics.PorterDuff;
+import android.graphics.Typeface;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -17,12 +21,16 @@ public class EditorWordsAdapter extends RecyclerView.Adapter<EditorWordsAdapter.
 
     protected final List<EditorWord> mEditorWords;
     private final LayoutInflater mLayoutInflater;
+    private Typeface tf1, tf2;
     private final DictionaryCallbacks mDictionaryCallbacks;
+
     public EditorWordsAdapter(List<EditorWord> editorWords, LayoutInflater layoutInflater, DictionaryCallbacks dictionaryCallbacks) {
         mEditorWords = new ArrayList<>(editorWords);
         mEditorWords.add(new EditorWord.AddNew());
         mLayoutInflater = layoutInflater;
         mDictionaryCallbacks = dictionaryCallbacks;
+        tf1 = Typeface.createFromAsset(layoutInflater.getContext().getAssets(), "fonts/ropa_soft_bold.ttf");
+        tf2 = Typeface.createFromAsset(layoutInflater.getContext().getAssets(), "fonts/ropa_soft_light.ttf");
     }
 
     @Override
@@ -118,6 +126,11 @@ public class EditorWordsAdapter extends RecyclerView.Adapter<EditorWordsAdapter.
 
         public EditorWordViewHolderAddNew(View itemView) {
             super(itemView);
+            if (itemView.findViewById(R.id.no_words_dictionary) != null) {
+                ((TextView) itemView.findViewById(R.id.no_words_dictionary)).setTypeface(tf2);
+            } else {
+                ((TextView) itemView.findViewById(R.id.add_new_word)).setTypeface(tf2);
+            }
             itemView.setOnClickListener(this);
         }
 
@@ -137,6 +150,8 @@ public class EditorWordsAdapter extends RecyclerView.Adapter<EditorWordsAdapter.
         public EditorWordViewHolderNormal(View itemView) {
             super(itemView);
             mWordView = (TextView) itemView.findViewById(R.id.word_view);
+            mWordView.setTypeface(tf2);
+            //mWordView.getBackground().setColorFilter(ResourcesCompat.getColor(mLayoutInflater.getContext().getResources(), android.R.color.white, mLayoutInflater.getContext().getTheme()), PorterDuff.Mode.SRC_ATOP);
             mWordView.setOnClickListener(this);
             itemView.findViewById(R.id.delete_user_word).setOnClickListener(this);
         }
@@ -150,7 +165,8 @@ public class EditorWordsAdapter extends RecyclerView.Adapter<EditorWordsAdapter.
         @Override
         public void onClick(View v) {
             final int itemPosition = getItemPosition();
-            if (itemPosition < 0) return;//this means that the view has already detached from the window.
+            if (itemPosition < 0)
+                return;//this means that the view has already detached from the window.
 
             if (v == mWordView) {
                 EditorWord editorWord = mEditorWords.remove(itemPosition);
@@ -170,6 +186,8 @@ public class EditorWordsAdapter extends RecyclerView.Adapter<EditorWordsAdapter.
         public EditorWordViewHolderEditing(View itemView) {
             super(itemView);
             mWordView = (EditText) itemView.findViewById(R.id.word_view);
+            mWordView.getBackground().setColorFilter(ResourcesCompat.getColor(mLayoutInflater.getContext().getResources(), android.R.color.white, mLayoutInflater.getContext().getTheme()), PorterDuff.Mode.SRC_ATOP);
+            mWordView.setTypeface(tf2);
             itemView.findViewById(R.id.approve_user_word).setOnClickListener(this);
             itemView.findViewById(R.id.cancel_user_word).setOnClickListener(this);
         }
@@ -184,8 +202,8 @@ public class EditorWordsAdapter extends RecyclerView.Adapter<EditorWordsAdapter.
         public void onClick(View v) {
             final int itemPosition = getItemPosition();
             if (itemPosition == -1) return;//somehow, the word is not in the list of words anymore.
-            
-            final boolean addNewRow = (itemPosition == mEditorWords.size()-1);
+
+            final boolean addNewRow = (itemPosition == mEditorWords.size() - 1);
             if (v.getId() == R.id.cancel_user_word || TextUtils.isEmpty(mWordView.getText())) {
                 EditorWord editorWord = mEditorWords.remove(itemPosition);
                 if (addNewRow) {
@@ -209,6 +227,7 @@ public class EditorWordsAdapter extends RecyclerView.Adapter<EditorWordsAdapter.
 
     public interface DictionaryCallbacks {
         void onWordDeleted(final EditorWord word);
+
         void onWordUpdated(final String oldWord, final EditorWord newWord);
     }
 }

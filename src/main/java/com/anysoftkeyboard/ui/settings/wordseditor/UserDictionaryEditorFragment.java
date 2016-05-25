@@ -23,11 +23,16 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.database.Cursor;
+import android.graphics.PorterDuff;
 import android.graphics.Rect;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.VisibleForTesting;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.ActionBar;
+import android.support.v7.widget.AppCompatCheckedTextView;
+import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -42,6 +47,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.anysoftkeyboard.PermissionsRequestCodes;
 import com.anysoftkeyboard.base.dictionaries.EditableDictionary;
@@ -83,6 +89,8 @@ public class UserDictionaryEditorFragment extends Fragment
     private WordsCursor mCursor;
     private String mSelectedLocale = null;
     private EditableDictionary mCurrentDictionary;
+
+    private Typeface tf1, tf2;
 
     private RecyclerView mWordsRecyclerView;
 
@@ -136,11 +144,22 @@ public class UserDictionaryEditorFragment extends Fragment
         setHasOptionsMenu(true);
         FragmentChauffeurActivity activity = (FragmentChauffeurActivity) getActivity();
         ActionBar actionBar = activity.getSupportActionBar();
-        actionBar.setDisplayShowCustomEnabled(true);
-        actionBar.setDisplayShowTitleEnabled(false);
+
+        tf1 = Typeface.createFromAsset(getContext().getAssets(), "fonts/ropa_soft_bold.ttf");
+        tf2 = Typeface.createFromAsset(getContext().getAssets(), "fonts/ropa_soft_light.ttf");
+
+        if (actionBar != null) {
+            actionBar.setDisplayShowCustomEnabled(true);
+            actionBar.setDisplayShowTitleEnabled(false);
+        }
+
         View v = inflater.inflate(R.layout.words_editor_actionbar_view, null);
+
+        ((TextView) v.findViewById(R.id.titleWordsEditor)).setTypeface(tf2);
         mLanguagesSpinner = (Spinner) v.findViewById(R.id.user_dictionay_langs);
-        actionBar.setCustomView(v);
+
+        if (actionBar != null)
+            actionBar.setCustomView(v);
 
         return inflater.inflate(R.layout.user_dictionary_editor, container, false);
     }
@@ -239,9 +258,23 @@ public class UserDictionaryEditorFragment extends Fragment
             protected void onPreExecute() {
                 super.onPreExecute();
                 //creating in the UI thread
-                mAdapter = new ArrayAdapter<>(
-                        getActivity(),
-                        android.R.layout.simple_spinner_item);
+                mAdapter = new ArrayAdapter<DictionaryLocale>(getActivity(), android.R.layout.simple_spinner_item) {
+                    @Override
+                    public View getView(int position, View convertView, ViewGroup parent) {
+                        View v = super.getView(position, convertView, parent);
+                        ((AppCompatTextView) v).setTypeface(tf2);
+                        return v;
+                    }
+
+                    @Override
+                    public View getDropDownView(int position, View convertView, ViewGroup parent) {
+                        View v = super.getDropDownView(position, convertView, parent);
+                        ((AppCompatCheckedTextView) v).setTypeface(tf2);
+                        ((AppCompatCheckedTextView) v).setTextColor(ResourcesCompat.getColor(getResources(), R.color.safety_keyboard_color, getContext().getTheme()));
+                        return v;
+                    }
+                };
+                mLanguagesSpinner.getBackground().setColorFilter(ResourcesCompat.getColor(getResources(), android.R.color.white, getContext().getTheme()), PorterDuff.Mode.SRC_ATOP);
             }
 
             @Override
