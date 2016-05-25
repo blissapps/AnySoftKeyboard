@@ -500,7 +500,7 @@
     <string name="setup_wizard_top_title">Configurar\nutilização do\nThe Safety Keyboard by Moto</string>
     <string name="setup_wizard_step_two_title">Trocar para o The Safety Keyboard by Moto</string>
     <string name="setup_wizard_step_two_small_sub_title">Passo dois de três</string>
-    <string name="setup_wizard_step_two_details">Para utilizar o <i>The Safety Keyboard</i> by <i>Moto</i>, você precisa defini-lo como teclado activo</string>
+    <string name="setup_wizard_step_two_details">Para utilizar o <i>The Safety Keyboard</i> by <i>Moto</i>, você precisa defini-lo como teclado ativo</string>
     <string name="setup_wizard_step_two_action">Alterar o teclado ativo</string>
 
     <string name="setup_wizard_step_permissions_title">Ativar permissões</string>
