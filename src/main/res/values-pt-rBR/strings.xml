@@ -505,9 +505,9 @@
 
     <string name="setup_wizard_step_permissions_title">Ativar permissões</string>
     <string name="wizard_step_this_step_complete_text_permissions"><i>The Safety Keyboard by Moto</i> precisa de acesso a permissões extra. Isto irá permitir uma melhor experiência.</string>
-    <string name="setup_wizard_step_permissions_details">Neste passo, poderá aprovar o acesso do <i>The Safety Keyboard by Moto</i> aos contactos guardados no seu dispositivo. Se desejar bloquear este acesso poderá Desativar dicionário de contactos.</string>
-    <string name="setup_wizard_step_location_permissions_details">Neste passo, poderá aprovar o acesso do <i>The Safety Keyboard by Moto</i> à localização do seu dispositivo. Se desejar bloquear este acesso poderá Desativar acesso à localização.</string>
-    <string name="setup_wizard_step_storage_permissions_details">Neste passo, poderá aprovar o acesso do <i>The Safety Keyboard by Moto</i> à memória externa do seu dispositivo. Se desejar bloquear este acesso poderá Desativar acesso à localização.</string>
+    <string name="setup_wizard_step_permissions_details"><b>Contato</b>\nUsar os dados de contato.</string>
+    <string name="setup_wizard_step_location_permissions_details"><b>Localização</b>\nO teclado só funcionará em modo seguro se o GPS estiver ativo.</string>
+    <string name="setup_wizard_step_storage_permissions_details"><b>Fotos / mídia / arquivos</b>\nUsar um ou mais dos seguintes itens: armazenamento externo e arquivos do dispositivo.</string>
 
     <string name="setup_wizard_step_three_title">O The Safety Keyboard by Moto está pronto!</string>
     <string name="setup_wizard_step_three_details">Obrigado por escolher o <i>The Safety Keyboard by Moto</i>.</string>
@@ -537,9 +537,9 @@
     <string name="notification_location_ticker">Permissão de localização é necessária</string>
     <string name="allow_permission">Permitir</string>
     <string name="navigate_to_app_permissions">Ir para as permissões</string>
-    <string name="contacts_permissions_dialog_message">The Safety Keyboard by Moto utiliza o nome dos seus contactos para lhe oferecer sugestões personalizadas. Ao digitar uma plavra procuramos por palavras similares para que complete ou corrija o que está digitando.</string>
-    <string name="location_permissions_dialog_message">The Safety Keyboard by Moto utiliza a localização do seu dispositivo para melhorar a sua segurança. Ao utilizar o teclado nós calculamos sua velocidade. Se estiver dirigindo não deve utilizar o telefone/tablet.</string>
-    <string name="turn_off_contacts_dictionary">Desativar dicionário de contactos</string>
-    <string name="turn_off_location">Desativar acesso à localização</string>
-    <string name="turn_off_storage">Desativar acesso à memória externa</string>
+    <string name="contacts_permissions_dialog_message">Para o The Safety Keyboard funcionar melhor, precisamos de algumas permissões que você pode ou não liberar.</string>
+    <string name="location_permissions_dialog_message"></string>
+    <string name="turn_off_contacts_dictionary">Desativar</string>
+    <string name="turn_off_location">Desativar</string>
+    <string name="turn_off_storage">Desativar</string>
 </resources>

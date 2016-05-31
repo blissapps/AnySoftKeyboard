@@ -2,6 +2,7 @@ package com.anysoftkeyboard.ui.settings.setup;
 
 import android.Manifest;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -107,22 +108,22 @@ public class WizardPermissionsFragment extends WizardPageBaseFragment implements
     }
 
     @Override
-    protected boolean isStepCompleted() {
-        if (getActivity() != null) {
+    protected boolean isStepCompleted(Context ctx) {
+        if (ctx != null) {
             return !AnyApplication.getConfig().useContactsDictionary() ||//either the user disabled Contacts
-                    ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.READ_CONTACTS) == PackageManager.PERMISSION_GRANTED || //or the user granted permission
+                    ContextCompat.checkSelfPermission(ctx, Manifest.permission.READ_CONTACTS) == PackageManager.PERMISSION_GRANTED || //or the user granted permission
                     !AnyApplication.getConfig().useLocation() ||//either the user disabled location
-                    ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED || //or the user granted permission
+                    ContextCompat.checkSelfPermission(ctx, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED || //or the user granted permission
                     !AnyApplication.getConfig().useStorage() ||//either the user disabled Storage access
-                    ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED; //or the user granted permission//or the user granted permission
+                    ContextCompat.checkSelfPermission(ctx, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED; //or the user granted permission//or the user granted permission
         } else {
             return false;
         }
     }
 
     @Override
-    protected boolean isStepPreConditionDone() {
-        return SetupSupport.isThisKeyboardSetAsDefaultIME(getActivity());
+    protected boolean isStepPreConditionDone(Context ctx) {
+        return SetupSupport.isThisKeyboardSetAsDefaultIME(ctx);
     }
 
     @Override

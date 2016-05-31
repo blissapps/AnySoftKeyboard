@@ -53,7 +53,7 @@ public class WizardPageEnableKeyboardFragment extends WizardPageBaseFragment {
         @Override
         public void onChange(boolean selfChange) {
             if (!isResumed()) {
-                if (isStepCompleted()) {
+                if (isStepCompleted(getContext())) {
                     //should we return to this task?
                     //this happens when the user is asked to enable AnySoftKeyboard, which is done on a different UI activity (outside of my App).
                     mGetBackHereHandler.removeMessages(KEY_MESSAGE_RETURN_TO_APP);
@@ -120,15 +120,26 @@ public class WizardPageEnableKeyboardFragment extends WizardPageBaseFragment {
         unregisterSettingsObserverNow();
     }
 
-    @Override
+   /* @Override
     protected boolean isStepCompleted() {
-        return SetupSupport.isThisKeyboardEnabled(getActivity());
+        return SetupSupport.isThisKeyboardEnabled(getActivity() != null ? getActivity() : getContext());
     }
 
     @Override
     protected boolean isStepPreConditionDone() {
         return true;//the pre-condition is that the App is installed... I guess it does, right?
+    } */
+
+    @Override
+    protected boolean isStepCompleted(Context ctx) {
+        return SetupSupport.isThisKeyboardEnabled(ctx);
     }
+
+    @Override
+    protected boolean isStepPreConditionDone(Context ctx) {
+        return true;//the pre-condition is that the App is installed... I guess it does, right?
+    }
+
 
     @Override
     public void onDestroy() {

@@ -37,7 +37,7 @@ public class WizardPageSwitchToKeyboardFragment extends WizardPageBaseFragment {
         ((TextView) view.findViewById(R.id.go_to_switch_keyboard_action)).setTypeface(tf1);
     }
 
-    @Override
+   /* @Override
     protected boolean isStepCompleted() {
         return SetupSupport.isThisKeyboardSetAsDefaultIME(getActivity());
     }
@@ -45,5 +45,15 @@ public class WizardPageSwitchToKeyboardFragment extends WizardPageBaseFragment {
     @Override
     protected boolean isStepPreConditionDone() {
         return SetupSupport.isThisKeyboardEnabled(getActivity());
+    } */
+
+    @Override
+    protected boolean isStepCompleted(Context ctx) {
+        return SetupSupport.isThisKeyboardSetAsDefaultIME(ctx);
+    }
+
+    @Override
+    protected boolean isStepPreConditionDone(Context ctx) {
+        return SetupSupport.isThisKeyboardEnabled(ctx);
     }
 }

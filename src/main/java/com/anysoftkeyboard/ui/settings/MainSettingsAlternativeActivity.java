@@ -65,6 +65,7 @@ public class MainSettingsAlternativeActivity extends PermissionsFragmentChauffeu
         tf1 = Typeface.createFromAsset(getApplicationContext().getAssets(), "fonts/ropa_soft_bold.ttf");
         tf2 = Typeface.createFromAsset(getApplicationContext().getAssets(), "fonts/ropa_soft_light.ttf");
         myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+
         setSupportActionBar(myToolbar);
         mTitle = getTitle();
 

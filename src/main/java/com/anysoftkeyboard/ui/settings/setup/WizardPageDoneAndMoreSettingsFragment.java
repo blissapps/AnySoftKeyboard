@@ -44,14 +44,25 @@ public class WizardPageDoneAndMoreSettingsFragment extends WizardPageBaseFragmen
         ((TextView) view.findViewById(R.id.tvTitleTrdStep)).setTypeface(tf1);
     }
 
-    @Override
+  /*  @Override
     protected boolean isStepCompleted() {
         return false;//this step is never done! You can always configure more :)
     }
 
     @Override
     protected boolean isStepPreConditionDone() {
-        return SetupSupport.isThisKeyboardSetAsDefaultIME(getActivity());
+        return
+    } */
+
+
+    @Override
+    protected boolean isStepCompleted(Context ctx) {
+        return false;
+    }
+
+    @Override
+    protected boolean isStepPreConditionDone(Context ctx) {
+        return SetupSupport.isThisKeyboardSetAsDefaultIME(ctx);
     }
 
     @Override
@@ -79,4 +90,5 @@ public class WizardPageDoneAndMoreSettingsFragment extends WizardPageBaseFragmen
                 break;
         }
     }
+
 }
