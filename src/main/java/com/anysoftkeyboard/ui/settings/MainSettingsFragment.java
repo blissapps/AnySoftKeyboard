@@ -17,12 +17,20 @@
 package com.anysoftkeyboard.ui.settings;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
 import android.graphics.Typeface;
+import android.graphics.drawable.AnimationDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceCategory;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.preference.PreferenceFragment;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,12 +39,17 @@ import android.widget.TextView;
 
 import com.anysoftkeyboard.keyboards.KeyboardAddOnAndBuilder;
 import com.anysoftkeyboard.keyboards.KeyboardFactory;
+import com.anysoftkeyboard.ui.settings.setup.SetUpKeyboardWizardFragment;
 import com.anysoftkeyboard.ui.settings.widget.AddOnCheckBoxPreference;
+import com.anysoftkeyboard.utils.Log;
 import com.menny.android.anysoftkeyboard.R;
+
+import net.evendanan.chauffeur.lib.FragmentChauffeurActivity;
+import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;
 
 import java.util.List;
 
-public class MainSettingsFragment extends Fragment{
+public class MainSettingsFragment extends Fragment {
 
     private Typeface tf1, tf2;
 

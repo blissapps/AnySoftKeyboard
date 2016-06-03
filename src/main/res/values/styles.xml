@@ -281,12 +281,16 @@
 
     <style name="Ask.Legal.Title" parent="Ask.Legal">
         <item name="android:textSize">@dimen/font_size_title</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorLink">@android:color/white</item>
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:layout_marginBottom">8dp</item>
     </style>
 
     <style name="Ask.Legal.Text" parent="Ask.Legal">
         <item name="android:textSize">@dimen/font_size_small_text</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorLink">@android:color/white</item>
         <item name="android:layout_marginLeft">8dp</item>
         <item name="android:layout_marginRight">8dp</item>
         <item name="android:autoLink">email|web</item>
@@ -295,7 +299,7 @@
     <style name="Ask.Legal.Divider" parent="Ask.Legal">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
-        <item name="android:background">@color/menu_divider</item>
+        <item name="android:background">@android:color/white</item>
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:layout_marginBottom">8dp</item>
     </style>

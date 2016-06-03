@@ -28,6 +28,7 @@ import android.widget.TextView;
 import com.anysoftkeyboard.ui.settings.MainFragment;
 import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
 import com.anysoftkeyboard.ui.settings.MainSettingsAlternativeActivity;
+import com.anysoftkeyboard.ui.settings.MainSettingsFragment;
 import com.menny.android.anysoftkeyboard.R;
 
 import net.evendanan.chauffeur.lib.FragmentChauffeurActivity;
