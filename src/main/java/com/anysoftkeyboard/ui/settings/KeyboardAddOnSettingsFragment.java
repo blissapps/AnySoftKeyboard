@@ -50,9 +50,9 @@ public class KeyboardAddOnSettingsFragment extends PreferenceFragment {
 
         keyboardsGroup.removeAll();
 
-        //add pt and pt-pBR keyboards first
+        //add pt and pt-rBR keyboards first
         for (final KeyboardAddOnAndBuilder creator : creators) {
-            if(creator.getKeyboardLocale().equals("pt") || creator.getKeyboardLocale().equals("pt-pBR")) {
+            if(creator.getKeyboardLocale().equals("pt") || creator.getKeyboardLocale().equals("pt-rBR")) {
                 final AddOnCheckBoxPreference checkBox = new AddOnCheckBoxPreference(activity, null, R.style.Theme_Preference);
                 checkBox.setAddOn(creator);
                 keyboardsGroup.addPreference(checkBox);
@@ -61,7 +61,7 @@ public class KeyboardAddOnSettingsFragment extends PreferenceFragment {
 
         //add the others afterwards
         for (final KeyboardAddOnAndBuilder creator : creators) {
-            if(!creator.getKeyboardLocale().equals("pt") && !creator.getKeyboardLocale().equals("pt-pBR")) {
+            if(!creator.getKeyboardLocale().equals("pt") && !creator.getKeyboardLocale().equals("pt-rBR")) {
                 final AddOnCheckBoxPreference checkBox = new AddOnCheckBoxPreference(activity, null, R.style.Theme_Preference);
                 checkBox.setAddOn(creator);
                 keyboardsGroup.addPreference(checkBox);

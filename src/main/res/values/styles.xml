@@ -91,6 +91,11 @@
         <item name="colorAccent">@color/safety_keyboard_color</item>
         <item name="windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
+        <item name="actionOverflowButtonStyle">@style/CustomOverflowButton</item>
+    </style>
+
+    <style name="CustomOverflowButton" parent="Base.Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_dots_vertical_white_24dp</item>
     </style>
 
     <style name="Theme.AskApp.NoTitle" parent="Theme.AskApp">

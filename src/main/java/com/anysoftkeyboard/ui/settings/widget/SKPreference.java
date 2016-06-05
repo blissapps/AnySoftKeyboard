@@ -36,6 +36,8 @@ public class SKPreference extends Preference {
         super.onBindView(view);
         tf1 = Typeface.createFromAsset(getContext().getAssets(), "fonts/ropa_soft_bold.ttf");
         tf2 = Typeface.createFromAsset(getContext().getAssets(), "fonts/ropa_soft_light.ttf");
+        ((TextView) view.findViewById(android.R.id.title)).setTextColor(getContext().getResources().getColor(android.R.color.white));
+        ((TextView) view.findViewById(android.R.id.summary)).setTextColor(getContext().getResources().getColor(android.R.color.white));
         ((TextView) view.findViewById(android.R.id.title)).setTypeface(tf1);
         ((TextView) view.findViewById(android.R.id.summary)).setTypeface(tf2);
 

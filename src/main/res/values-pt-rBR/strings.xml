@@ -100,6 +100,9 @@
     <string name="persistent_layout_per_package_id_title">Memorizar esquema de alfabeto por aplicação</string>
     <string name="persistent_layout_per_package_id_off_summary">Utilizar o mesmo esquema em todas as aplicações.</string>
     <string name="persistent_layout_per_package_id_on_summary">Trocar automaticamente para o anterior esquema utilizado na aplicação.</string>
+    <string name="one_shot_quick_text_popup">Fecho automático após tecla premida</string>
+    <string name="one_shot_quick_text_popup_on_summary">Fechar popup de texto rápido depois de premir a tecla</string>
+    <string name="one_shot_quick_text_popup_off_summary">Manter popup de texto rápido até premir a tecla de fecho</string>
     <string name="hide_soft_when_physical">Ocultar teclado ao usar tecla física</string>
     <string name="hide_soft_when_physical_on_summary">Ocultar teclado virtual ao usar teclado físico</string>
     <string name="hide_soft_when_physical_off_summary">Mostrar teclado virtual ao usar teclado físico</string>
@@ -141,8 +144,10 @@
     <string name="swipe_right_two_fingers_action_title">Selecione a ação ao deslizar para a direita</string>
     <string name="pinch_gesture_action">Gesto Juntar</string>
     <string name="pinch_gesture_action_title">Escolha a ação</string>
+    <string name="pinch_gesture_action_summary">Defina a acção do gesto juntar. Actualmente, %s</string>
     <string name="separate_gesture_action">Gesto Esticar</string>
     <string name="separate_gesture_action_title">Escolha a ação</string>
+    <string name="separate_gesture_action_summary">Defina a acção do gesto esticar. Actualmente, %s</string>
     <string name="swipe_action_name_none">Sem ação</string>
     <string name="swipe_action_name_next_alphabet">Teclado alfabético seguinte</string>
     <string name="swipe_action_name_next_symbols">Teclado simbólico seguinte</string>
@@ -170,22 +175,29 @@
     <string name="settings_swipe_velocity_normal">Normal</string>
     <string name="settings_swipe_velocity_fast">Rápida</string>
     <string name="settings_swipe_velocity_very_fast">Muito rápida</string>
+    <string name="settings_swipe_velocity_threshold_summary">A velocidade mínima do gesto deslize. Actualmente, %s</string>
     <string name="settings_swipe_distance_threshold_title">Distância de deslizamento</string>
     <string name="settings_swipe_distance_very_short">Muito curta</string>
     <string name="settings_swipe_distance_short">Curta</string>
     <string name="settings_swipe_distance_normal">Normal</string>
     <string name="settings_swipe_distance_long">Longa</string>
     <string name="settings_swipe_distance_very_long">Muito longa</string>
+    <string name="settings_swipe_distance_threshold_summary">A distância mínima do gesto deslize. Actualmente, %s</string>
     <string name="hardware_keys_group">Funções das teclas</string>
     <string name="volume_key_for_left_right_support">Tecla de volume para esquerda/direita</string>
     <string name="volume_key_for_left_right_support_on_summary">Desativar esquerda/direita usando teclas de volume</string>
     <string name="camera_key_for_backspace_backword_support">Tecla Câmara para apagar carácter/palavra</string>
     <string name="camera_key_for_backspace_backword_support_on_summary">Restaurar opção da tecla da câmara</string>
+    <string name="volume_key_for_left_right_support_off_summary">Volume para cima vira retrocede o cursor, volume para baixo avança o cursor</string>
+    <string name="camera_key_for_backspace_backword_support_off_summary">Toque simples apaga o último caracter, toque prolongado apaga última palavra.</string>
     <string name="menu_even_more_settings">Ainda mais...</string>
     <string name="more_ui_settings_group">Interface</string>
     <string name="special_dictionaries_group">Dicionários especiais</string>
     <string name="use_user_dictionary">Dicionário do usuário</string>
+    <string name="use_user_dictionary_on_summary">Sugerir palavras adicionadas pelo usuário (faça duplo clique para adicionar a sugestão apresentada)</string>
     <string name="always_use_fallback_user_dictionary">Utilizar dicionário de usuário como recurso</string>
+    <string name="always_use_fallback_user_dictionary_on_summary">Usar apenas o dicionário existente de The Safety Keyboard by Moto\'s (não recomendado).</string>
+    <string name="always_use_fallback_user_dictionary_off_summary">Tentar usar o dicionário de sistema primeiro (recomendado).</string>
     <string name="use_auto_dictionary">Dicionário automático</string>
     <string name="use_auto_dictionary_dialog_title">Escolha o modo de aprendizagem</string>
     <string name="use_auto_dictionary_summary">Aprender palavras automaticamente. Método: %s</string>
@@ -201,6 +213,7 @@
     <string name="use_next_words_dictionary_aggressiveness_minimal">Mínima</string>
     <string name="use_next_words_dictionary_aggressiveness_medium">Normal</string>
     <string name="use_next_words_dictionary_aggressiveness_maximum">Máxima</string>
+    <string name="use_next_words_dictionary_aggressiveness_summary">Intensidade de sugestões: %s</string>
     <string name="auto_pick_suggestion_aggressiveness_title">Intensidade da auto-selecção da sugestão</string>
     <string name="auto_pick_suggestion_aggressiveness_none">Desligada</string>
     <string name="auto_pick_suggestion_aggressiveness_minimal">Intensidade mínima</string>
@@ -315,6 +328,9 @@
     </string>
     <!-- settings - quick text keys -->
     <string name="quick_text_keys_group">Teclas de texto rápido</string>
+    <string name="quick_text_keys_order">Ordem dos grupos de texto rápido</string>
+    <string name="quick_text_keys_order_dialog_title">Definir ordem dos grupos</string>
+    <string name="quick_text_keys_order_summary">A ordem em que os grupos de texto rápido devem surgir.</string>
     <!-- settings - extension keyboards -->
     <!-- settings - top generic row -->
     <string name="top_generic_row_group">Linha superior comum</string>
@@ -386,6 +402,7 @@
     <string name="default_quick_text_key_name">Emoticons simples</string>
     <string name="unicode_gestures_quick_text_key_name">Gestos</string>
     <string name="unicode_accessories_quick_text_key_name">Acessórios</string>
+    <string name="unicode_people_quick_text_key_name">Pessoas</string>
     <string name="unicode_animals_quick_text_key_name">Animais</string>
     <string name="unicode_food_quick_text_key_name">Alimentação</string>
     <string name="unicode_nature_quick_text_key_name">Natureza</string>
@@ -457,6 +474,8 @@
     <string name="initial_quick_text_tab_title">Grupo inicial</string>
     <string name="initial_quick_text_tab_last_used_tab">Iniciar com o último grupo utilizado</string>
     <string name="initial_quick_text_tab_history_tab">Iniciar com o histórico</string>
+    <string name="initial_quick_text_tab_summary">Começar com o seguinte grupo de texto rápido: %s</string>
+    <string name="initial_quick_text_tab_always_first_tab">Começar sempre com o primeiro</string>
     <string name="developer_tools">Ferramentas de programação</string>
     <string name="click_for_developer_features">Ferramentas de programação</string>
     <string name="click_for_developer_features_summary">Várias ferramentas de desenvolvimento do The Safety Keyboard by Moto</string>
@@ -528,6 +547,12 @@
     <string name="main_fragment_go_to_settings_button">Ir para as definições</string>
     <string name="quick_text_tab_title_template"><xliff:g id="first_key">%s</xliff:g>\u0020<xliff:g id="name">%s</xliff:g></string>
     <string name="next_word_settings_group">Definições</string>
+    <string name="next_word_dict_settings">Definições Next Word</string>
+    <string name="next_word_stats_group">Estatísticas de Utilização Next Word</string>
+    <string name="next_words_statistics_count">Contagem inicial de palavras:\u0020<xliff:g id="first_word">%d</xliff:g>\nContagem média de palavras:\u0020<xliff:g id="second_word">%d</xliff:g></string>
+    <string name="next_words_statistics_no_usage">Ainda sem utilização suficiente. Digite um pouco mais.</string>
+    <string name="next_word_prefs_clear_data">Apagar dados Next Word</string>
+    <string name="next_word_prefs_clear_data_summary">Isto é irreversível. Todo o seu histórico será apagado.</string>
     <string name="setup_wizard_step_three_action_go_to_home_fragment">Ir para a página principal</string>
     <string name="notification_read_contacts_title">Posso aceder aos seus contactos?</string>
     <string name="notification_read_contacts_text">Necessitamos de aceder aos seus contactos para disponibilizar uma melhor experiência.</string>

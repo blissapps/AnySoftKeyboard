@@ -14,6 +14,7 @@ import com.anysoftkeyboard.dictionaries.DictionaryAddOnAndBuilder;
 import com.anysoftkeyboard.dictionaries.ExternalDictionaryFactory;
 import com.anysoftkeyboard.nextword.NextWordDictionary;
 import com.anysoftkeyboard.nextword.NextWordStatistics;
+import com.anysoftkeyboard.ui.settings.widget.SKPreference;
 import com.menny.android.anysoftkeyboard.R;
 
 import net.evendanan.pushingpixels.AsyncTaskWithProgressWindow;
@@ -65,6 +66,7 @@ public class NextWordSettingsFragment extends PreferenceFragment implements Asyn
     @Override
     public void onCreate(Bundle paramBundle) {
         super.onCreate(paramBundle);
+        getActivity().setTheme(R.style.Theme_Preference_Switch);
         addPreferencesFromResource(R.xml.prefs_next_word);
     }
 
@@ -125,7 +127,7 @@ public class NextWordSettingsFragment extends PreferenceFragment implements Asyn
                 super.onProgressUpdate(values);
                 if (isCancelled()) return;
                 for (ProgressReport progressReport : values) {
-                    Preference localeData = new Preference(getActivity());
+                    SKPreference localeData = new SKPreference(getActivity());
                     localeData.setKey(progressReport.dictionaryBuilderByLocale.getLanguage());
                     localeData.setTitle(progressReport.dictionaryBuilderByLocale.getLanguage() + " - " + progressReport.dictionaryBuilderByLocale.getName());
                     if (progressReport.nextWordStatistics.firstWordCount == 0) {
