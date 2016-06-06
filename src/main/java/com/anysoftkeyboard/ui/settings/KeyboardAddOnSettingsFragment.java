@@ -55,7 +55,9 @@ public class KeyboardAddOnSettingsFragment extends PreferenceFragment {
             if(creator.getKeyboardLocale().equals("pt") || creator.getKeyboardLocale().equals("pt-rBR")) {
                 final AddOnCheckBoxPreference checkBox = new AddOnCheckBoxPreference(activity, null, R.style.Theme_Preference);
                 checkBox.setAddOn(creator);
+                checkBox.setEnabled(true);
                 keyboardsGroup.addPreference(checkBox);
+
             }
         }
 

@@ -135,7 +135,13 @@ public class AddOnCheckBoxPreference extends Preference implements
         }
         boolean defaultChecked = false;
         if (mAddOn instanceof KeyboardAddOnAndBuilder) {
-            defaultChecked = ((KeyboardAddOnAndBuilder) mAddOn).getKeyboardDefaultEnabled();
+            if (((KeyboardAddOnAndBuilder) mAddOn).getKeyboardLocale().equals("pt") || ((KeyboardAddOnAndBuilder) mAddOn).getKeyboardLocale().equals("pt-rBR")) {
+                defaultChecked = true;
+                persistBoolean(defaultChecked);
+            } else {
+                defaultChecked = false; // ((KeyboardAddOnAndBuilder) mAddOn).getKeyboardDefaultEnabled();
+                persistBoolean(defaultChecked);
+            }
         }
         mCheckBox.setChecked(getPersistedBoolean(defaultChecked));
     }

@@ -11,7 +11,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/safety_keyboard_color"
         android:elevation="4dp"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/Theme.AskApp.Toolbar"
         app:titleTextColor="@color/candidate_normal">
 
         <TextView

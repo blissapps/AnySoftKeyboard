@@ -63,10 +63,13 @@ public class LocationClientLocationResponder
 
     @Override
     public EndLocationResponderStatus endLocationResponder(Context ctx) {
-        if (googleApiClient.isConnected()) {
-            LocationServices.FusedLocationApi.removeLocationUpdates(googleApiClient, this);
+        if (googleApiClient != null) {
+            if (googleApiClient.isConnected()) {
+                LocationServices.FusedLocationApi.removeLocationUpdates(googleApiClient, this);
+            }
         }
         return EndLocationResponderStatus.Success;
+
     }
 
     @Override

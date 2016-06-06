@@ -91,6 +91,9 @@
         <item name="colorAccent">@color/safety_keyboard_color</item>
         <item name="windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.AskApp.Toolbar" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="actionOverflowButtonStyle">@style/CustomOverflowButton</item>
     </style>
 
